@@ -8,7 +8,6 @@
     align-items: center;
     border: 0px solid black;
     border-radius: 20px;
-    /* justify-content: space-around; */
 }
 
 .profile>div>a {
@@ -32,45 +31,94 @@ a:hover {
     border-radius: 10px;
 }
 
-.bestPost {
+/* 부모 상자 */
+.post {
     height: 400px;
 }
-.bestPostWr{
-    margin-bottom: 30px;
-}
-
-.bestPost a {
-    text-decoration: none;
+.post a {
+    text-decoration: none; /* a태그에 밑 줄을 없애기 위해서 */
     color: black;
     font-size: 20px;
     margin: 10px 0px;
 }
 
+/* 자식 상자 1 */
+.PostWr{
+    margin-bottom: 30px;
+}
+
+/* 자식 상자 2 */
+.bestSlidesBox{
+    position: relative;
+    display: flex; /* 일자로 놓기 위해 */
+    /* margin: auto; */
+    justify-content: space-around;
+    align-items: center; /* 중앙 정렬 */
+}
+
+/* 자식 상자2에 자식 상자1 */
+.bestSlidesContainer{
+    width: 870px;
+    overflow: hidden;
+}
+
+/* 자식 상자2에 자식 상자1에 자식상자*/
 .bestSlidesBox .bestSlides{
+    position: relative;
     display: flex;
     list-style: none;
-    border-radius: 10px;
-    
+    margin-top: 15px;
+    width: 1200000px; /* width를 크기 주어서 버튼을 넘기면 width 상자가 이동하게 만들고 싶다.*/
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* padding: 10px 0px; */
 }
+
 .bestSlidesBox .bestSlides img{
-    width: 300px;
-    height: 300px;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    padding: 10px;
+    width: 210px;
+    height: 210px;
 }
 
 .prev,
 .next {
-    position: absolute;
-    /* top: 20%; */
-    /* font-size: 20px;
-    font-weight: bold;
-    padding: 10px; */
     cursor: pointer;
 }
 
-.prev {
-    left: 0;
+/* recent Slides */
+
+/* 자식 상자 2 */
+.recentSlidesBox{
+    position: relative;
+    display: flex; /* 일자로 놓기 위해 */
+    /* margin: auto; */
+    justify-content: space-around;
+    align-items: center; /* 중앙 정렬 */
 }
 
-.next {
-    right: 0;
+/* 자식 상자2에 자식 상자1 */
+.recentSlidesContainer{
+    width: 870px;
+    overflow: hidden;
+}
+
+/* 자식 상자2에 자식 상자1에 자식상자*/
+.recentSlidesBox .recentSlides{
+    position: relative;
+    display: flex;
+    list-style: none;
+    margin-top: 15px;
+    width: 1200000px; /* width를 크기 주어서 버튼을 넘기면 width 상자가 이동하게 만들고 싶다.*/
+}
+
+.recentSlidesBox .recentSlides img{
+    justify-content: center;
+    align-items: center;
+    display: block;
+    padding: 10px;
+    width: 210px;
+    height: 210px;
 }
