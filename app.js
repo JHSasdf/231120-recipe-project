@@ -9,7 +9,7 @@ $('#hamburger').click(function() {
 $('.card').click(function() {
     $('.curtain').toggleClass('visible');
     $('body').append(`
-    <div class="card hero-card" style="position: fixed; width: 50vw; height: 80vw; top: 50%; left: 50%; z-index: 3; transform: translate(-50%, -50%); ">
+    <div class="card modal-card" style="position: fixed; width: 50vw; height: 80vh; top: 50%; left: 50%; z-index: 3; transform: translate(-50%, -50%); ">
       <img src=${this.children[0].src} class="card-img-top" alt="image-of-food">
       
       <div class="card-body" style="display: block;">
@@ -20,7 +20,7 @@ $('.card').click(function() {
 })
 
 $('.curtain').click(function () {
-    $('.hero-card').remove();
+    $('.modal-card').remove();
     $('.curtain').toggleClass('visible');  
 })
 
