@@ -48,7 +48,6 @@ input {
   display: none;
   position: relative;
   right: 0;
-
 }
 
 #search-btn {
@@ -69,34 +68,42 @@ input {
   padding: 0;
 }
 
-#hamburger {
+.hamburger {
   width: 1.5rem;
   height: 1.5rem;
   display: none;
   cursor: pointer;
-
 }
 
-#hamburger li {
+.hamburger li {
   background-color: black;
   height: 2px;
   margin-bottom: 7px;
   display: block;
 }
 
-#hidden-menu button {
+.hidden-menu button {
   background-color: transparent;
   border: none;
   color: white;
 }
 
+.hidden-menu .hamburger {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
 .hidden-menu {
-  width: 30%;
-  height: 100%;
+  width: 100%;
+  height: 40%;
   position: fixed;
   right: 0;
+  top: 0;
+  z-index: 3;
   display: none;
-  background-color: rgba(92, 133, 129, 0.7);
+  background-color: rgb(83, 90, 89);
+  text-align: center;
 }
 
 .main-section {
@@ -117,6 +124,11 @@ input {
   border-radius: 10px;
 }
 
+.food-slide-title {
+  width: 75%;
+  margin: 0 auto;
+}
+
 .swiper-slide img {
   width: 100%;
   height: 100%;
@@ -129,6 +141,7 @@ input {
   overflow: hidden;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 .card-title {
@@ -137,6 +150,16 @@ input {
 
 .card-body {
   display: none;
+}
+
+.modal-card {
+  position: fixed;
+  width: 60vw;
+  height: 80vh;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
 }
 
 .swiper-slide .card img {
@@ -150,7 +173,6 @@ input {
   object-fit: cover;
 }
 
-
 .curtain {
   position: fixed;
   width: 100vw;
@@ -163,34 +185,33 @@ input {
 }
 
 .visible {
-    display: block;
-  }
+  display: block;
+}
 
 @media screen and (max-width: 768px) {
-
   #nav-var {
     display: none;
   }
 
-
-  #hamburger {
+  .hamburger {
     display: block;
   }
 
   .swiper {
     height: 30vh;
   }
+
+  .modal-card {
+    width: 70vw;
+  }
 }
 
 @media screen and (max-width: 576px) {
-  
-
-  .food-grid {
-    grid-template-columns: repeat(1, 1fr);
-    row-gap: 2%;
-  }
-
   .swiper {
     height: 20vh;
+  }
+
+  .modal-card {
+    width: 80vw;
   }
 }
