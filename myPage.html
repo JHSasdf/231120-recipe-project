@@ -25,14 +25,15 @@
     <!-- 로그인 화면 -->
     <div class="profile container-md">
         <div class="profileImg ">
-            <img src="./Profile_icon.png" alt="프로필이미지" width="300px" height="300px">
+            <img src="./Profile_icon.png" alt="프로필이미지" width="300px" height="300px" id="previewImg">
         </div>
         <div>
-            <a href="">
+            <a href="./myPage2.html">
                 <h1>로그인하세요 ></h1>
             </a>
         </div>
     </div>
+
     <!-- 로그인 배너와 작성글 hr -->
     <div class="hr container-md"></div>
 
@@ -40,33 +41,33 @@
     <div class="post container-md">
 
         <div class="PostWr">
+            <!-- 베스트 글 페이지로 이동 -->
             <a href=""><span>베스트 글 <i class="fa-solid fa-award"></i></span></a>
         </div>
 
-        <div class="bestSlidesBox" style="background-color: pink;">
-
+        <div class="bestSlidesBox">
             <!-- container-md -->
-
-            <!-- 추가 이미지는 함수를 이용해서 추가 -->
             <a class="prev" onclick="prevSlidesBe()">&lt;</a>
 
             <div class="bestSlidesContainer">
-            <ul class="bestSlides">
-                <li>
-                    <img src="./food_img/bibimbap.jpeg" alt="비빔밥">
-                </li>
-                <li>
-                    <img src="./food_img/images-3.jpeg" alt="">
-                </li>
-                <li>
-                    <img src="./food_img/images-2.jpeg" alt="">
-                </li>
-                <li>
-                    <img src="./food_img/images-4.jpeg" alt="">
-                </li>
-                <!-- 여기에 추가하는 함수를 추가로 만들면 될거 같습니다. -->
-            </ul>
-        </div>
+                <!-- 추가 이미지는 함수를 이용해서 추가 -->
+                <!-- 베스트 글을 최대 몇개 까지 표시할 지 지정 ex) max 10 -->
+                <ul class="bestSlides">
+                    <li>
+                        <img src="./food_img/bibimbap.jpeg" alt="비빔밥">
+                    </li>
+                    <li>
+                        <img src="./food_img/images-3.jpeg" alt="">
+                    </li>
+                    <li>
+                        <img src="./food_img/images-2.jpeg" alt="">
+                    </li>
+                    <li>
+                        <img src="./food_img/images-4.jpeg" alt="">
+                    </li>
+                    <!-- 여기에 추가하는 함수를 추가로 만들면 될거 같습니다. -->
+                </ul>
+            </div>
             <!-- 이전 다음 -->
             <a class="next" onclick="nextSlidesBe()">&gt;</a>
         </div>
@@ -87,26 +88,43 @@
             <a class="prev" onclick="prevSlidesRe()">&lt;</a>
 
             <div class="recentSlidesContainer">
-            <ul class="recentSlides">
-                <li>
-                    <img src="./food_img/bibimbap.jpeg" alt="비빔밥">
-                </li>
-                <li>
-                    <img src="./food_img/images-3.jpeg" alt="">
-                </li>
-                <li>
-                    <img src="./food_img/images-2.jpeg" alt="">
-                </li>
-                <li>
-                    <img src="./food_img/images-4.jpeg" alt="">
-                </li>
-                <!-- 여기에 추가하는 함수를 추가로 만들면 될거 같습니다. -->
-            </ul>
-        </div>
+                <ul class="recentSlides">
+                    <li>
+                        <img src="./food_img/bibimbap.jpeg" alt="비빔밥">
+                    </li>
+                    <li>
+                        <img src="./food_img/images-3.jpeg" alt="">
+                    </li>
+                    <li>
+                        <img src="./food_img/images-2.jpeg" alt="">
+                    </li>
+                    <li>
+                        <img src="./food_img/images-4.jpeg" alt="">
+                    </li>
+                    <!-- 여기에 추가하는 함수를 추가로 만들면 될거 같습니다. -->
+                </ul>
+            </div>
             <!-- 이전 다음 -->
             <a class="next" onclick="nextSlidesRe()">&gt;</a>
         </div>
     </div>
+
+
+    <hr class="container-md">
+
+    <div class="request container-md">
+        <p>고객센터</p>
+        <div>
+            <a href="">
+                <p>공지사항</p>
+            </a>
+            <a href="">
+                <p>FAQ</p>
+            </a>
+            <p>고객 센터 번호 : 000 - 0000 - 0000</p>
+        </div>
+    </div>
+
 
     <script src="./myPage.js"></script>
 

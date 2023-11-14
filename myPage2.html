@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myPage2</title>
+
+    <!-- CSS 링크 -->
+    <link rel="stylesheet" href="./myPage2.css">
+
+    <!-- 부트스트랩 및 폰트어썸 링크 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+        integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+</head>
+
+<body>
+    <!-- section 22 -->
+    <div class="profile container-md">
+        <!-- section 23 -->
+
+        <div class="profileImg">
+            <!-- 프로필 이미지를 아이디 별로 변경 -->
+            <!-- 프로필 이미지. 클릭 시 input[type=file]을 클릭하는 JavaScript 함수가 실행됩니다. -->
+            <img src="./Profile_icon.png" alt="프로필이미지" width="300px" height="300px" id="previewImg" onclick="changeImg()">
+
+            <!-- 이미지를 변경하기 위한 파일 업로드 input. 실제로는 display: none;으로 숨겨져 있습니다. -->
+            <input type="file" accept="image/*" style="display: none;" id="inputImg" onchange="previewFile()">
+        </div>
+
+
+        <!-- section 28 -->
+        <div class="idBox">
+            <!-- section 24 -->
+            <div class="nameAndLike">
+                <!-- section 25 -->
+                <div>
+                    <!-- 아이디를 가져와서 연결 시키면 돼요 -->
+                    <Strong>ID이름(닉네임)</Strong>
+                </div>
+                <!-- section 26 -->
+                <div class="like">
+                    <!-- 좋아요 수를 표시하면 돼요 -->
+                    <p class="likeP">좋아요! <i class="fa-regular fa-thumbs-up good" onclick="Good()"></i></p>
+                    <br>
+                    <p id="count">0</p>
+                </div>
+            </div>
+            <!-- section 27 로그아웃 버튼 -->
+            <div class="logout">
+                <button><a href="./myPage.html">logout</a></button>
+            </div>
+        </div>
+    </div>
+    <!-- 로그인 배너와 작성글 hr -->
+    <div class="hr container-md"></div>
+
+    <hr class="container-md">
+
+    <!-- 고객 센터 -->
+    <div class="request container-md">
+        <p>고객센터</p>
+        <div>
+            <a href=""><p>공지사항</p></a>
+            <a href=""><p>FAQ</p></a>
+            <p>고객 센터 번호 : 000 - 0000 - 0000</p>
+        </div>
+    </div>
+
+    <script src="./myPage2.js"></script>
+
+</body>
+
+</html>
