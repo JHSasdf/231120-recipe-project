@@ -1,5 +1,4 @@
 const swiper1 = new Swiper('.mainSlider', {
-    // loop: true,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -16,47 +15,20 @@ const swiper2 = new Swiper('.featRecipe', {
     breakpoints: {
         576: {
             slidesPerView: 2,
-            // spaceBetween: 20,
         },
         768: {
             slidesPerView: 3,
-            // spaceBetween: 10,
         },
         992: {
             slidesPerView: 3,
-            // spaceBetween: 50,
         },
     },
 });
 function onPrint() {
-    const body = document.querySelector('body');
-    const printContents = document.querySelector('.detailContent').innerHTML;
-    const printDiv = document.createElement("textarea");
-    printDiv.className = "print-div";
-
-    // body.appendChild(printDiv);
-    // printDiv.value = printContents;
-    // document.body.style.display = 'none';
-    // window.print();
-    // printDiv.print();
-    //document.body.style.display = 'block';
-    // printDiv.style.display = 'none';
     window.print();
 }
 
 $(function(){
-    /* $('.single-item').slick({
-        adaptiveHeight: true,
-        prevArrow:$('.mainSlider .btnPrev'),
-        nextArrow:$('.mainSlider .btnNext')
-    }); */
-    /* $('.featRecipe .slider').slick({
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite:false,
-        prevArrow:$('.featRecipe .btnPrev'),
-        nextArrow:$('.featRecipe .btnNext')
-    }); */
     $('.btnTWX').click(function(e){
         let linkUrl = window.location.href;
         e.preventDefault();
