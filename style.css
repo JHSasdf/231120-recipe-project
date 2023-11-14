@@ -213,7 +213,7 @@ button {
   position: fixed;
   top: 100px;
   right: 20px;
-  
+  z-index: 2;
 }
 
 .container-of-like {
@@ -221,6 +221,7 @@ button {
   top: 80px;
   right: 20px;
   background-color: #ff806c;
+  z-index: 2;
 }
 
 .curtain {
