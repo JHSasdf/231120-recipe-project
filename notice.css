@@ -1,0 +1,141 @@
+body{
+    margin: 0px;
+}
+
+.noBanner{
+    width: 100%;
+    height: 24vh;
+    background-image: url(./noticeBanner3.jpg);
+    /* background-size: cover; */
+    background-size: 100% 700px;
+    background-repeat: no-repeat;
+    background-position: 0px -350px;
+    align-items: center;
+}
+.noBanner div{
+    position : relative;
+    font-size : 200%;
+    top: 30px;
+    left: 30px;
+    color: whitesmoke;
+}
+
+.noticeBox{
+    width: 100%;
+    height: 78px;
+    /* background-color: rgb(243, 243, 247); */
+    /* margin-bottom: 125px; */
+    padding: 23px 0px 26px;
+}
+
+.noTopic{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 148px;
+    width: 1194px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 125px;
+    /* background-color: rgb(243, 243, 247); */
+
+}
+ul, li{
+    list-style: none;
+}
+.topic1{
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: -0.5px;
+    color: rgb(36, 36, 36);
+    border-bottom: 1px solid rgb(36, 36, 36);
+}
+
+.topic2{
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: -0.5px;
+    color: rgb(36, 36, 36);
+    border-bottom: none;
+}
+
+a, button, label{
+    cursor: pointer;
+}
+
+a, a:hover{
+    text-decoration: none;
+}
+
+section{
+    width: 1194px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+    display: block;
+}
+section * {
+    outline: none;
+}
+
+section button{
+    background: transparent;
+}
+
+.sectionHead{
+    position: relative;
+    padding-bottom: 24.5px;
+    border-bottom: 1px solid rgb(219, 219, 226);
+}
+
+.sectionHead > h2{
+    font-size: 24px;
+    letter-spacing: -0.6px;
+}
+
+.serviceItems{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28.5px 0px;
+    /* border-bottom: 1px solid rgb(219, 219, 226); */
+}
+
+.serviceItems > p{
+    min-width: 68px;
+    font-size: 18px;
+    letter-spacing: -0.45px;
+    color: rgb(94, 102, 141);
+    margin-right: 59px;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.serviceItemsStyle{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.serviceItemsStyle > p:first-child{
+    font-size: 18px;
+    letter-spacing: -0.45px;
+    text-align: left;
+}
+
+.serviceItemsStyle > p:last-child{
+    font-size: 16px;
+    letter-spacing: -0.4px;
+    color: rgb( 87, 87, 87);
+}
+
+button{
+    background: transparent;
+    color: #232323;
+    border: none;
+}
+button, input, select{
+    vertical-align: middle;
+}
