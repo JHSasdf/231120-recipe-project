@@ -8,6 +8,7 @@
 
     <!-- CSS 링크 -->
     <link rel="stylesheet" href="./myPage2.css">
+    <link rel="stylesheet" href="./mainHeader.css">
 
     <!-- 부트스트랩 및 폰트어썸 링크 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -25,6 +26,34 @@
 </head>
 
 <body>
+    <header>
+        <nav class="navigation">
+            <div class="logoImg">로고</div>
+            <ul class="menu">
+                <li>메뉴1</li>
+                <li>메뉴2</li>
+                <li>메뉴3</li>
+                <li>메뉴4</li>
+                <li class="myPageshort">마이페이지</li>
+            </ul>
+            <div class="icon">
+                <div class="search">검색
+                </div>
+                <div class="login" data-bs-toggle="modal" data-bs-target="#exampleModal">로그인
+                </div>
+                <div class="more">더보기</div>
+                <div class="myPagelong">마이페이지</div>
+            </div>
+        </nav>
+        <div class="searchBox">
+            <div class="back">back</div>
+            <div class="searchWrap">
+                <input type="text" placeholder="궁금했던 레시피를 검색해보세요!">
+                <span>검색버튼</span>
+            </div>
+        </div>
+    </header>
+
     <!-- section 22 -->
     <div class="profile container-md">
         <!-- section 23 -->
@@ -188,6 +217,7 @@
     </div>
 
     <script src="./myPage2.js"></script>
+    <script src="./mainHeader.js"></script>
 
 </body>
 
