@@ -51,7 +51,7 @@
                 <!-- section 26 -->
                 <div class="like">
                     <!-- 좋아요 수를 표시하면 돼요 -->
-                    <p class="likeP">좋아요! <i class="fa-regular fa-thumbs-up good" onclick="Good()"></i></p>
+                    <p>좋아요! <i class="fa-regular fa-thumbs-up good" onclick="Good()"></i></p>
                     <br>
                     <p id="count">0</p>
                 </div>
@@ -62,10 +62,120 @@
             </div>
         </div>
     </div>
+
+    <!-- 작성한 레시피 -->
     <!-- 로그인 배너와 작성글 hr -->
     <div class="hr container-md"></div>
 
+    <div class="post container-md">
+
+        <div class="PostWr">
+            <!-- 작성한 글 페이지로 이동 -->
+            <a href=""><span>작성한 레시피 <i class="fa-regular fa-pen-to-square"></i></span></a>
+        </div>
+
+        <div class="newSlidesBox">
+            <!-- container-md -->
+            <a class="prev" onclick="prevSlidesNew()">&lt;</a>
+
+            <div class="newSlidesContainer">
+                <ul class="newSlides">
+                    <li>
+                        <img src="./food_img/bibimbap.jpeg" alt="비빔밥">
+                    </li>
+                    <li>
+                        <img src="./food_img/images-3.jpeg" alt="">
+                    </li>
+                    <li>
+                        <img src="./food_img/images-2.jpeg" alt="">
+                    </li>
+                    <li>
+                        <img src="./food_img/images-4.jpeg" alt="">
+                    </li>
+                    <!-- 여기에 추가하는 함수를 추가로 만들면 될거 같습니다. -->
+                </ul>
+            </div>
+            <!-- 이전 다음 -->
+            <a class="next" onclick="nextSlidesNew()">&gt;</a>
+        </div>
+    </div>
+
+    <!-- 베스트 레시피 -->
+    <div class="post container-md">
+
+        <div class="PostWr">
+            <!-- 베스트 글 페이지로 이동 -->
+            <a href=""><span>베스트 레시피 <i class="fa-solid fa-award"></i></span></a>
+        </div>
+
+        <div class="bestSlidesBox">
+            <!-- container-md -->
+            <a class="prev" onclick="prevSlidesBe()">&lt;</a>
+
+            <div class="bestSlidesContainer">
+                <!-- 추가 이미지는 함수를 이용해서 추가 -->
+                <!-- 베스트 글을 최대 몇개 까지 표시할 지 지정 ex) max 10 -->
+                <ul class="bestSlides">
+                    <li>
+                        <img src="./food_img/bibimbap.jpeg" alt="비빔밥">
+                    </li>
+                    <li>
+                        <img src="./food_img/images-3.jpeg" alt="">
+                    </li>
+                    <li>
+                        <img src="./food_img/images-2.jpeg" alt="">
+                    </li>
+                    <li>
+                        <img src="./food_img/images-4.jpeg" alt="">
+                    </li>
+                    <!-- 여기에 추가하는 함수를 추가로 만들면 될거 같습니다. -->
+                </ul>
+            </div>
+            <!-- 이전 다음 -->
+            <a class="next" onclick="nextSlidesBe()">&gt;</a>
+        </div>
+    </div>
+
+
+    <!-- 최근 조회한 레시피 -->
+
+    <div class="post container-md">
+
+        <div class="PostWr">
+            <a href=""><span>최근 조회한 레시피 <i class="fa-regular fa-eye"></i></span></a>
+        </div>
+
+        <div class="recentSlidesBox">
+            <!-- container-md -->
+            <!-- 추가 이미지는 함수를 이용해서 추가 -->
+            <a class="prev" onclick="prevSlidesRe()">&lt;</a>
+
+            <div class="recentSlidesContainer">
+                <ul class="recentSlides">
+                    <li>
+                        <img src="./food_img/bibimbap.jpeg" alt="비빔밥">
+                    </li>
+                    <li>
+                        <img src="./food_img/images-3.jpeg" alt="">
+                    </li>
+                    <li>
+                        <img src="./food_img/images-2.jpeg" alt="">
+                    </li>
+                    <li>
+                        <img src="./food_img/images-4.jpeg" alt="">
+                    </li>
+                    <!-- 여기에 추가하는 함수를 추가로 만들면 될거 같습니다. -->
+                </ul>
+            </div>
+            <!-- 이전 다음 -->
+            <a class="next" onclick="nextSlidesRe()">&gt;</a>
+        </div>
+    </div>
+
+    
+
     <hr class="container-md">
+
 
     <!-- 고객 센터 -->
     <div class="request container-md">
