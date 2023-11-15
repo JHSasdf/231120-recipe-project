@@ -27,96 +27,15 @@ button {
   border: none;
 }
 
-#upper-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #ff806c;
-  margin: 0;
-  padding: 0.5rem 5%;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-
-#search-box {
-  /* width: 70%; */
-
-  display: flex;
-}
-
-.search-input {
-  width: 15rem;
-  box-sizing: border-box;
-  height: 35px;
-  display: none;
-  position: relative;
-  right: 0;
-}
-
-#search-btn {
-  position: relative;
-  height: 35px;
-  left: -2rem;
-  padding: 0;
-}
-
-#nav-var {
-  display: flex;
-  width: 50%;
-  height: 3rem;
-  line-height: 3rem;
-  justify-content: space-between;
-  padding: 0;
-}
-
-.hamburger {
-  width: 1.5rem;
-  height: 1.5rem;
-  display: none;
-  cursor: pointer;
-}
-
-.hamburger li {
-  background-color: black;
-  height: 2px;
-  margin-bottom: 7px;
-  display: block;
-}
-
-.hidden-menu button {
-
-  color: white;
-}
-
-.hidden-menu .hamburger {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-}
-
-.hidden-menu {
-  width: 100%;
-  height: 40%;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 3;
-  display: none;
-  background-color: rgb(83, 90, 89);
-  text-align: center;
-}
 
 .main-section {
-  margin-top: 5rem;
+  margin-top: 11vh;
 }
 
 .swiper1 {
   width: 75%;
   height: 50vh;
-  background-color: #ebde95;
+
   padding: 0.5rem 1rem;
   border-radius: 10px;
 }
@@ -128,13 +47,19 @@ button {
   height: 20vh;
   padding: 0.5rem 1rem;
   border-radius: 10px;
-  background-color: #ebde95;
+
 }
 
 .food-slide-title {
   width: 75%;
   margin: 0 auto;
   display: flex;
+  
+}
+
+.food-slide-title h5 {
+  margin: 0;
+  line-height: 2rem;
 }
 
 .swiper-slide img {
@@ -189,7 +114,7 @@ button {
 
 
 .add-modal-card {
-  background-color: rgb(255, 240, 240);
+  background-color: rgb(252, 243, 243);
   border-radius: 10px;
   display: none;
 }
@@ -208,16 +133,18 @@ button {
 .like-list {
   display: none;
   position: fixed;
-  top: 100px;
+  top: 10rem;
   right: 20px;
   z-index: 2;
+  background-color: rgba(255,128,108, 0.6);
+  border-radius: 8px;
 }
 
 .container-of-like {
   position: fixed;
-  top: 80px;
+  top: 8rem;
   right: 20px;
-  background-color: #ff806c;
+  color: #ff806c;
   z-index: 2;
 }
 
@@ -241,7 +168,7 @@ button {
 }
 
 .blue {
-  color: blueviolet;
+  color: rgb(226, 43, 202);
   font-weight: bold;
 }
 

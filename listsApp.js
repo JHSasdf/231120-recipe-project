@@ -35,12 +35,15 @@ $(document).on("click", ".food-card" ,function() {
 })
 
 $(document).on('click', '.like-btn', function() {
-  if (card.dataset.mylike < 1) {
+  if (JSON.parse(window.localStorage.getItem('isLoggedin'))) {
+    if (card.dataset.mylike < 1) {
   card.dataset.numberoflikes = parseInt(card.dataset.numberoflikes) + 1;
   $('.likes span')[0].textContent = card.dataset.numberoflikes;
   $('.like-list').append(`<li><button class="find-card-btn"><span class="invisible">${card.dataset.index}</span> <span>${card.children[1].children[0].textContent}</span></button></li>`)
   card.dataset.mylike = parseInt(card.dataset.mylike) + 1;
   $($('.like-btn')[0].children[0]).addClass('blue');
+
+}
 }
 })
 
