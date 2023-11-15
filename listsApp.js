@@ -43,7 +43,6 @@ $(document).on('click', '.like-btn', function() {
   card.dataset.mylike = parseInt(card.dataset.mylike) + 1;
   $($('.like-btn')[0].children[0]).addClass('blue');
 
-  window.localStorage.setItem(card.children[1].children[0].textContent, JSON.stringify([card.dataset.index, card.children[1].children[0].textContent, card.dataset.numberoflikes, card.children[0].src, card.children[1].children[1].textContent, card.children[1].children[2].textContent]))
 }
 }
 })

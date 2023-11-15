@@ -1,11 +1,11 @@
 header .navigation {
     width: 100%;
     height: 10vh;
-    background-color: lightsalmon;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
@@ -124,6 +124,11 @@ header .searchBox .back {
 
     header .navigation .menu .myPageshort {
         display: block;
+    }
+
+    header .navigation .menu,
+    header .navigation {
+        position: fixed;
     }
 
     header .navigation .icon .myPagelong {

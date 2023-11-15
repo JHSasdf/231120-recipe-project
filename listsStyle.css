@@ -35,7 +35,7 @@ button {
 .swiper1 {
   width: 75%;
   height: 50vh;
-  background-color: #ebde95;
+
   padding: 0.5rem 1rem;
   border-radius: 10px;
 }
@@ -47,7 +47,7 @@ button {
   height: 20vh;
   padding: 0.5rem 1rem;
   border-radius: 10px;
-  background-color: #ebde95;
+
 }
 
 .food-slide-title {
