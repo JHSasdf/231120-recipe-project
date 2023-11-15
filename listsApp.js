@@ -53,7 +53,7 @@ $('.container-of-like').click(function() {
 
 $(document).on('click', '.find-card-btn', function() {
     for (const card of $('.food-card')) {
-      if (this.children[0].textContent === card.dataset.index) {
+      if (this.children[0].textContent === card.dataset.index ) {
         $('.curtain').addClass('visible');
         $('body').append(`
         <div class="card modal-card">
@@ -66,9 +66,37 @@ $(document).on('click', '.find-card-btn', function() {
             <p class="card-text" style="white-space: pre-wrap;">${card.children[1].children[2].textContent} </p>
           </div>
         </div>`)
+        $($('.like-btn')[0].children[0]).addClass('blue');
+        break;
       }
     }
-    $($('.like-btn')[0].children[0]).addClass('blue');
+  
+})
+
+$(document).on('click', '.search-btn', function() {
+  for (const card of $('.food-card')) {
+    if ($('.search-input').val() === card.children[1].children[0].textContent) {
+      $('.curtain').addClass('visible');
+      $('body').append(`
+      <div class="card modal-card">
+        <img src=${card.children[0].src} class="card-img-top" alt="image-of-food">  
+        <div class="card-body" style="display: block;">
+        <div class="likes"><div><button class="like-btn"><i class="bi bi-hand-thumbs-up"></i></button> <span>${card.dataset.numberoflikes}</span></div>
+           </div>
+          <h4 class="card-title">${card.children[1].children[0].textContent}</h4>
+          <p class="card-ingredient" style="white-space: pre-wrap;">${card.children[1].children[1].textContent}</p>
+          <p class="card-text" style="white-space: pre-wrap;">${card.children[1].children[2].textContent} </p>
+        </div>
+      </div>`)
+      $($('.like-btn')[0].children[0]).addClass('blue');
+      $('.search-input').val("")
+
+      return
+    }
+    
+  }
+  $('.search-input').val("")
+  alert('매칭하는 레시피가 없습니다.')
 })
 
 $('.curtain').click(function () {

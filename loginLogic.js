@@ -42,4 +42,12 @@ $(".login-button").click(function () {
   }
   window.localStorage.setItem("isLoggedin", true);
   cleanLoginInput()
+  $('#exampleModal').removeClass('show');
+  $('#exampleModal').css('display','none');
+  $('#exampleModal').attr('aria-hidden','true');
+  $('#exampleModal').removeAttr('role');
+  $('#exampleModal').removeAttr('arid-modal');
+  $('.modal-backdrop').remove();
+  $('body').removeClass('modal-open');
+  $('body').css('overflow', 'visible');
 });
