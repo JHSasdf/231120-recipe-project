@@ -165,7 +165,6 @@ ul,li{margin: 0;padding: 0;list-style: none;}
 .replyList li .moreBtns{position: absolute;top: 1rem;right: 0;}
 .replyList li .moreBtns button{color: var(--d-color);background-color: transparent;border-radius: 5px;}
 .replyList li .thumb{display: inline-block;width: 25px;height: 25px;border-radius: 50%;background-position: center;background-size: cover;border: 1px solid var(--d-line);}
-.replyList li.replyDep1{}
 .replyList li.replyDep2{margin-left: 2.4rem;margin-bottom: 0;padding-top: 0;border-top-width: 0;color: var(--d-color);}
 .replyList li.replyDep2 .moreBtns{top: 0;}
 .replyList li .thumb img{width:100%;}
