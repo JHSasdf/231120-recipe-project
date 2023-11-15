@@ -7,6 +7,7 @@
     --d-pointB:#FF735E;
     --d-hover:#ddd;
 }
+.tit{font-family: 'Do Hyeon';}
 a{color: inherit;text-decoration: none;}
 ul,li{margin: 0;padding: 0;list-style: none;}
 [onclick]{cursor: pointer;}
@@ -33,6 +34,11 @@ ul,li{margin: 0;padding: 0;list-style: none;}
     background-color: #E2574C;
     margin-left: calc(var(--bs-gutter-x) * .5);
     clip-path: polygon(0 0, 0% 100%, 100% 0);
+
+    filter: drop-shadow(2px 2px 2px #000);
+}
+.dh_imgs .bookmark:hover{
+    transform:scale(1.1);
 }
 .dh_imgs .bookmark:before{content:"";position: absolute;left: 10%;top: 10%;
     width: 50%;height: 58%;
