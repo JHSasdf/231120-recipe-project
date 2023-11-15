@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(246, 251, 255);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  background-color: rgb(246, 251, 255);
+  border-radius: 4px;
+  border: 1px solid rgba(56, 56, 56, 0.3);
+  padding: 0.5rem;
+  outline: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+
+.main-section {
+  margin-top: 11vh;
+}
+
+.swiper1 {
+  width: 75%;
+  height: 50vh;
+
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+
+.swiper2,
+.swiper3,
+.swiper4 {
+  width: 75%;
+  height: 20vh;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+
+}
+
+.food-slide-title {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  
+}
+
+.food-slide-title h5 {
+  margin: 0;
+  line-height: 2rem;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.food-card {
+  cursor: pointer;
+}
+
+.card-title {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+}
+
+.card-body {
+  display: none;
+}
+
+.card-ingredient {
+  margin: 2rem;
+}
+
+.modal-card,
+.add-modal-card {
+  position: fixed;
+  width: 60vw;
+  height: 90vh;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  
+}
+
+.likes {
+
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+.add-modal-card {
+  background-color: rgb(252, 243, 243);
+  border-radius: 10px;
+  display: none;
+}
+
+.swiper-slide .card img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-img-top {
+  height: 50%;
+  object-fit: cover;
+}
+
+.like-list {
+  display: none;
+  position: fixed;
+  top: 10rem;
+  right: 20px;
+  z-index: 2;
+  background-color: rgba(255,128,108, 0.6);
+  border-radius: 8px;
+}
+
+.container-of-like {
+  position: fixed;
+  top: 8rem;
+  right: 20px;
+  color: #ff806c;
+  z-index: 2;
+}
+
+.curtain {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(201, 201, 201, 0.7);
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
+}
+
+.blue {
+  color: rgb(226, 43, 202);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  #nav-var {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .swiper {
+    height: 30vh;
+  }
+
+  .modal-card {
+    width: 70vw;
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .swiper {
+    height: 20vh;
+  }
+
+  .modal-card {
+    width: 80vw;
+  }
+}
