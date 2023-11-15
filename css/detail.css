@@ -5,11 +5,12 @@
     --d-line:#d8d8d8;
     --d-pointA:#FF3D54;
     --d-pointB:#FF735E;
+    --d-hover:#ddd;
 }
 a{color: inherit;text-decoration: none;}
 ul,li{margin: 0;padding: 0;list-style: none;}
 [onclick]{cursor: pointer;}
-.container{color: var(--d-color);padding:50px 20px;border-top: 1px solid #ddd;}
+.container{min-width:280px;color: var(--d-color);padding:50px 20px;border-top: 1px solid #ddd;}
 .container .head{display: flex;align-items: center;font-size: 2rem;gap: 10px;}
 .container .head .tit{margin: 0;font-size: inherit;}
 .container .head em{color: var(--d-pointB);font-style: normal;}
@@ -20,9 +21,35 @@ ul,li{margin: 0;padding: 0;list-style: none;}
     background-color: rgba(0, 0, 0, .1);
 }
 
-/* 해더 */
+.dh_imgs{position: relative;}
+
+.dh_imgs .bi-star-fill{color:#ddd}
+.dh_imgs .bookmark{position: absolute;left: 0;top: 0;width: 10%;height: 10%;
+    background-repeat: no-repeat;
+    background-position: 20% 20%;
+    z-index: 2;
+    background-size: 50%;
+    /* background-image: url('../imgs/star-svgrepo-com.png'); */
+    background-color: #E2574C;
+    margin-left: calc(var(--bs-gutter-x) * .5);
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+}
+.dh_imgs .bookmark:before{content:"";position: absolute;left: 10%;top: 10%;
+    width: 50%;height: 58%;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+    background-image: url('../imgs/star-svgrepo-com.png');
+    transition: .8s;
+    transform-origin: 50% 50%;
+}
+.dh_imgs .bookmark:hover:before{
+    transform: rotate(360deg);
+}
+
+/* 본문 */
 .detailContent{text-align: center;}
-.detailContent .imgWrap{margin-bottom: 1rem;padding: 1rem;background-color: rgba(238,238,238,.17);border: 1px solid #eee;}
+.detailContent .imgWrap{margin-bottom: 1rem;padding: 1rem;}
 .detailContent img{width: 100%;max-width: 400px;}
 .detailHead .title{display: flex;justify-content: space-between;align-items: center;}
 .tit{color: var(--d-head);vertical-align: top;}
@@ -30,7 +57,7 @@ ul,li{margin: 0;padding: 0;list-style: none;}
 @media (min-width: 992px) {
     .ingredients{border-right: 1px solid var(--d-line);} 
 }
-.ingredients .banner{height: 150px;background-color: var(--d-note);}
+.ingredients .banner{display: inline-block;border: 1px solid var(--d-line);}
 .tit [class*="fa-"]{color: #000;}
 .tit em{display: block;font-size: 1rem;font-style: normal;color: var(--d-color);}
 .shares{display: flex;gap: 10px;}
@@ -116,8 +143,6 @@ ul,li{margin: 0;padding: 0;list-style: none;}
 }
 .featRecipeArrows button:hover{transform: scale(1.1);}
 .featRecipeArrows button:after{font-size: 1rem;}
-.featRecipeArrows .btnPrev{}
-.featRecipeArrows .btnNext{}
 
 /* 댓글 */
 .replyInput{display: flex;gap:10px;}
@@ -130,8 +155,19 @@ ul,li{margin: 0;padding: 0;list-style: none;}
     .replyInput button{width: 100%;padding:1rem 2rem}
 }
 
-.replyList li{position: relative;margin-bottom: 2rem;text-align: left;}
+.replyList{border-bottom: 1px solid var(--d-line);}
+.replyList li{position: relative;margin: 0;padding: 1rem 0;
+    text-align: left;
+    border-top: 1px solid var(--d-line);
+    color: var(--d-head);
+}
+.replyList li:last-child{margin-top: 0;}
+.replyList li .moreBtns{position: absolute;top: 1rem;right: 0;}
+.replyList li .moreBtns button{color: var(--d-color);background-color: transparent;border-radius: 5px;}
 .replyList li .thumb{display: inline-block;width: 25px;height: 25px;border-radius: 50%;background-position: center;background-size: cover;border: 1px solid var(--d-line);}
+.replyList li.replyDep1{}
+.replyList li.replyDep2{margin-left: 2.4rem;margin-bottom: 0;padding-top: 0;border-top-width: 0;color: var(--d-color);}
+.replyList li.replyDep2 .moreBtns{top: 0;}
 .replyList li .thumb img{width:100%;}
 .replyList li .userInfo{display: flex;gap: 10px;}
 .replyList li .userInfo .name{color: var(--d-head);}
@@ -155,13 +191,15 @@ ul,li{margin: 0;padding: 0;list-style: none;}
 
 
 /* 팝업 */
-.modal{background-color: rgba(0,0,0,.4);}
+.modal{min-width:280px;background-color: rgba(0,0,0,.4);}
 .modal img{max-width:100%;}
 
 .modal-dialog{max-width: 544px;}
+#ingredients .list li{position: relative;padding-left: 1rem;}
+#ingredients .list li:before{content:"";position: absolute;top: .5rem;left: 0;width: 0.5rem;height: 0.5rem;background-color: #000;border-radius: 50%;}
 /* 밥숟가락 계량법 */
 @media screen and (max-width:575px) {
-    .weightBtns{display: flex;flex-direction: column;gap:5px}
+    .weightBtns{display: grid;grid-template-columns:repeat(2,1fr); gap:5px}
 }
 @media screen and (min-width:576px) {
     .weightBtns{display: inline-flex;}
@@ -173,7 +211,7 @@ ul,li{margin: 0;padding: 0;list-style: none;}
 
 .clr:after {content:""; display:block; clear:both;}
 .weight_mask{position:fixed;top:0;left:0;right:0;bottom:0;background:url(../images/b_bg.png) repeat;z-index:100;display:none;}
-.weight_wrap{}
+
 .weight_wrap ul.clr{display: flex;flex-wrap: wrap;gap: 5px;}
 .weight_title{position:relative;background-color:#fc7405;text-align:center;font-size:24px;color:#fff;line-height:60px;}
 .weight_title .close{position:absolute;top:17px;right:30px;}
