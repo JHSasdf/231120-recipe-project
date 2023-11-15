@@ -27,7 +27,9 @@ button {
   border: none;
 }
 
-
+article {
+  margin-bottom: 3rem;
+}
 .main-section {
   margin-top: 11vh;
 }
@@ -54,12 +56,18 @@ button {
   width: 75%;
   margin: 0 auto;
   display: flex;
-  
+  justify-content: space-between;
+  padding: 1rem;
+  font-weight: bold;
 }
 
 .food-slide-title h5 {
+  font-weight: bold;
+}
+.food-slide-title h5 {
   margin: 0;
   line-height: 2rem;
+
 }
 
 .swiper-slide img {
@@ -101,18 +109,15 @@ button {
   height: 90vh;
   top: 50%;
   left: 50%;
-  z-index: 3;
+  z-index: 6;
   transform: translate(-50%, -50%);
   
 }
 
 .likes {
-
-
   width: 100%;
   display: flex;
   justify-content: space-between;
-
 }
 
 
@@ -135,7 +140,7 @@ button {
 
 .like-list {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 10rem;
   right: 20px;
   z-index: 2;
@@ -144,7 +149,7 @@ button {
 }
 
 .container-of-like {
-  position: fixed;
+  position: absolute;
   top: 8rem;
   right: 20px;
   color: #ff806c;
@@ -158,7 +163,7 @@ button {
   background-color: rgba(201, 201, 201, 0.7);
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 5;
   display: none;
 }
 
@@ -176,13 +181,6 @@ button {
 }
 
 @media screen and (max-width: 768px) {
-  #nav-var {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-  }
 
   .swiper {
     height: 30vh;
@@ -192,6 +190,15 @@ button {
     width: 70vw;
     overflow: scroll;
   }
+
+  .like-list,
+  .container-of-like {
+   
+    position: fixed;
+ 
+  }
+  
+
 }
 
 @media screen and (max-width: 576px) {

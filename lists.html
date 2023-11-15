@@ -68,8 +68,8 @@
       <div class="searchBox">
           <div class="back">back</div>
           <div class="searchWrap">
-              <input type="text" placeholder="궁금했던 레시피를 검색해보세요!">
-              <span>검색버튼</span>
+              <input type="text" class="search-input" placeholder="궁금했던 레시피를 검색해보세요!">
+              <button type="button" class="search-btn" >검색버튼</button>
           </div>
       </div>
 
@@ -95,7 +95,9 @@
                 </form>
             </div>
             <div class="modal-footer">
+              <form>
                 <button type="button" class="btn btn-primary login-button">Sign in</button>
+              </form>
             </div>
         </div>
     </div>
@@ -107,7 +109,9 @@
     <main>
       <section class="main-section">
         <article>
-          <h5 class="food-slide-title">추천 레시피</h5>
+          <div class="food-slide-title">
+            <h5 >추천 레시피</h5>
+          </div>
           <div class="swiper swiper1">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -115,7 +119,7 @@
               <div class="swiper-slide">
                 <div class="card food-card" data-mylike="0" data-index="0" data-numberoflikes="4300">
                   <img
-                    src="https://recipe1.ezmember.co.kr/cache/recipe/2023/11/13/3722a63446bacb3f1fa7fd01dfc226b61.jpg"
+                    src="https://cdn.pixabay.com/photo/2018/04/07/03/21/food-3297633_1280.jpg"
                     class="card-img-top"
                     alt="image-of-food"
                   />
@@ -137,7 +141,7 @@
                 <div class="swiper-slide">
                   <div class="card food-card" data-mylike="0" data-index="1"  data-numberoflikes="3124">
                     <img
-                      src="https://recipe1.ezmember.co.kr/cache/recipe/2016/09/08/84916e7b89655237a7521d2d6b10a1581.jpg"
+                      src="https://cdn.pixabay.com/photo/2019/09/05/01/08/food-4452839_1280.jpg"
                       class="card-img-top"
                       alt="image-of-food"
                     />
@@ -158,7 +162,7 @@
                 <div class="swiper-slide">
                   <div class="card food-card" data-mylike="0" data-index="2" data-numberoflikes="1985">
                     <img
-                      src="https://recipe1.ezmember.co.kr/cache/recipe/2015/07/30/e04f166dcf6ce27215eaccdd7c5e301a1.jpg"
+                      src="https://cdn.pixabay.com/photo/2020/01/21/03/11/korean-food-4781973_640.jpg"
                       class="card-img-top"
                       alt="image-of-food"
                     />
@@ -192,7 +196,7 @@
 
         <article>
           <div class="food-slide-title">
-          <h5 >한식</h5> <button type="button" class="button add-card-btn"  data-countryindex="1"><i class="bi bi-plus-circle"></i></button> </div>
+          <h5 >한식  </h5> <button type="button" class="button add-card-btn"  data-countryindex="1"><i class="bi bi-pencil-square"></i></button> </div>
           <div class="swiper swiper2">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper card-slide-1">
@@ -245,13 +249,13 @@
               <div class="swiper-slide">
                 <div class="card food-card" data-mylike="0" data-index="5" data-numberoflikes="315">
                   <img
-                    src="https://recipe1.ezmember.co.kr/cache/recipe/2016/02/16/d74c6731fce3dc72c5579b24083185f11.jpg"
+                    src="https://cdn.pixabay.com/photo/2017/09/10/14/23/toppokki-2735719_640.jpg"
                     class="card-img-top"
                     alt="image-of-food"
                   />
 
                   <div class="card-body">
-                    <h4 class="card-title">떡 베이컨 간장 조림</h4>
+                    <h4 class="card-title">떡볶이</h4>
                     <p class="card-ingredient">준비재료 : 베이컨, 대파, 떡, 간장, 참기름, 물엿, 기름</p>
                     <p class="card-text">1. 대파에 떡과 베이컨을 기름을 두르고 볶는다.
 2. 간장, 참기름 한스푼, 물엿 적당히 넣고 볶는다.
@@ -285,14 +289,14 @@
               <div class="swiper-slide">
                 <div class="card food-card" data-mylike="0" data-index="7" data-numberoflikes="342">
                   <img
-                    src="https://recipe1.ezmember.co.kr/cache/recipe/2022/07/31/d804978cda6e3c8b4e3a94a1c19696041.jpg"
+                    src="https://cdn.pixabay.com/photo/2017/02/19/21/02/food-2080896_640.jpg"
                     class="card-img-top"
                     alt="image-of-food"
                   />
 
                   <div class="card-body">
-                    <h4 class="card-title">스팸 감자조림</h4>
-                    <p class="card-ingredient">준비재료 : 감자 2개, 스팸 200g, 진간장 4스푼, 설탕 4스푼, 후추 조금, 올리고당 1스푼, 다진마늘 1스푼, 물 120ml</p>
+                    <h4 class="card-title">고기 감자조림</h4>
+                    <p class="card-ingredient">준비재료 : 감자 2개, 고기 200g, 진간장 4스푼, 설탕 4스푼, 후추 조금, 올리고당 1스푼, 다진마늘 1스푼, 물 120ml</p>
                     <p class="card-text">1. 감자는 깍뚝 썰어 2분 데친다.
 2. 스팸은 깍둑 썰어 팬에 노릇하게 구워준다.
 3. 삶은 감자,다진마늘1스푼을 넣어 살짝 볶는다.
@@ -318,7 +322,7 @@
 
         <article>
           <div class="food-slide-title">
-            <h5 >중식</h5> <button type="button" class="button add-card-btn"  data-countryindex="2"><i class="bi bi-plus-circle"></i></button> </div>
+            <h5 >양식  </h5> <button type="button" class="button add-card-btn"  data-countryindex="2"><i class="bi bi-pencil-square"></i></button> </div>
           <div class="swiper swiper2">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper card-slide-2">
@@ -445,7 +449,7 @@
         </article>
         <article>
           <div class="food-slide-title">
-            <h5 >일식</h5> <button class="button add-card-btn" type="button"  data-countryindex="3"><i class="bi bi-plus-circle"></i></button> </div>
+            <h5 >일식  </h5> <button class="button add-card-btn" type="button"  data-countryindex="3"><i class="bi bi-pencil-square"></i></button> </div>
           <div class="swiper swiper2">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper card-slide-3">
