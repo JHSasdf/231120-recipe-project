@@ -17,12 +17,15 @@ toggle.addEventListener('click', function () {
 })
 search.addEventListener('click', function () {
     searchBox.classList.toggle('active');
-    $('body').css('overflow', 'hidden');
+    if (window.innerWidth <= 768) {
+
+        $('body').toggleClass('overflow-hidden')
+    }
     // login.classList.toggle('inactive');
     // toggle.classList.toggle('inactive');
 })
 
 back.addEventListener('click', function () {
     searchBox.classList.remove('active');
-    $('body').css('overflow', 'visible');
+    $('body').removeClass('overflow-hidden')
 })
