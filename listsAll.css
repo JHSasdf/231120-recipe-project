@@ -1,5 +1,6 @@
 .main-section {
     margin-top: 8rem;
+    margin-bottom: 4rem;
 }
 
 .logo {
@@ -15,8 +16,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
-  row-gap: 2vh;
-  column-gap: 1.3vw;
+  row-gap: 4vh;
+  column-gap: 3vw;
 }
 
 .main-section .all-lists-grid-container .food-card {
@@ -58,13 +59,24 @@
     display: none;
 }
 
+@media screen and (min-width: 1025px){
+    header .navigation {
+        padding: 0 3rem ;
+    }
+    
+}
+
 @media screen and (max-width: 1024px) {
     
     .all-lists-grid-container {
       grid-template-columns: repeat(3, 1fr);
-    
     }
+    header .navigation {
+        padding: 0 1.7rem ;
     }
+
+    }
+   
 
 @media screen and (max-width: 768px) {
     
@@ -84,8 +96,14 @@
     
     .all-lists-grid-container {
       grid-template-columns: repeat(1, 1fr);
-      .logo {
-        width: 75px;
+      
     }
+
+    header .navigation {
+        padding: 0;
+    }
+
+    .navigation .icon div {
+        font-size: 0.8rem;
     }
     }
