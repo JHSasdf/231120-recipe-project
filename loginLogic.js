@@ -40,6 +40,8 @@ $(".login-button").click(function () {
     cleanLoginInput()
     return alert("아이디 혹은 비밀번호가 다릅니다.");
   }
+
+  // 로그인 시
   window.localStorage.setItem("isLoggedin", true);
   cleanLoginInput()
   $('#exampleModal').removeClass('show');
@@ -50,4 +52,5 @@ $(".login-button").click(function () {
   $('.modal-backdrop').remove();
   $('body').removeClass('modal-open');
   $('body').css('overflow', 'visible');
+  $('.login-text')[0].innerHTML = '<i class="bi bi-person-circle" style="font-size: 1.2rem;"></i>';
 });
