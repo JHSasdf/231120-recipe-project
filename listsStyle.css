@@ -1,7 +1,15 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(246, 251, 255);
+  background-color: white;
+  color: #64220B;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+input,
+textarea,
+button {
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 ul {
@@ -12,15 +20,20 @@ ul {
 
 a {
   text-decoration: none;
+  color: #64220B !important;
 }
 
-input {
+input,
+textarea {
   background-color: rgb(246, 251, 255);
   border-radius: 4px;
   border: 1px solid rgba(56, 56, 56, 0.3);
   padding: 0.5rem;
   outline: none;
+  resize: none;
 }
+
+
 
 button {
   background-color: transparent;
@@ -67,7 +80,6 @@ article {
 .food-slide-title h5 {
   margin: 0;
   line-height: 2rem;
-
 }
 
 .swiper-slide img {
@@ -114,6 +126,34 @@ article {
   
 }
 
+
+.add-modal-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  display: none;
+}
+
+.add-modal-card * {
+  display: block;
+  width: 100%;
+  color: #64220B;
+}
+
+.add-modal-card button {
+
+  color: #64220B;
+  padding: 0;
+}
+
+.add-modal-card label {
+  margin-bottom: 0.5rem;
+}
+
+.add-modal-card textarea {
+  height: 40%;
+}
+
 .likes {
   width: 100%;
   display: flex;
@@ -121,11 +161,7 @@ article {
 }
 
 
-.add-modal-card {
-  background-color: rgb(252, 243, 243);
-  border-radius: 10px;
-  display: none;
-}
+
 
 .swiper-slide .card img {
   object-fit: cover;
@@ -144,15 +180,13 @@ article {
   top: 10rem;
   right: 20px;
   z-index: 2;
-  background-color: rgba(255,128,108, 0.6);
+  background-color: rgba(148,67,15, 0.6);
   border-radius: 8px;
 }
 
 .container-of-like {
-  position: absolute;
-  top: 8rem;
-  right: 20px;
-  color: #ff806c;
+
+  color: rgb(148,67,15);
   z-index: 2;
 }
 
@@ -160,7 +194,7 @@ article {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(201, 201, 201, 0.7);
+  background-color: rgba(71, 71, 71, 0.7);
   top: 0;
   left: 0;
   z-index: 5;
@@ -188,11 +222,10 @@ article {
 
   .modal-card {
     width: 70vw;
-    overflow: scroll;
+    overflow: auto;
   }
 
-  .like-list,
-  .container-of-like {
+  .like-list{
    
     position: fixed;
  
