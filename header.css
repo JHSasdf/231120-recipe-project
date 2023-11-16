@@ -186,3 +186,9 @@ header .searchBox .back {
     }
 
 }
+
+@media screen and (max-width: 576px) {
+    #exampleModal .modal-dialog .modal-content {
+        width: 100vw;
+    }
+}
