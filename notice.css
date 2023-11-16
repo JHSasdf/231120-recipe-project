@@ -99,7 +99,7 @@ section button{
     justify-content: space-between;
     align-items: center;
     padding: 28.5px 0px;
-    /* border-bottom: 1px solid rgb(219, 219, 226); */
+    border-bottom: 1px solid rgb(219, 219, 226);
 }
 
 .serviceItems > p{
@@ -117,6 +117,9 @@ section button{
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    /* 모바일 버전에서 */
+    /* flex-direction: column;
+    align-items: flex-start; */
 }
 
 .serviceItemsStyle > p:first-child{
@@ -126,16 +129,55 @@ section button{
 }
 
 .serviceItemsStyle > p:last-child{
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: -0.4px;
     color: rgb( 87, 87, 87);
 }
 
 button{
-    background: transparent;
     color: #232323;
     border: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28.5px 0px;
 }
 button, input, select{
     vertical-align: middle;
+}
+
+.hiddenWr{
+    display: none;
+    width: 100%;
+    padding: 75.5px 0px;
+    border-bottom: 1px solid rgb(212, 219, 226);
+}
+
+.hiddenWr > p{
+    white-space: pre-line;
+    font-size: 18px;
+    line-height: 35px;
+    letter-spacing: -0.45;
+}
+
+.request {
+    width: 1194px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-top: 1px solid rgb(212, 219, 226);
+    text-align: right;
+}
+.request > p{
+    font-size:110%;
+    font-weight: 700;
+}
+.request div  {
+    color : grey;
+    font-size: 80%;
+}
+.request div a{
+    text-decoration: none;
+    color : grey
 }

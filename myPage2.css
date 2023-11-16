@@ -205,18 +205,3 @@ a:hover {
 
 
 
-
-
-
-/* 고객센터 */
-.request > p{
-    font-size:140%;
-    font-weight: 700;
-}
-.request div  {
-    color : grey
-}
-.request div a{
-    text-decoration: none;
-    color : grey
-}
