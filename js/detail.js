@@ -50,6 +50,53 @@ function onPrint() {
     window.print();
 }
 
+//뒤로가기 버튼
+let $btnBack = document.querySelector('.btnBack');
+$btnBack.addEventListener('click',function(e){
+    window.history.back();
+});
+
+//처음(상단)으로 가기 버튼
+/// We select the element we want to target
+var target = document.querySelector(".detailHead");
+
+var btnGroup = document.querySelector(".airBtns");
+var scrollToTopBtn = document.querySelector(".btnTop");
+var rootElement = document.documentElement;
+
+// Next we want to create a function that will be called when that element is intersected
+function callback(entries, observer) {
+  // The callback will return an array of entries, even if you are only observing a single item
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Show button
+      btnGroup.classList.remove("show");
+    } else {
+        // Hide button
+        btnGroup.classList.add("show");
+    }
+  });
+}
+
+function scrollToTop() {
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+scrollToTopBtn.addEventListener("click", scrollToTop);
+
+// Next we instantiate the observer with the function we created above. This takes an optional configuration
+// object that we will use in the other examples.
+let observer = new IntersectionObserver(callback);
+// Finally start observing the target element
+observer.observe(target);
+
+
+// let $btnTop = document.querySelector('.btnTop');
+// $btnTop.addEventListener('click',function(e){
+//     window.scrollTo({top:0,behavior:'smooth'})
+// });
 $(function(){
     $('.btnTWX').click(function(e){
         let linkUrl = window.location.href;
@@ -81,12 +128,8 @@ $(function(){
         e.preventDefault();
         let tit=$(this).prev().text().split("(")[0];//더미 타이틀 가저오기
         $('#ingredients .modal-title').text(tit);//더미 타이틀 삽입
-        $('#ingredients').addClass('d-block');
     });
     //팝업: 계량방법 
-    $('.btnWeight').click(function(e){
-        $('#weight').addClass('d-block');
-    });
     $('.weightBtns input').click(function(e){
         let idx = this.id.split('btnradio')[1]-1;
         console.log(idx);
@@ -94,8 +137,5 @@ $(function(){
         if($(this).is(":checked")){
             $('.weight_con').eq(idx).show();
         }
-    });
-    $('.btn-close').click(function(e){
-        $(this).closest('.modal').removeClass('d-block');
     });
 });
