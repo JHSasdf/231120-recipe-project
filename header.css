@@ -84,7 +84,9 @@ header .searchBox .back {
     display: none;
 }
 
-
+.overflow-hidden {
+    overflow: hidden;
+}
 
 .modal.fade .modal-dialog {
     width: 380px;
