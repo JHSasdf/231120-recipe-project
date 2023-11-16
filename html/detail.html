@@ -6,7 +6,7 @@
     <title>우아한 레시피</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- 페이스북 api -->
     <meta property="og:url"                content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
@@ -41,241 +41,387 @@
         crossorigin="anonymous"
     ></script>
 
-    <!-- slick css -->
-    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
-
-    <!-- slick js -->
-    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
-
     <!-- swiper css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- style -->
     <link rel="stylesheet" type="text/css" meida="print" href="../css/print.css" />
+    <link rel="stylesheet" type="text/css" href="../header.css" />
     <link rel="stylesheet" type="text/css" href="../css/detail.css" />
+    <script src="../header.js" defer></script>
     
 </head>
 <body>
-    <div class="container my-5 detailHead"><!-- 상단 -->
-        <div class="row">
-            <div class=" col-lg-5 dh_imgs"><!-- 좌측 : 이미지컷  -->
-                <a href="#" class="bookmark" aria-label="bookmark"></a>
-                <div class="swiper sliderWrap mainSlider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <iframe width="100%" height="500" src="https://www.youtube.com/embed/vNqTnXQaTvY?si=-4E2BfA7_p4bUNHt&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                        <div class="swiper-slide"><img src="../imgs/d_recipe_1.jpg" alt=""></div>
-                    </div>
-                    <div class="arrows">
-                        <button class="swiper-button-prev btnPrev" aria-label="previous"></button>
-                        <button class="swiper-button-next btnNext" aria-label="next"></button>
-                    </div>
-                </div><!-- //sliderWrap -->
-            </div><!-- //좌측 : 이미지컷  -->
-            <div class=" col-lg-7 mt-3 dh_smr"><!-- 우측 : 설명  -->
-                <div class="summary">
-                    <div class="title">
-                        <h2 class="tit">
-                            <em class="mb-2"><i class="fa-solid fa-award"></i> 주간 레시피 1위</em>
-                            배추 된장국
-                        </h2>
-
-                        <ul class="shares">
-                            <li><a href="#" class="btnFB"><i class="fa-brands fa-facebook"></i></a></li>
-                            <li><a href="#" class="btnTWX"><i class="fa-brands fa-x-twitter"></i></a></li>
-                            <li><a href="#" class="btnCopy"><i class="fa-solid fa-link"></i></a></li>
-                        </ul>
-                    </div>
-                    <ul class="recipe_info my-3 pt-3">
-                        <li>
-                            <span>난이도 <i class="lv1" aria-label="1"></i></span>
-                            <span>소요시간 20분</span>
-                        </li>
-                        <li>
-                            <span><i class="fa-solid fa-eye" aria-label="조회수"></i> 23677</span>
-                            <span><i class="fa-solid fa-heart"></i aria-label="좋아요"> 27</span>
-                            <span><i class="fa-solid fa-share-from-square" aria-label="공유 횟수"></i> 68</span>
-                            <span onclick="onPrint();"><i class="fa-solid fa-print" aria-label="프린트"></i></span>
-                        </li>
-                    </ul>
-                    <p class="smr my-5 my-lg-3">
-                        수능도시락의 포인트는 늘 먹던 대로<br>
-                        편안하게 싸주는 거라죠.<br><br>
-                        그렇기에 빠질 수 없는 것이 바로 된장국!<br>
-                        구수한 된장국에 배추를 넣어 부드럽게 끓여냈어요.<br><br>
-                        여기에 소화를 돕는 오이지까지 곁들이니<br>
-                        속 편안한 점심이 되겠네요.
-                    </p>
+    <header>
+        <nav class="navigation">
+            <div class="logoImg">로고</div>
+            <ul class="menu">
+                <li>메뉴1</li>
+                <li>메뉴2</li>
+                <li>메뉴3</li>
+                <li>메뉴4</li>
+                <li class="myPageshort">마이페이지</li>
+            </ul>
+            <div class="icon">
+                <div class="search">검색
                 </div>
-            </div><!-- //우측 : 설명  -->
-        </div><!-- row -->
-    </div><!-- //상단 -->
-    <div class="container my-5 detailBody"><!-- 본문 -->
-        <div class="row">
-            <div class="col-lg-5 ingredients"><!-- 본문 : 좌측 -->
-                <div class="sticky-top">
-                    <div>
-                        <h2 class="tit">
-                            <span>재료 </span>
-                            <button class="btn btn-outline-info btn-sm btnWeight">계량 방법</button>
-                        </h2>
-                        <p>
-                            <span>배추잎(4장)</span> <a href="#"><i class="bi bi-info-circle"></i></a><br>
-                            <span>대파(5cm)</span><a href="#"><i class="bi bi-info-circle"></i></a><br>
-                            <span>국물용 멸치(10마리)</span> <a href="#"><i class="bi bi-info-circle"></i></a><br>
-                            <span>다시마(1장=5×5cm)</span> <a href="#"><i class="bi bi-info-circle"></i></a><br>
-                            <span>된장(1)</span> <a href="#"><i class="bi bi-info-circle"></i></a><br>
-                            <span>국간장(0.5)</span> <a href="#"><i class="bi bi-info-circle"></i></a><br>
-                            <span>다진 마늘(0.3)</span> <a href="#"><i class="bi bi-info-circle"></i></a>
-                        </p>
-                    </div>
-                    <div class="feat my-5">
-                        <h2 class="tit">
-                            <span>관련 레시피</span>
-                        </h2>
+                <div class="login" data-bs-toggle="modal" data-bs-target="#exampleModal">로그인
+                </div>
+                <div class="more">더보기</div>
+                <div class="myPagelong">마이페이지</div>
+            </div>
+        </nav>
+        <div class="searchBox">
+            <div class="back">back</div>
+            <div class="searchWrap">
+                <input type="text" class="search-input" placeholder="궁금했던 레시피를 검색해보세요!">
+                <button type="button" class="search-btn" >검색버튼</button>
+            </div>
+        </div>
 
-                        <div class="featRecipeArrows">
+        <!-- bootstrap Modal simple ver.-->
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Sign in</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="id" class="col-form-label">아이디</label>
+                                <input type="text" class="form-control login-id" id="id">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="col-form-label">비밀번호</label>
+                                <input type="text" class="form-control login-pw" id="password">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <form>
+                        <button type="button" class="btn btn-primary login-button">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="container detailHead"><!-- 상단 -->
+            <div class="row">
+                <div class=" col-lg-5 dh_imgs"><!-- 좌측 : 이미지컷  -->
+                    <a href="#" class="bookmark" aria-label="bookmark"></a>
+                    <div class="swiper sliderWrap mainSlider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <iframe width="100%" height="500" src="https://www.youtube.com/embed/vNqTnXQaTvY?si=-4E2BfA7_p4bUNHt&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div class="swiper-slide"><img src="../imgs/d_recipe_1.jpg" alt=""></div>
+                        </div>
+                        <div class="arrows">
                             <button class="swiper-button-prev btnPrev" aria-label="previous"></button>
                             <button class="swiper-button-next btnNext" aria-label="next"></button>
-                        </div><!-- //arrows -->
-                        <div class="swiper sliderWrap featRecipe">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="#none">
-                                        <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
-                                        <p>1 레시피</p>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#none">
-                                        <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
-                                        <p>2 레시피</p>
-                                    </a>
-
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#none">
-                                        <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
-                                        <p>3 레시피</p>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#none">
-                                        <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
-                                        <p>4 레시피</p>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#none">
-                                        <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
-                                        <p>5 레시피</p>
-                                    </a>
-                                </div>
-                            </div><!-- //slider -->
                         </div>
-                    </div>
-                    <div>
-                        <a href="https://m.auction.co.kr/e/bigs/tab4?itemno=c268102368&appGatePopupB=true&BCODE=BN00258330&gate_id=b5721202-bea5-4e6d-893c-8596e66cdd48%3FP_ID%3D855&HCODE=Y&URL=&PARTNERSHIP=eyAiUEFSVE5FUlNISVAlNUZJRCI6Ijg1NSIsIlBBUlRORVJTSElQJTVGQkNPREUiOiJCTjAwMjU4MzMwIiwiUEFSVE5FUlNISVAlNUZIQ09ERSI6IlkiLCJjaGFubmVyX2NndWlkIjoiMTE0MDc0NTk4NDEwODgwMDQ0ODEwMDAwMDAiLCJjaGFubmVyX3BndWlkIjoiMjE2OTM4NDY2NzcwOTgwMDE0NzEwMTAwMDAifQ&appgate_guid=0140523a-397e-43fd-901c-88521b419e2c" target="_blank" class="banner"><img src="https://ssl.pstatic.net/melona/libs/1471/1471993/1fb4b9d2ee6bd24494f1_20231114160855327.png" alt="[광고]K2 아이더  인기 신발/잡화 오늘 단 하루 ~76% OFF!" style="display: block;width: 100%;border:none;"></a>
-                    </div>
-                </div><!-- //sticky-top -->
-            </div><!-- //본문 : 좌측 -->
-            <div class="col"><!-- 본문 : 우측 -->
-                <div class="detailContent mt-5 mt-lg-0">
-                    <div class="imgWrap">
-                        <img src="https://2bob.co.kr/data/recipe/20170521021709-BDJC5.jpg" alt=""></div>
-                        1
-                        냄비에 물(3컵)과 육수 재료를 넣고<br>
-                        중간 불에서 끓어오르면 다시마를 건진 뒤<br>
-                        중약 불로 줄여 10분 정도 더 끓여<br>
-                        멸치를 건지고<br><br>
-            
-                        <div class="imgWrap"><img src="https://2bob.co.kr/data/recipe/20170521021711-TEB9C.jpg" alt=""></div>
-                        2
-                        배추는 먹기 좋은 크기로 칼을 눕혀<br>
-                        저며 썰고, 대파는 어슷 썰고<br><br>
-            
-                        <div class="imgWrap"><img src="https://2bob.co.kr/data/recipe/20170521021713-HU1W9.jpg" alt=""></div>
-                        3
-                        육수에 된장을 푼 뒤 배추를 넣고<br>
-                        중간 불로 끓이다가 숨이 죽기 시작하면<br>
-                        국간장과 다진 마늘, 대파를 넣어<br>
-                        조금 더 끓여 마무리.<br><br>
-            
-                        ❗️tip
-                        취향에 따라 두부나 버섯을 더해도 좋아요.
-                </div>
-            </div><!-- //본문 : 우측 -->
-        </div><!-- row -->
-    </div><!-- //본문 -->
-    
-    <div class="container detailFoot my-5"><!-- 댓글 -->
-        <div class="head">
-            <h2 class="tit">레시피 댓글</h2> <em>3</em>
-        </div>
-        <div class="body ">
-            <div class="replyInput">
-                <textarea name="" id="" cols="30" rows="10" placeholder="함께 이야기 해주세요"></textarea>
-                <button>등록</button>
-            </div>
-            <ul class="replyList mt-5">
-                <li class="replyDep1">
-                    <div class="userInfo">
-                        <span class="thumb me-1" style="background-image: url('../imgs/noimage.png')"></span>
-                        <span class="name">홍길동</span>
-                        <span class="date">2023-11-13</span>
-                    </div>
-                    <div class="comment mt-2 ps-2">
-                        좋아요! 제 입맛에 너무 잘 맞네요~!!
-                    </div>
-                    <div class="moreBtns">
-                        <button class="btnModify" aria-label="수정"><i class="bi bi-pencil"></i></button>
-                        <button class="btnDelete" aria-label="삭제"><i class="bi bi-trash"></i></button>
-                    </div>
-                </li>
-                <li class="replyDep2">
-                    <div class="userInfo">
-                        <span class="thumb me-1" style="background-image: url('../imgs/noimage.png')"></span>
-                        <span class="name">홍길순</span>
-                        <span class="date">2023-11-13</span>
-                    </div>
-                    <div class="comment mt-2 ps-2">
-                        오!!! 맛있다니 저도 감동입니닷!! 😍
-                    </div>
-                    <div class="moreBtns">
-                        <button class="btnModify" aria-label="수정"><i class="bi bi-pencil"></i></button>
-                        <button class="btnDelete" aria-label="삭제"><i class="bi bi-trash"></i></button>
-                    </div>
-                </li>
-                <li class="replyDep2">
-                    <div class="userInfo">
-                        <span class="thumb me-1" style="background-image: url('../imgs/noimage.png')"></span>
-                        <span class="name">홍길순</span>
-                        <span class="date">2023-11-13</span>
-                    </div>
-                    <div class="comment mt-2 ps-2">
-                        좋아요! 제 입맛에 너무 잘 맞네요~!!
-                    </div>
-                    <div class="moreBtns">
-                        <button class="btnModify" aria-label="수정"><i class="bi bi-pencil"></i></button>
-                        <button class="btnDelete" aria-label="삭제"><i class="bi bi-trash"></i></button>
-                    </div>
-                </li>
-                <li class="replyDep1">
-                    <div class="userInfo">
-                        <span class="thumb me-1" style="background-image: url('../imgs/noimage.png')"></span>
-                        <span class="name">홍길동</span>
-                        <span class="date">2023-11-13</span>
-                    </div>
-                    <div class="comment mt-2 ps-2">
-                        좋아요! 제 입맛에 너무 잘 맞네요~!!
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div><!-- //댓글 -->
+                    </div><!-- //sliderWrap -->
+                </div><!-- //좌측 : 이미지컷  -->
+                <div class=" col-lg-7 mt-3 dh_smr"><!-- 우측 : 설명  -->
+                    <div class="summary">
+                        <div class="title">
+                            <h2 class="tit">
+                                <em class="mb-2"><i class="fa-solid fa-award"></i> 주간 레시피 1위</em>
+                                배추 된장국
+                            </h2>
 
-    <div id="ingredients" class="modal"><!-- 팝업 : 재료 -->
+                            <ul class="shares">
+                                <li><a href="#" class="btnFB"><i class="fa-brands fa-facebook"></i></a></li>
+                                <li><a href="#" class="btnTWX"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                <li><a href="#" class="btnCopy"><i class="fa-solid fa-link"></i></a></li>
+                                <li><a href="#" onclick="onPrint();"><i class="fa-solid fa-print" aria-label="프린트"></i></a></li>
+                            </ul>
+                        </div>
+                        <ul class="recipe_info my-3 pt-3">
+                            <li>
+                                <span>난이도 &nbsp;
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </span>
+                                <span>소요시간 20분</span>
+                            </li>
+                            <li>
+                                <span><i class="fa-solid fa-eye" aria-label="조회수"></i> 23677</span>
+                                <span><i class="fa-solid fa-heart"></i aria-label="좋아요"> <span>27</span></span>
+                                <!-- <span><i class="fa-solid fa-share-from-square" aria-label="공유 횟수"></i> 68</span> -->
+                            </li>
+                        </ul>
+                        <p class="smr my-5 my-lg-3">
+                            수능도시락의 포인트는 늘 먹던 대로<br>
+                            편안하게 싸주는 거라죠.<br><br>
+                            그렇기에 빠질 수 없는 것이 바로 된장국!<br>
+                            구수한 된장국에 배추를 넣어 부드럽게 끓여냈어요.<br><br>
+                            여기에 소화를 돕는 오이지까지 곁들이니<br>
+                            속 편안한 점심이 되겠네요.
+                        </p>
+                    </div>
+                </div><!-- //우측 : 설명  -->
+            </div><!-- row -->
+        </div><!-- //상단 -->
+        <div class="container my-5 detailBody"><!-- 본문 -->
+            <div class="row">
+                <div class="col-lg-5 ingredients"><!-- 본문 : 좌측 -->
+                    <div class="sticky-top">
+                        <div>
+                            <h2 class="tit">
+                                <span>재료 </span>
+                                <button class="btn btn-outline-info btn-sm btnWeight" data-bs-toggle="modal" data-bs-target="#weight">계량 방법</button>
+                            </h2>
+                            <p>
+                                <span>배추잎(4장)</span> <a href="#" data-bs-toggle="modal" data-bs-target="#ingredients"><i class="bi bi-info-circle"></i></a><br>
+                                <span>대파(5cm)</span><a href="#" data-bs-toggle="modal" data-bs-target="#ingredients"><i class="bi bi-info-circle"></i></a><br>
+                                <span>국물용 멸치(10마리)</span> <a href="#" data-bs-toggle="modal" data-bs-target="#ingredients"><i class="bi bi-info-circle"></i></a><br>
+                                <span>다시마(1장=5×5cm)</span> <a href="#" data-bs-toggle="modal" data-bs-target="#ingredients"><i class="bi bi-info-circle"></i></a><br>
+                                <span>된장(1)</span> <a href="#" data-bs-toggle="modal" data-bs-target="#ingredients"><i class="bi bi-info-circle"></i></a><br>
+                                <span>국간장(0.5)</span> <a href="#" data-bs-toggle="modal" data-bs-target="#ingredients"><i class="bi bi-info-circle"></i></a><br>
+                                <span>다진 마늘(0.3)</span> <a href="#" data-bs-toggle="modal" data-bs-target="#ingredients"><i class="bi bi-info-circle"></i></a>
+                            </p>
+                        </div>
+                        <div class="feat my-5">
+                            <h2 class="tit">
+                                <span>관련 레시피</span>
+                            </h2>
+
+                            <div class="featRecipeArrows">
+                                <button class="swiper-button-prev btnPrev" aria-label="previous"></button>
+                                <button class="swiper-button-next btnNext" aria-label="next"></button>
+                            </div><!-- //arrows -->
+                            <div class="swiper sliderWrap featRecipe">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#none">
+                                            <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
+                                            <p>1 레시피</p>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#none">
+                                            <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
+                                            <p>2 레시피</p>
+                                        </a>
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#none">
+                                            <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
+                                            <p>3 레시피</p>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#none">
+                                            <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
+                                            <p>4 레시피</p>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#none">
+                                            <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
+                                            <p>5 레시피</p>
+                                        </a>
+                                    </div>
+                                </div><!-- //slider -->
+                            </div>
+                        </div>
+                        <div>
+                            <a href="https://m.auction.co.kr/e/bigs/tab4?itemno=c268102368&appGatePopupB=true&BCODE=BN00258330&gate_id=b5721202-bea5-4e6d-893c-8596e66cdd48%3FP_ID%3D855&HCODE=Y&URL=&PARTNERSHIP=eyAiUEFSVE5FUlNISVAlNUZJRCI6Ijg1NSIsIlBBUlRORVJTSElQJTVGQkNPREUiOiJCTjAwMjU4MzMwIiwiUEFSVE5FUlNISVAlNUZIQ09ERSI6IlkiLCJjaGFubmVyX2NndWlkIjoiMTE0MDc0NTk4NDEwODgwMDQ0ODEwMDAwMDAiLCJjaGFubmVyX3BndWlkIjoiMjE2OTM4NDY2NzcwOTgwMDE0NzEwMTAwMDAifQ&appgate_guid=0140523a-397e-43fd-901c-88521b419e2c" target="_blank" class="banner"><img src="https://ssl.pstatic.net/melona/libs/1471/1471993/1fb4b9d2ee6bd24494f1_20231114160855327.png" alt="[광고]K2 아이더  인기 신발/잡화 오늘 단 하루 ~76% OFF!" style="display: block;width: 100%;border:none;"></a>
+                        </div>
+                    </div><!-- //sticky-top -->
+                </div><!-- //본문 : 좌측 -->
+                <div class="col"><!-- 본문 : 우측 -->
+                    <div class="detailContent mt-5 mt-lg-0">
+                        <div class="imgWrap">
+                            <img src="https://2bob.co.kr/data/recipe/20170521021709-BDJC5.jpg" alt=""></div>
+                            1
+                            냄비에 물(3컵)과 육수 재료를 넣고<br>
+                            중간 불에서 끓어오르면 다시마를 건진 뒤<br>
+                            중약 불로 줄여 10분 정도 더 끓여<br>
+                            멸치를 건지고<br><br>
+                
+                            <div class="imgWrap"><img src="https://2bob.co.kr/data/recipe/20170521021711-TEB9C.jpg" alt=""></div>
+                            2
+                            배추는 먹기 좋은 크기로 칼을 눕혀<br>
+                            저며 썰고, 대파는 어슷 썰고<br><br>
+                
+                            <div class="imgWrap"><img src="https://2bob.co.kr/data/recipe/20170521021713-HU1W9.jpg" alt=""></div>
+                            3
+                            육수에 된장을 푼 뒤 배추를 넣고<br>
+                            중간 불로 끓이다가 숨이 죽기 시작하면<br>
+                            국간장과 다진 마늘, 대파를 넣어<br>
+                            조금 더 끓여 마무리.<br><br>
+                
+                            ❗️tip
+                            취향에 따라 두부나 버섯을 더해도 좋아요.
+                    </div>
+                </div><!-- //본문 : 우측 -->
+            </div><!-- row -->
+        </div><!-- //본문 -->
+        
+        <div class="container detailFoot my-5"><!-- 댓글 -->
+            <div class="head">
+                <h2 class="tit">레시피 댓글</h2> <em>3</em>
+            </div>
+            <div class="body ">
+                <div class="replyInput">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="함께 이야기 해주세요"></textarea>
+                    <button>등록</button>
+                </div>
+                <ul class="replyList mt-5">
+                    <li class="replyDep1">
+                        <div class="userInfo">
+                            <span class="thumb me-1" style="background-image: url('../imgs/noimage.png')"></span>
+                            <span class="name">홍길동</span>
+                            <span class="date">2023-11-13</span>
+                        </div>
+                        <div class="comment mt-2 ps-2">
+                            좋아요! 제 입맛에 너무 잘 맞네요~!!
+                        </div>
+                        <div class="moreBtns">
+                            <button class="btnModify" aria-label="수정"><i class="bi bi-pencil"></i></button>
+                            <button class="btnDelete" aria-label="삭제"><i class="bi bi-trash"></i></button>
+                        </div>
+                    </li>
+                    <li class="replyDep2">
+                        <div class="userInfo">
+                            <span class="thumb me-1" style="background-image: url('../imgs/noimage.png')"></span>
+                            <span class="name">홍길순</span>
+                            <span class="date">2023-11-13</span>
+                        </div>
+                        <div class="comment mt-2 ps-2">
+                            오!!! 맛있다니 저도 감동입니닷!! 😍
+                        </div>
+                        <div class="moreBtns">
+                            <button class="btnModify" aria-label="수정"><i class="bi bi-pencil"></i></button>
+                            <button class="btnDelete" aria-label="삭제"><i class="bi bi-trash"></i></button>
+                        </div>
+                    </li>
+                    <li class="replyDep2">
+                        <div class="userInfo">
+                            <span class="thumb me-1" style="background-image: url('../imgs/noimage.png')"></span>
+                            <span class="name">홍길순</span>
+                            <span class="date">2023-11-13</span>
+                        </div>
+                        <div class="comment mt-2 ps-2">
+                            좋아요! 제 입맛에 너무 잘 맞네요~!!
+                        </div>
+                        <div class="moreBtns">
+                            <button class="btnModify" aria-label="수정"><i class="bi bi-pencil"></i></button>
+                            <button class="btnDelete" aria-label="삭제"><i class="bi bi-trash"></i></button>
+                        </div>
+                    </li>
+                    <li class="replyDep1">
+                        <div class="userInfo">
+                            <span class="thumb me-1" style="background-image: url('../imgs/noimage.png')"></span>
+                            <span class="name">홍길동</span>
+                            <span class="date">2023-11-13</span>
+                        </div>
+                        <div class="comment mt-2 ps-2">
+                            좋아요! 제 입맛에 너무 잘 맞네요~!!
+                        </div>
+                    </li>
+                    <li class="replyDep1">
+                        <div class="userInfo">
+                            <span class="thumb me-1" style="background-image: url('../imgs/noimage.png')"></span>
+                            <span class="name">홍길동</span>
+                            <span class="date">2023-11-13</span>
+                        </div>
+                        <div class="comment mt-2 ps-2">
+                            좋아요! 제 입맛에 너무 잘 맞네요~!!
+                        </div>
+                    </li>
+                    <li class="replyDep1">
+                        <div class="userInfo">
+                            <span class="thumb me-1" style="background-image: url('../imgs/noimage.png')"></span>
+                            <span class="name">홍길동</span>
+                            <span class="date">2023-11-13</span>
+                        </div>
+                        <div class="comment mt-2 ps-2">
+                            좋아요! 제 입맛에 너무 잘 맞네요~!!
+                        </div>
+                    </li>
+                    <li class="replyDep1">
+                        <div class="userInfo">
+                            <span class="thumb me-1" style="background-image: url('../imgs/noimage.png')"></span>
+                            <span class="name">홍길동</span>
+                            <span class="date">2023-11-13</span>
+                        </div>
+                        <div class="comment mt-2 ps-2">
+                            좋아요! 제 입맛에 너무 잘 맞네요~!!
+                        </div>
+                    </li>
+                    <li class="replyDep1">
+                        <div class="userInfo">
+                            <span class="thumb me-1" style="background-image: url('../imgs/noimage.png')"></span>
+                            <span class="name">홍길동</span>
+                            <span class="date">2023-11-13</span>
+                        </div>
+                        <div class="comment mt-2 ps-2">
+                            좋아요! 제 입맛에 너무 잘 맞네요~!!
+                        </div>
+                    </li>
+                    <li class="replyDep1">
+                        <div class="userInfo">
+                            <span class="thumb me-1" style="background-image: url('../imgs/noimage.png')"></span>
+                            <span class="name">홍길동</span>
+                            <span class="date">2023-11-13</span>
+                        </div>
+                        <div class="comment mt-2 ps-2">
+                            좋아요! 제 입맛에 너무 잘 맞네요~!!
+                        </div>
+                    </li>
+                    <li class="replyDep1">
+                        <div class="userInfo">
+                            <span class="thumb me-1" style="background-image: url('../imgs/noimage.png')"></span>
+                            <span class="name">홍길동</span>
+                            <span class="date">2023-11-13</span>
+                        </div>
+                        <div class="comment mt-2 ps-2">
+                            좋아요! 제 입맛에 너무 잘 맞네요~!!
+                        </div>
+                    </li>
+                    <li class="replyDep1">
+                        <div class="userInfo">
+                            <span class="thumb me-1" style="background-image: url('../imgs/noimage.png')"></span>
+                            <span class="name">홍길동</span>
+                            <span class="date">2023-11-13</span>
+                        </div>
+                        <div class="comment mt-2 ps-2">
+                            좋아요! 제 입맛에 너무 잘 맞네요~!!
+                        </div>
+                    </li>
+                    <li class="replyDep1">
+                        <div class="userInfo">
+                            <span class="thumb me-1" style="background-image: url('../imgs/noimage.png')"></span>
+                            <span class="name">홍길동</span>
+                            <span class="date">2023-11-13</span>
+                        </div>
+                        <div class="comment mt-2 ps-2">
+                            좋아요! 제 입맛에 너무 잘 맞네요~!!
+                        </div>
+                    </li>
+                </ul>
+                <button class="replyMoreBtn my-3">댓글 더보기 <i class="bi bi-plus"></i></button>
+            </div>
+        </div><!-- //댓글 -->
+    </main>
+    <div class="airBtns">
+        <button class="btnBack" aria-label="뒤로가기"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="btnTop" aria-label="상단으로가기"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+
+    <div id="ingredients" class="modal fade"><!-- 팝업 : 재료 -->
         <div class="modal-dialog" role="document">
             <div class="modal-content rounded-4 shadow">
                 <div class="modal-header pt-4 px-4 border-bottom-0">
@@ -342,7 +488,7 @@
     </div><!-- // 팝업 : 재료 -->
 
     <!-- 팝업 : 계량 -->
-    <div id="weight" class="modal">
+    <div id="weight" class="modal fade">
         <div class="modal-dialog" role="document">
             <div class="modal-content rounded-4 shadow">
                 <div class="modal-header pt-4 px-4 border-bottom-0">
