@@ -3,11 +3,11 @@ body{
 }
 
 .noBanner{
-    width: 100%;
+    width: 100vw;
     height: 24vh;
     background-image: url(./noticeBanner3.jpg);
     /* background-size: cover; */
-    background-size: 100% 700px;
+    background-size: 100vw 700px;
     background-repeat: no-repeat;
     background-position: 0px -350px;
     align-items: center;
@@ -71,7 +71,7 @@ section{
     width: 1194px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.5rem;
+    font-size: 18px;
     display: block;
 }
 section * {
@@ -83,6 +83,7 @@ section button{
 }
 
 .sectionHead{
+    /* display: flex; */
     position: relative;
     padding-bottom: 24.5px;
     border-bottom: 1px solid rgb(219, 219, 226);
@@ -91,6 +92,15 @@ section button{
 .sectionHead > h2{
     font-size: 24px;
     letter-spacing: -0.6px;
+}
+.sectionHead button {
+    display: block;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1100px;
+    margin-top: -30px;
 }
 
 .serviceItems{
@@ -154,30 +164,98 @@ button, input, select{
     border-bottom: 1px solid rgb(212, 219, 226);
 }
 
-.hiddenWr > p{
+.hiddenF > p{
     white-space: pre-line;
     font-size: 18px;
     line-height: 35px;
     letter-spacing: -0.45;
 }
 
-.request {
-    width: 1194px;
-    margin-left: auto;
-    margin-right: auto;
+.nothing{
+    height: 100px;
+}
+
+label{
     display: block;
-    border-top: 1px solid rgb(212, 219, 226);
-    text-align: right;
+    margin-top: 20px;
 }
-.request > p{
-    font-size:110%;
-    font-weight: 700;
+
+form{
+    margin: 0 auto;
+    width: 500px;
 }
-.request div  {
-    color : grey;
-    font-size: 80%;
+
+input, textarea{
+    width: 439px;
+    /* height: 600px; */
+    background-color: #efefef;
+    border-radius: 6px;
+    border: 1px solid #dedede;
+    padding: 10px;
+    margin-top: 3px;
+    font-size: 0.9rem;
+    color: #3a3a3a;
 }
-.request div a{
-    text-decoration: none;
-    color : grey
+
+input:focus, textarea:focus{
+    border: 1px solid #97d6eb;
+}
+
+#submit, #cancel{
+    width: 127px;
+    height: 48px;
+    text-align: center;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#submit:hover, #cancel:hover{
+    color: #fff;
+    background-color: rgba(81, 79, 79, 0.716);
+    opacity: 0.9;
+}
+
+.popup{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(94, 93, 93, 0.9);
+    opacity: 0;
+    visibility: hidden; 
+    transform: scale(1.1); 
+    transition: visibility 0s linear 0s, opacity 0.25s, transform 0s; 
+}
+
+.popup-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 2rem 2rem;
+    background-color: white;     
+    width: 500px;
+    height: 450px;
+    border-radius: 0.5rem;
+}
+/* 
+.show-popup{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; 
+} */
+
+#all{
+    margin-top: 100px;
+}
+
+/* 구글 폰트 */
+*{
+    font-family: 'Gugi', sans-serif;
+    font-family: 'Nanum Brush Script', cursive;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #64220B;
 }
