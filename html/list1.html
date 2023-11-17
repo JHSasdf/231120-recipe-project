@@ -509,8 +509,9 @@
     </main>
     <div class="curtain"></div>
     <div class="add-modal-card">
-      <label for="modal-img">이미지 주소</label>
-      <input type="text" id="modal-img">
+      <label for="modal-img">이미지 첨부</label>
+      <!-- <input type="text" id="modal-img"> -->
+      <input type="file" accept="image/*" id="inputImg" onchange="previewFile()">
       <br>
       <label for="modal-name">메뉴 이름</label>
       <input type="text" id="modal-name">

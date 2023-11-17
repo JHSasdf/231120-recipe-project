@@ -1,7 +1,7 @@
 let slideIndex;
 let card;
 let index = 18;
-
+let imgUrl;
 
 const url = new URL(location); // URLSearchParams 객체
 const urlParams = url.searchParams; // URLSearchParams.get()
@@ -123,24 +123,38 @@ function searchInputVisible() {
   $('.search-input').toggleClass('visible')
 }
 
+function previewFile() {
+  let file = document.getElementById('inputImg').files[0];
+  let reader = new FileReader();
+
+  if (file) {
+      reader.readAsDataURL(file);
+
+}
+
+  reader.onload = function () {
+      imgUrl = reader.result;  
+  };
+}
+
 $(document).on('click', '.add-card-btn', function() {
   $('.add-modal-card').addClass('visible')
   $('.curtain').addClass('visible');
   slideIndex = this.dataset.countryindex;
 
   $(document).on('click', '.confirm-add-card-btn', function() {
-    if ($('#modal-img').val().length > 0 && $('#modal-name').val().length > 0 &&  $('#modal-ingredient').val().length > 0 && $('#modal-text').val().length > 0 ) {
+    if ($('#modal-name').val().length > 0 &&  $('#modal-ingredient').val().length > 0 && $('#modal-text').val().length > 0 ) {
     $(`.all-lists-grid-container`).append(`
     <div class="card food-card" data-mylike="0" data-index="${index++}" data-numberoflikes="0">
       <img
-        src= ${$('#modal-img').val()}
+        src= ${imgUrl}
         class="card-img-top"
         alt="image-of-food"
       />
 
       <div class="card-body">
-        <a href="/html/detail.html" class="card-title">${$('#modal-name').val()} <i class="bi bi-arrow-right"></i></a>
-        <p class="card-ingredient">${$('#modal-ingredient').val()}</p>
+        <a href="./detail.html" class="card-title">${$('#modal-name').val()} <i class="bi bi-arrow-right"></i></a>
+        <p class="card-ingredient">준비재료: ${$('#modal-ingredient').val()}</p>
         <p class="card-text">${$('#modal-text').val()}
         </p>
       </div>
