@@ -237,7 +237,7 @@ input:focus, textarea:focus{
     padding: 2rem 2rem;
     background-color: white;     
     width: 500px;
-    height: 450px;
+    height: 500px;
     border-radius: 0.5rem;
 }
 /* 
@@ -258,4 +258,12 @@ input:focus, textarea:focus{
     font-family: 'Nanum Brush Script', cursive;
     font-family: 'Noto Sans KR', sans-serif;
     color: #64220B;
+}
+
+.sectionBox{
+    display: block;
+}
+
+.sectionBox2{
+    display: none;
 }
