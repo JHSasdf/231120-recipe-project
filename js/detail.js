@@ -1,18 +1,3 @@
-//임시 경로 수정
-function urlChanger(el,attr){
-    let val=el.getAttribute(attr);
-    if(attr=='src') el.src=`../${val}`;
-    if(attr=='href') el.href=`..${val}`;
-}
-const headerImgs = document.querySelectorAll('header img');
-headerImgs.forEach(function(el){
-    urlChanger(el,'src');
-});
-const headerAnchors = document.querySelectorAll('header a');
-headerAnchors.forEach(function(el){
-    urlChanger(el,'href');
-});
-
 const swiper1 = new Swiper('.mainSlider', {
     navigation: {
         nextEl: '.mainSlider .swiper-button-next',
