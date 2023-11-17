@@ -3,15 +3,29 @@ let card;
 let index = 18;
 
 
+const url = new URL(location); // URLSearchParams 객체
+const urlParams = url.searchParams; // URLSearchParams.get()
+let result = urlParams.get('cate');// 3의 결과
+
+if (result == 1) {
+  $('.food-slide-title h5')[0].textContent= '양식 레시피';
+  $('.card-group2').addClass('order1');
+} else if (result == 2) {
+  $('.food-slide-title h5')[0].textContent= '중식 레시피';
+  $('.card-group3').addClass('order1');
+} else if (result == 3) {
+  $('.food-slide-title h5')[0].textContent= '일식 레시피';
+  $('.card-group4').addClass('order1');
+}
+
+
+
 function removeModals () {
   $('.modal-card').remove();
   $('.curtain').removeClass('visible');
   $('.add-modal-card').removeClass('visible')
 }
 
-$('.hamburger').click(function() {
-    $('.hidden-menu').toggleClass('visible');
-})
 
 $(document).on("click", ".food-card img" ,function() {
   card = this.parentNode;
@@ -158,6 +172,8 @@ $(document).on('click', '.add-card-btn', function() {
       {scale: '100%'}, 200, 'swing')
   })
   
+
+
 
 
 

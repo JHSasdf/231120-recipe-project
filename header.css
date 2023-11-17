@@ -9,6 +9,15 @@ header .navigation {
     top: 0;
     left: 0;
     z-index: 2;
+    padding: 0 3rem ;
+}
+
+header .navigation a {
+    text-decoration: none;
+}
+
+header .navigation * {
+    color: rgb(148,67,15);
 }
 
 header .navigation .logoImg {
@@ -20,6 +29,7 @@ header .navigation .menu {
     list-style: none;
     margin-bottom: 0;
     padding-left: 0;
+    gap: 0.5rem;
 }
 
 header .navigation .menu li {
@@ -93,6 +103,9 @@ header .searchBox .back {
     transition: bottom .75s ease-in-out;
 }
 
+.logo {
+    width: 200px;
+  }
 /* .modal.fade .modal-footer {
     padding-bottom: 2rem;x
 }  */
@@ -116,6 +129,12 @@ header .searchBox .back {
     display: block;
 } */
 
+@media screen and (max-width: 1024px) {
+
+    header .navigation {
+        padding: 0 1.7rem;
+    }
+}
 
 @media screen and (max-width: 768px) {
 
@@ -124,6 +143,9 @@ header .searchBox .back {
         height: 10vh;
     }
 
+    .logo {
+        width: 150px;
+    }
     header .navigation .menu .myPageshort {
         display: block;
     }
@@ -165,11 +187,13 @@ header .searchBox .back {
         display: none;
     }
 
+   
     /* header .navigation .icon .more.inactive {
         display: none;
     } */
 
     header .searchBox {
+        position: fixed;
         height: 100vh;
         top: 0;
         opacity: 1;
@@ -191,4 +215,19 @@ header .searchBox .back {
     #exampleModal .modal-dialog .modal-content {
         width: 100vw;
     }
+
+    header .navigation {
+    padding: 0;
+    }   
+
+    .navigation .icon div {
+    font-size: 0.8rem;
+    }
 }
+
+
+
+
+
+
+
