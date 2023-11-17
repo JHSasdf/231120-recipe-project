@@ -1,0 +1,20 @@
+.request {
+    width: 1194px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-top: 1px solid rgb(212, 219, 226);
+    text-align: right;
+}
+.request > p{
+    font-size:110%;
+    font-weight: 700;
+}
+.request div  {
+    color : grey;
+    font-size: 80%;
+}
+.request div a{
+    text-decoration: none;
+    color : grey
+}

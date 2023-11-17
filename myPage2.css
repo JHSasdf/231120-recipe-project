@@ -2,7 +2,7 @@
     margin: 0 100px 0 100px;
     height: 220px;
     /* padding: 20px; */
-    background-color: rgb(248, 141, 98,.7);
+    background-color: rgb(245, 212, 189,.7);
     position: relative;
     display: flex;
     justify-content: center;
@@ -192,6 +192,9 @@ a:hover {
     height: 210px;
 }
 
+#all{
+    margin-top: 100px;
+}
 
 
 /*  프로필과 그 밑 내용 구분 선 */
@@ -199,24 +202,14 @@ a:hover {
     width: 10px;
     height: 10px;
     margin: 20px 0px;
-    background-color: rgb(0, 255, 123,.5);
+    background-color: rgb(108,36,22,.5);
     border-radius: 10px;
 }
 
-
-
-
-
-
-/* 고객센터 */
-.request > p{
-    font-size:140%;
-    font-weight: 700;
-}
-.request div  {
-    color : grey
-}
-.request div a{
-    text-decoration: none;
-    color : grey
+/* 구글 폰트 */
+*{
+    font-family: 'Gugi', sans-serif;
+    font-family: 'Nanum Brush Script', cursive;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #64220B;
 }

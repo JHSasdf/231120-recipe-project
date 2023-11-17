@@ -1,10 +1,21 @@
 header .navigation {
     width: 100%;
     height: 10vh;
-    background-color: lightsalmon;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.navigation a {
+    text-decoration: none;
+}
+
+.navigation * {
+    color: #64220B;
 }
 
 header .navigation .logoImg {
@@ -80,9 +91,111 @@ header .searchBox .back {
     display: none;
 }
 
-
+.overflow-hidden {
+    overflow: hidden;
+}
 
 .modal.fade .modal-dialog {
     width: 380px;
     transition: bottom .75s ease-in-out;
+}
+
+/* .modal.fade .modal-footer {
+    padding-bottom: 2rem;x
+}  */
+
+
+/* header .searchInput {
+    position: absolute;
+    width: 100%;
+    height: 20vh;
+    z-index: 3;
+    background-color: lightsalmon;
+    opacity: 0.9;
+    text-align: center;
+    display: none;
+} */
+/* header .searchInput input {
+    position: absolute;
+    top: 45%;
+} */
+/* header .searchInput.active {
+    display: block;
+} */
+
+
+@media screen and (max-width: 768px) {
+
+    header .navigation {
+        width: 100%;
+        height: 10vh;
+    }
+
+    header .navigation .menu .myPageshort {
+        display: block;
+    }
+
+    header .navigation .menu,
+    header .navigation {
+        position: fixed;
+    }
+
+    header .navigation .icon .myPagelong {
+        display: none;
+    }
+
+    header .navigation .icon .more {
+        display: block;
+    }
+
+    header .navigation .menu {
+        display: block;
+        position: absolute;
+        background-color: lightsalmon;
+        width: 100%;
+
+        z-index: 100;
+        visibility: hidden;
+        top: 10vh;
+    }
+
+    header .navigation .menu.active {
+        opacity: 0.9;
+        visibility: visible;
+    }
+
+    header .navigation .icon .search.inactive {
+        display: none;
+    }
+
+    header .navigation .icon .login.inactive {
+        display: none;
+    }
+
+    /* header .navigation .icon .more.inactive {
+        display: none;
+    } */
+
+    header .searchBox {
+        height: 100vh;
+        top: 0;
+        opacity: 1;
+    }
+
+    header .searchBox .back {
+        display: block;
+        cursor: pointer;
+    }
+
+    header .searchBox .searchWrap {
+        position: relative;
+        top: 0;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    #exampleModal .modal-dialog .modal-content {
+        width: 100vw;
+    }
 }
