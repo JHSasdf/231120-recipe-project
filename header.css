@@ -11,6 +11,14 @@ header .navigation {
     z-index: 2;
 }
 
+header .navigation a {
+    text-decoration: none;
+}
+
+header .navigation * {
+    color: rgb(148,67,15);
+}
+
 header .navigation .logoImg {
     padding: 10px;
 }
@@ -20,6 +28,7 @@ header .navigation .menu {
     list-style: none;
     margin-bottom: 0;
     padding-left: 0;
+    gap: 0.5rem;
 }
 
 header .navigation .menu li {
@@ -170,6 +179,7 @@ header .searchBox .back {
     } */
 
     header .searchBox {
+        position: fixed;
         height: 100vh;
         top: 0;
         opacity: 1;
