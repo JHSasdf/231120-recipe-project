@@ -36,38 +36,39 @@
     />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="listsStyle.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-  
+
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="listsStyle.css" />
+    <link rel="stylesheet" href="listsAll.css">
 
     <script src="loginLogic.js" defer></script>
     <script src="header.js" defer></script>
     <script src="listsSwiper.js" defer></script>
-    <script src="listsApp.js" defer></script>
-    <title>전체 레시피- slide</title>
+    <script src="listsAll.js" defer></script>
+    <title>한식 레시피</title>
   </head>
   <body>
     <header>
       <nav class="navigation">
-          <div class="logoImg">로고</div>
+          <div class="logoImg"><a href="/mainpage.html"><img src="logo.png" alt="image-of-logo" class="logo"></a></div>
           <ul class="menu">
-              <li>메뉴1</li>
-              <li>메뉴2</li>
-              <li>메뉴3</li>
-              <li>메뉴4</li>
-              <li class="myPageshort">마이페이지</li>
+              <li><a href="/list1.html">한식</a></li>
+              <li><a href="/list2.html">양식</a></li>
+              <li><a href="/list3.html">중식</a></li>
+              <li><a href="/list4.html">일식</a></li>
+              <li class="myPageshort"> <a href="/myPage.html">마이페이지</a></li>
           </ul>
           <div class="icon">
               <div class="search">검색
               </div>
-              <div class="login" data-bs-toggle="modal" data-bs-target="#exampleModal">로그인
+              <div class="login login-text" data-bs-toggle="modal" data-bs-target="#exampleModal">로그인 
               </div>
               <div class="more">더보기</div>
-              <div class="myPagelong">마이페이지</div>
+              <div class="myPagelong"><a href="/myPage.html">마이페이지</a></div>
           </div>
       </nav>
       <div class="searchBox">
@@ -112,17 +113,17 @@
 
  
     <main>
-      <section class="main-section">
-        <article>
+        <section class="main-section">
           <div class="food-slide-title">
-            <h5 >추천 레시피</h5>
-          </div>
-          <div class="swiper swiper1">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <div class="card food-card" data-mylike="0" data-index="0" data-numberoflikes="4300">
+            <h5> 한식 레시피  </h5> 
+            <div>
+                <button class="container-of-like"><i class="bi bi-hand-thumbs-up"></i></button>
+                <button type="button" class="button add-card-btn"  data-countryindex="1"><i class="bi bi-pencil-square" style="color:  rgb(148,67,15);"></i></button> 
+            </div>
+                
+        </div>
+        <article class="all-lists-grid-container">
+                <div class="card food-card" data-mylike="0" data-index="0" data-numberoflikes="4300" style="order: -2;">
                   <img
                     src="https://cdn.pixabay.com/photo/2018/04/07/03/21/food-3297633_1280.jpg"
                     class="card-img-top"
@@ -130,7 +131,7 @@
                   />
 
                   <div class="card-body">
-                    <h4 class="card-title">계란찜</h4>
+                    <a href="/html/detail.html" class="card-title">계란찜 <i class="bi bi-arrow-right"></i></a>
                     <p class="card-ingredient">준비재료 : 계란 3개, 설탕 1/3스푼,통깨, 물 100ml, 소금 1/3스푼, 대파, 참기름 1스푼</p>
                     <p class="card-text">1. 작은 뚝배기에 계란 3개를 깨뜨려 넣은 뒤 거품기로 계란을 풀어줍니다
 2. 설탕 1/3 큰 술, 소금 1/3 큰 술을 넣고 한 번 더 거품기로 잘 섞어주기!
@@ -141,9 +142,7 @@
                     </p>
                   </div>
                 </div>
-              </div>
-          
-                <div class="swiper-slide">
+ 
                   <div class="card food-card" data-mylike="0" data-index="1"  data-numberoflikes="3124">
                     <img
                       src="https://cdn.pixabay.com/photo/2019/09/05/01/08/food-4452839_1280.jpg"
@@ -152,10 +151,11 @@
                     />
   
                     <div class="card-body">
-                      <h4 class="card-title">제육볶음</h4>
-                      <p class="card-ingredient">준비재료 : 돼지고기 1근, 양파 1개, 청양고추 2개, 대파 1뿌리, 설탕, 고추장, 간장, 고춧가루 2스푼, 다지마늘, 굴소스, 올리고당 1스푼
+                        <a href="/html/detail.html" class="card-title">제육볶음 <i class="bi bi-arrow-right"></i></a>
+                      <p class="card-ingredient">준비재료 : 돼지고기 1근, 양파 1개, 청양고추 2개, 대파 1뿌리, 설탕, 고추장, 간장, 고춧가루 2스푼, 다진마늘, 굴소스, 올리고당 1스푼
                       </p>
-                      <p class="card-text">1. 고추장 2스푼, 간장 2스푼. 고춧가루 2스푼, 다진마늘 1스푼, 굴소스 1스푼, 올리고당 1스푼 넣어서 양념장을 이렇게 만들어주세요
+                      <p class="card-text">1. 고추장 2스푼, 간장 2스푼. 고춧가루 2스푼, 다진마늘 1스푼, 굴소스 1스푼, 올리고당 1스푼 넣어서
+양념장을 이렇게 만들어주세요
 2. 고기가 익어갈때 설탕을 넣고 더 구워줍니다.
 3. 손질해둔 야채와 양념장을 넣고 볶아주세요
 4. 모든 재료가 다 익으면 제육볶음 끝!
@@ -163,9 +163,8 @@
                       </p>
                     </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card food-card" data-mylike="0" data-index="2" data-numberoflikes="1985">
+
+                  <div class="card food-card" data-mylike="0" data-index="2" data-numberoflikes="1985"  style="order: -1;">
                     <img
                       src="https://cdn.pixabay.com/photo/2020/01/21/03/11/korean-food-4781973_640.jpg"
                       class="card-img-top"
@@ -173,7 +172,7 @@
                     />
   
                     <div class="card-body">
-                      <h4 class="card-title">갈치조림</h4>
+                        <a href="/html/detail.html" class="card-title">갈치조림 <i class="bi bi-arrow-right"></i></a>
                       <p class="card-ingredient">준비재료 : 갈치, 무, 양파, 청양고추, 대파, 다시마, 간장, 설탕, 물엿, 고춧가루, 다진마늘, 다진생강, 맛술, 후추
                       </p>
                       <p class="card-text">1. 육수는 무 넙적하게 썰어주고, 다시마 4~5장, 무가 잠길정도의 물로 끓여줍니다. 끓기시작하면 다시마는 빼주세요.
@@ -185,29 +184,11 @@
                       </p>
                     </div>
                   </div>
-                </div>
-            </div>
-            <!-- If we need pagination -->
-            <!-- <div class="swiper-pagination"></div> -->
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
 
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
-          </div>
-        </article>
+    
 
-        <article>
-          <div class="food-slide-title">
-          <h5 >한식  </h5> <button type="button" class="button add-card-btn"  data-countryindex="1"><i class="bi bi-pencil-square"></i></button> </div>
-          <div class="swiper swiper2">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper card-slide-1">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <div class="card food-card" data-mylike="0" data-index="3"  data-numberoflikes="315">
+                <div class="card food-card" data-mylike="0" data-index="3"  data-numberoflikes="315"  style="order: -2;">
                   <img
                     src="https://recipe1.ezmember.co.kr/cache/recipe/2022/07/12/ff543d36f8d9765ca4d53fc63941f0851.jpg"
                     class="card-img-top"
@@ -215,7 +196,7 @@
                   />
 
                   <div class="card-body">
-                    <h4 class="card-title">마늘 통삼겹 구이</h4>
+                    <a href="/html/detail.html" class="card-title">마늘 통삼겹 구이 <i class="bi bi-arrow-right"></i></a>
                     <p class="card-ingredient">준비재료 : 삼겹살 500g, 고추 100g, 청주 1Ts, 소금, 후추 약간, 전분 1/2 종이컵, 다진마늘 6Ts, 꿀 4Ts, 레몬즙 1Ts, 식용유, 소금 약간</p>
                     <p class="card-text">1. 삼겹살에 칼집을 깊게 넣고 소금, 후추, 청주로 밑간한다.
 2. 꽈리고추는 물에 씻은 후 전분을 묻힌다.
@@ -227,9 +208,8 @@
                     </p>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card food-card" data-mylike="0" data-index="4"  data-numberoflikes="153">
+
+                <div class="card food-card" data-mylike="0" data-index="4"  data-numberoflikes="153"  style="order: 0;">
                   <img
                     src= 'https://recipe1.ezmember.co.kr/cache/recipe/2021/08/09/24b85da64bc678c4cee2122611a667841.jpg'
                     class="card-img-top"
@@ -237,7 +217,7 @@
                   />
 
                   <div class="card-body">
-                    <h4 class="card-title">가지 스테이크</h4>
+                    <a href="/html/detail.html" class="card-title">가지 스테이크 <i class="bi bi-arrow-right"></i></a>
                     <p class="card-ingredient">준비재료 : 가지 1개, 설탕 1.5Ts, 다진마늘 1/2Ts, 간장 2Ts, 식초 1Ts, 버터 2Ts</p>
                     <p class="card-text">1. 가지의 꼭지 부분은 자르고 통으로 두께 1~2cm 크기로 자른다.
 2. 자른 가지는 그릇에 담아 전자레인지에 4~5분 정도 돌린다.
@@ -249,10 +229,8 @@
                     </p>
                   </div>
                 </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card food-card" data-mylike="0" data-index="5" data-numberoflikes="315">
+  
+                <div class="card food-card" data-mylike="0" data-index="5" data-numberoflikes="315"  style="order: 2;">
                   <img
                     src="https://cdn.pixabay.com/photo/2017/09/10/14/23/toppokki-2735719_640.jpg"
                     class="card-img-top"
@@ -260,7 +238,7 @@
                   />
 
                   <div class="card-body">
-                    <h4 class="card-title">떡볶이</h4>
+                    <a href="/html/detail.html" class="card-title">떡볶이 <i class="bi bi-arrow-right"></i></a>
                     <p class="card-ingredient">준비재료 : 베이컨, 대파, 떡, 간장, 참기름, 물엿, 기름</p>
                     <p class="card-text">1. 대파에 떡과 베이컨을 기름을 두르고 볶는다.
 2. 간장, 참기름 한스푼, 물엿 적당히 넣고 볶는다.
@@ -269,9 +247,8 @@
                     </p>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card food-card" data-mylike="0" data-index="6" data-numberoflikes="33" >
+
+                <div class="card food-card" data-mylike="0" data-index="6" data-numberoflikes="33"  style="order: 1;" >
                   <img
                     src="https://recipe1.ezmember.co.kr/cache/recipe/2023/11/13/ee1a4dabe8592303cc353e3d71ded67f1.jpg"
                     class="card-img-top"
@@ -279,7 +256,7 @@
                   />
 
                   <div class="card-body">
-                    <h4 class="card-title">숙주나물 무침</h4>
+                    <a href="/html/detail.html" class="card-title">숙주나물 무침 <i class="bi bi-arrow-right"></i></a>
                     <p class="card-ingredient">준비재료 : 숙주 300g, 쪽파 10가닥, 죽염 1/2Ts, 참치액 1/2스푼, 참기름 1스푼, 깨소금 1큰술, 통깨 1/2큰술</p>
                     <p class="card-text">1. 숙주는 찬물에 2~3번 깨끗이 씻어 껍질과 불순물을 제거한 후 물기를 빼 줍니다.
 2. 고명으로 들어 갈 쪽파는 1CM 정도 크기로 쫑쫑 썰어 줍니다.
@@ -290,9 +267,8 @@
                     </p>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card food-card" data-mylike="0" data-index="7" data-numberoflikes="342">
+
+                <div class="card food-card" data-mylike="0" data-index="7" data-numberoflikes="342"  style="order: -2;">
                   <img
                     src="https://cdn.pixabay.com/photo/2017/02/19/21/02/food-2080896_640.jpg"
                     class="card-img-top"
@@ -300,7 +276,7 @@
                   />
 
                   <div class="card-body">
-                    <h4 class="card-title">고기 감자조림</h4>
+                    <a href="/html/detail.html" class="card-title">고기 감자조림 <i class="bi bi-arrow-right"></i></a>
                     <p class="card-ingredient">준비재료 : 감자 2개, 고기 200g, 진간장 4스푼, 설탕 4스푼, 후추 조금, 올리고당 1스푼, 다진마늘 1스푼, 물 120ml</p>
                     <p class="card-text">1. 감자는 깍뚝 썰어 2분 데친다.
 2. 스팸은 깍둑 썰어 팬에 노릇하게 구워준다.
@@ -311,29 +287,12 @@
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
-            <!-- If we need pagination -->
-            <!-- <div class="swiper-pagination"></div> -->
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
 
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
-          </div>
-        </article>
 
-        <article>
-          <div class="food-slide-title">
-            <h5 >양식  </h5> <button type="button" class="button add-card-btn"  data-countryindex="2"><i class="bi bi-pencil-square"></i></button> </div>
-          <div class="swiper swiper2">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper card-slide-2">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <div class="card food-card" data-mylike="0" data-index="8" data-numberoflikes="342">
+        
+
+                <div class="card food-card" data-mylike="0" data-index="8" data-numberoflikes="342"  style="order: -1;">
                   <img
                     src="https://recipe1.ezmember.co.kr/cache/recipe/2016/04/08/8448b043b2e1eb6cb55041b0bffb1a281.jpg"
                     class="card-img-top"
@@ -341,7 +300,7 @@
                   />
 
                   <div class="card-body" >
-                    <h4 class="card-title">참치 퀘사디아</h4>
+                    <a href="/html/detail.html" class="card-title">참치 퀘사디아 <i class="bi bi-arrow-right"></i></a>
                     <p class="card-ingredient">준비재료 : 또띠아 2장, 참치캔 1개, 치즈, 양파 0.5개, 청양고추 1개, 토마토소스 4스푼</p>
                     <p class="card-text">1. 또띠아 한쪽면에 토마토소스를 2T덜어 바르고 캔참치의 기름기를 최소화하여 올려줍니다
 2. 그 위로 양파, 햄, 청양고추를 올려 줍니다.
@@ -352,10 +311,9 @@
                     </p>
                   </div>
                 </div>
-              </div>
 
-              <div class="swiper-slide">
-                <div class="card food-card" data-mylike="0" data-index="9" data-numberoflikes="240">
+
+                <div class="card food-card" data-mylike="0" data-index="9" data-numberoflikes="240"  style="order: 2;">
                   <img
                     src="https://recipe1.ezmember.co.kr/cache/recipe/2018/09/19/82747f5d992649fbab050d16a99389cf1.jpg"
                     class="card-img-top"
@@ -363,7 +321,7 @@
                   />
 
                   <div class="card-body">
-                    <h4 class="card-title">마약 계란</h4>
+                    <a href="/html/detail.html" class="card-title">마약계란 <i class="bi bi-arrow-right"></i></a>
                     <p class="card-ingredient">준비재료 : 훈제 달걀 10알 양조간장, 물 100ml, 맛술 1큰술, 청고추, 홍고추 1개, 다진마늘 1큰술, 양파 1/4개</p>
                     <p class="card-text">1. 계란 껍질을 까줍니다.
 2. 간장+물+올리고당 섞은 후 청고추,홍고추 다져서 넣고!
@@ -374,9 +332,9 @@
                     </p>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card food-card" data-mylike="0" data-index="10" data-numberoflikes="210">
+
+
+                <div class="card food-card" data-mylike="0" data-index="10" data-numberoflikes="210"  style="order: -2;">
                   <img
                     src="https://recipe1.ezmember.co.kr/cache/recipe/2019/08/01/ccc38222338c8673dc9588c610303a811.jpg"
                     class="card-img-top"
@@ -384,7 +342,7 @@
                   />
 
                   <div class="card-body">
-                    <h4 class="card-title">크래미 유부초밥</h4>
+                    <a href="/html/detail.html" class="card-title">크래미 유부초밥 <i class="bi bi-arrow-right"></i></a>
                     <p class="card-ingredient">준비재료 : 크래미 4개, 허니머스터드 1스푼, 밥 2/3공기, 마요네즈 3.5스푼, 유부초밥 1봉지, 후추 약간, 양파 1/4개</p>
                     <p class="card-text">1. 양파는 잘게 다진 뒤 찬물에 5분간 담가 건져요.
 2. 크래미를 결대로 찢은 후 양파, 양념 재료를 넣고 섞어요.
@@ -394,9 +352,9 @@
                     </p>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card food-card" data-mylike="0" data-index="11" data-numberoflikes="95">
+
+
+                <div class="card food-card" data-mylike="0" data-index="11" data-numberoflikes="95"  style="order: 0;">
                   <img
                     src="https://recipe1.ezmember.co.kr/cache/recipe/2022/08/10/f5e0b95c2ca77f31083a04c21ff50a741.jpg"
                     class="card-img-top"
@@ -404,7 +362,7 @@
                   />
 
                   <div class="card-body">
-                    <h4 class="card-title">명란 유부초밥</h4>
+                    <a href="/html/detail.html" class="card-title">명란 유부초밥 <i class="bi bi-arrow-right"></i></a>
                     <p class="card-ingredient">준비재료 : 조림유부 8장, 밥 2공기, 맛술 1/2스푼, 와사비, 명란젓 3덩이, 마요네즈 2스푼, 참기름 1스푼</p>
                     <p class="card-text">1. 명란젓은 겉껍질을 살짝 갈라 알 부분만 꺼낸다
 2. 마요네즈와 맛술을 넣고 섞는다
@@ -415,9 +373,9 @@
                     </p>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card food-card" data-mylike="0" data-index="12" data-numberoflikes="204">
+
+
+                <div class="card food-card" data-mylike="0" data-index="12" data-numberoflikes="204"  style="order: 1;">
                   <img
                     src="https://recipe1.ezmember.co.kr/cache/recipe/2016/03/22/34653c3f0b81699d266dcfc1418365c01.jpg"
                     class="card-img-top"
@@ -425,7 +383,7 @@
                   />
 
                   <div class="card-body">
-                    <h4 class="card-title">소고기 무국</h4>
+                    <a href="/html/detail.html" class="card-title">소고기 무국 <i class="bi bi-arrow-right"></i></a>
                     <p class="card-ingredient">준비재료 : 무 1/3개 소고기, 대파 1개, 참기름 2스푼, 간마늘 1스푼, 국간장 4스푼, 멸치육수</p>
                     <p class="card-text">1. 국거리용 소고기와 얇게 나박나박 썬 무를 준비해주세요. 무는 얇게 썰수록 조리시간이 줄어드니 조리시간 감안해서 썰어주세요.
 2. 참기름 2T 넣고 중불에서 소고기를 먼저 볶아주세요.
@@ -438,29 +396,12 @@
                     </p>
                   </div>
                 </div>
-              </div>
+
           
-            </div>
-            <!-- If we need pagination -->
-            <!-- <div class="swiper-pagination"></div> -->
+ 
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
 
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
-          </div>
-        </article>
-        <article>
-          <div class="food-slide-title">
-            <h5 >일식  </h5> <button class="button add-card-btn" type="button"  data-countryindex="3"><i class="bi bi-pencil-square"></i></button> </div>
-          <div class="swiper swiper2">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper card-slide-3">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <div class="card food-card" data-mylike="0" data-index="13"  data-numberoflikes="7">
+                <div class="card food-card" data-mylike="0" data-index="13"  data-numberoflikes="7"  style="order: 0;">
                   <img
                     src="https://recipe1.ezmember.co.kr/cache/recipe/2015/08/16/84788060b17a8792d15230d6061004f91.jpg"
                     class="card-img-top"
@@ -468,7 +409,7 @@
                   />
 
                   <div class="card-body">
-                    <h4 class="card-title">참치 오이롤 초밥</h4>
+                    <a href="/html/detail.html" class="card-title">참치 오이롤 초밥 <i class="bi bi-arrow-right"></i></a>
                     <p class="card-ingredient">준비재료 : 오이 1개, 밥 1공기, 참치 1캔, 양파 1/4개, 마요네즈 4스푼, 설탕 1스푼, 소금 1꼬집, 깨 조금</p>
                     <p class="card-text">1. 참치캔을 따서 기름을 제거하고 그릇에 담은 다음, 숟가락으로 으깨준다.
 2. 양파 4분의 1조각도 다져서 준비한다.
@@ -480,9 +421,8 @@
                     </p>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card food-card" data-mylike="0" data-index="14" data-numberoflikes="153">
+
+                <div class="card food-card" data-mylike="0" data-index="14" data-numberoflikes="153"  style="order: 2;">
                   <img
                     src="https://recipe1.ezmember.co.kr/cache/recipe/2023/10/24/020a00db7248f0b14d185a4bcd64605a1.jpg"
                     class="card-img-top"
@@ -490,7 +430,7 @@
                   />
 
                   <div class="card-body">
-                    <h4 class="card-title">계란말이</h4>
+                    <a href="/html/detail.html" class="card-title">계란말이 <i class="bi bi-arrow-right"></i></a>
                     <p class="card-ingredient">준비재료 : 계란 5개. 청양고추 1개, 홍고추 1/2개, 소금 두꼬집, 치킨스톡 1/3스푼, 식용유 1스푼</p>
                     <p class="card-text">1. 먼저 노른자와 흰자를 분리해 줍니다.
 2. 청양고추와 홍고추를 잘게 다져주고, 분리한 흰자에 섞어주세요. 노른자는 소금 두 꼬집으로, 흰자는 치킨스톡 1/3 큰 술로 밑간을 합니다.
@@ -501,9 +441,8 @@
                     </p>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card food-card" data-mylike="0" data-index="15" data-numberoflikes="673">
+
+                <div class="card food-card" data-mylike="0" data-index="15" data-numberoflikes="673"  style="order: 1;">
                   <img
                     src="https://recipe1.ezmember.co.kr/cache/recipe/2018/12/15/256905647e828147814a7b86064b00641.jpg"
                     class="card-img-top"
@@ -511,7 +450,7 @@
                   />
 
                   <div class="card-body">
-                    <h4 class="card-title">토마토 샤브 샐러드</h4>
+                    <a href="/html/detail.html" class="card-title">토마토 샤브 샐러드 <i class="bi bi-arrow-right"></i></a>
                     <p class="card-ingredient">준비재료 : 토마토 3개, 소고기 300g, 양파 3개, 꽈리고추 20개, 간장, 올리브유, 식초 5스푼, 설탕, 통깨 2스푼</p>
                     <p class="card-text">1. 꽈리고추는 채 썰어 씨를 빼고 물에 담궈 매운 맛이 빠지게 30분 정도 물에 담궈놓아요. 양파도 한 개를 채 썰어 30분 물에 담궈요.
                       그 후, 체에 받쳐 물기를 빼주세요.
@@ -523,10 +462,9 @@
                     </p>
                   </div>
                 </div>
-              </div>
 
-              <div class="swiper-slide">
-                <div class="card food-card" data-mylike="0" data-index="16" data-numberoflikes="67">
+
+                <div class="card food-card" data-mylike="0" data-index="16" data-numberoflikes="67"  style="order: -1;">
                   <img
                     src="https://recipe1.ezmember.co.kr/cache/recipe/2017/06/10/9fe714aba58c3f14552d10ac7f6da13f1.jpg"
                     class="card-img-top"
@@ -534,7 +472,7 @@
                   />
 
                   <div class="card-body">
-                    <h4 class="card-title">떡갈비 볶음밥</h4>
+                    <a href="/html/detail.html" class="card-title">떡갈비 볶음밥 <i class="bi bi-arrow-right"></i></a>
                     <p class="card-ingredient">준비재료 : 떡갈비 1개,당근 약간, 다진 파 1큰술, 밥 1공기, 소금 약간, 식용유 2큰술, 피망, 양파, 김치, 굴소스 1스푼, 후추 약간</p>
                     <p class="card-text">1. 떡갈비와 야채들은 볶기 좋은 크기로 잘라주세요.
 2. 달군 팬에 오일을 두르고 파기름을 내어주다가 잘라 논 떡갈비 넣어 노릇하게 볶아주세요.
@@ -546,9 +484,8 @@
                     </p>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card food-card" data-mylike="0" data-index="17" data-numberoflikes="3">
+
+                <div class="card food-card" data-mylike="0" data-index="17" data-numberoflikes="3"  style="order: 1;">
                   <img
                     src="https://recipe1.ezmember.co.kr/cache/recipe/2015/05/27/d776a52f6fda01bb6ed1d4bdfb7821ce1.jpg"
                     class="card-img-top"
@@ -556,7 +493,7 @@
                   />
 
                   <div class="card-body">
-                    <h4 class="card-title">고등어 무조림</h4>
+                    <a href="/html/detail.html" class="card-title">고등어 무조림 <i class="bi bi-arrow-right"></i></a>
                     <p class="card-ingredient">준비재료 : 고등어 1마리, 무 500g, 대파 1뿌리, 물 300ml, 진간장 4큰술, 고추장 2큰술, 매실액 2큰술, 맛술, 올리고당 다진마늘 1큰술, 후춧가루 약간</p>
                     <p class="card-text">1. 무와 대파는 흐르는 물에 씻은 후 무는 도톰하게 반달 썰어 주고 대파는 어슷 썰어 줍니다.
 2. 고등어는 흐르는 물에 깨끗하게 씻어 줍니다.
@@ -567,21 +504,8 @@
                     </p>
                   </div>
                 </div>
-              </div>
-
-
-            </div>
-            <!-- If we need pagination -->
-            <!-- <div class="swiper-pagination"></div> -->
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
-          </div>
-        </article>
+            </article>
+ 
       </section>
     </main>
     <div class="curtain"></div>
@@ -601,7 +525,7 @@
       <button type="button" class="confirm-add-card-btn" style="text-align: start;">추가</button>
     </div>
 
-    <button class="container-of-like"><i class="bi bi-hand-thumbs-up"></i></button>
+
     <div><ul class="like-list"></ul></div>
   </body>
 </html>

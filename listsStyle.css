@@ -18,9 +18,9 @@ ul {
   list-style: none;
 }
 
-a {
+.card-body a {
   text-decoration: none;
-  color: #64220B !important;
+  color: rgb(104, 45, 9) !important;
 }
 
 input,
@@ -112,6 +112,7 @@ article {
 
 .card-body {
   display: none;
+  color: #361205;
 }
 
 .card-ingredient {
@@ -214,7 +215,7 @@ article {
 }
 
 .blue {
-  color: rgb(226, 43, 202);
+  color: rgb(148,67,15);
   font-weight: bold;
 }
 

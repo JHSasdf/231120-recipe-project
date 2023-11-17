@@ -9,9 +9,6 @@ function removeModals () {
   $('.add-modal-card').removeClass('visible')
 }
 
-$('.hamburger').click(function() {
-    $('.hidden-menu').toggleClass('visible');
-})
 
 $(document).on("click", ".food-card" ,function() {
   card = this;
