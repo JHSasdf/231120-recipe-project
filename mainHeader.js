@@ -1,4 +1,4 @@
-let toggle2 = document.querySelector('.more');
+let toggle = document.querySelector('.more');
 let icon = document.querySelector('.icon')
 let menu = document.querySelector('.menu');
 let login = document.querySelector('.login');
@@ -8,7 +8,7 @@ let searchBox = document.querySelector('.searchBox')
 
 let back = document.querySelector('.back');
 
-toggle2.addEventListener('click', function () {
+toggle.addEventListener('click', function () {
     menu.classList.toggle('active');
     // login.style.display = 'none';
     search.classList.toggle('inactive');

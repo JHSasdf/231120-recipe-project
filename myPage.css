@@ -19,6 +19,10 @@ a:hover {
     cursor: pointer;
 }
 
+.Hey:hover{
+    bottom: 2vh;
+}
+
 .profile>.profileImg {
     width: 200px;
     height: 200px;
