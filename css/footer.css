@@ -1,0 +1,6 @@
+footer ul,
+footer li{margin: 0;padding: 0;list-style: none;}
+footer img{
+    width: 150px;
+    filter: grayscale(1);
+}
