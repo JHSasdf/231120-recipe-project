@@ -3,6 +3,23 @@ let card;
 let index = 18;
 
 
+const url = new URL(location); // URLSearchParams 객체
+const urlParams = url.searchParams; // URLSearchParams.get()
+let result = urlParams.get('cate');// 3의 결과
+
+if (result == 1) {
+  $('.food-slide-title h5')[0].textContent= '양식 레시피';
+  $('.card-group2').addClass('order1');
+} else if (result == 2) {
+  $('.food-slide-title h5')[0].textContent= '중식 레시피';
+  $('.card-group3').addClass('order1');
+} else if (result == 3) {
+  $('.food-slide-title h5')[0].textContent= '일식 레시피';
+  $('.card-group4').addClass('order1');
+}
+
+
+
 function removeModals () {
   $('.modal-card').remove();
   $('.curtain').removeClass('visible');
@@ -10,14 +27,14 @@ function removeModals () {
 }
 
 
-$(document).on("click", ".food-card" ,function() {
-  card = this;
+$(document).on("click", ".food-card img" ,function() {
+  card = this.parentNode;
   $('.curtain').addClass('visible');
   $('body').append(`
   <div class="card modal-card">
     <img src=${card.children[0].src} class="card-img-top" alt="image-of-food">  
     <div class="card-body" style="display: block;">
-    <div class="likes"><div><button class="like-btn"><i class="bi bi-hand-thumbs-up"></i></button> <span>${this.dataset.numberoflikes}</span></div>
+    <div class="likes"><div><button class="like-btn"><i class="bi bi-hand-thumbs-up"></i></button> <span>${card.dataset.numberoflikes}</span></div>
        </div>
       <h4 class="card-title">${card.children[1].children[0].textContent}</h4>
       <p class="card-ingredient" style="white-space: pre-wrap;">${card.children[1].children[1].textContent}</p>
@@ -57,7 +74,7 @@ $(document).on('click', '.find-card-btn', function() {
           <img src=${card.children[0].src} class="card-img-top" alt="image-of-food">  
           <div class="card-body" style="display: block;">
           <div class="likes"><div><button class="like-btn"><i class="bi bi-hand-thumbs-up"></i></button> <span>${card.dataset.numberoflikes}</span></div>
-             </div>
+            </div>
             <h4 class="card-title">${card.children[1].children[0].textContent}</h4>
             <p class="card-ingredient" style="white-space: pre-wrap;">${card.children[1].children[1].textContent}</p>
             <p class="card-text" style="white-space: pre-wrap;">${card.children[1].children[2].textContent} </p>
@@ -71,15 +88,17 @@ $(document).on('click', '.find-card-btn', function() {
 })
 
 $(document).on('click', '.search-btn', function() {
+
   for (const card of $('.food-card')) {
-    if ($('.search-input').val() === card.children[1].children[0].textContent) {
+    
+    if ($('.search-input')[0].value === card.children[1].children[0].textContent) {
       $('.curtain').addClass('visible');
       $('body').append(`
       <div class="card modal-card">
         <img src=${card.children[0].src} class="card-img-top" alt="image-of-food">  
         <div class="card-body" style="display: block;">
         <div class="likes"><div><button class="like-btn"><i class="bi bi-hand-thumbs-up"></i></button> <span>${card.dataset.numberoflikes}</span></div>
-           </div>
+          </div>
           <h4 class="card-title">${card.children[1].children[0].textContent}</h4>
           <p class="card-ingredient" style="white-space: pre-wrap;">${card.children[1].children[1].textContent}</p>
           <p class="card-text" style="white-space: pre-wrap;">${card.children[1].children[2].textContent} </p>
@@ -111,7 +130,7 @@ $(document).on('click', '.add-card-btn', function() {
 
   $(document).on('click', '.confirm-add-card-btn', function() {
     if ($('#modal-img').val().length > 0 && $('#modal-name').val().length > 0 &&  $('#modal-ingredient').val().length > 0 && $('#modal-text').val().length > 0 ) {
-    $(`.card-slide-${slideIndex}`).append(`<div class="swiper-slide">
+    $(`.all-lists-grid-container`).append(`
     <div class="card food-card" data-mylike="0" data-index="${index++}" data-numberoflikes="0">
       <img
         src= ${$('#modal-img').val()}
@@ -120,13 +139,13 @@ $(document).on('click', '.add-card-btn', function() {
       />
 
       <div class="card-body">
-        <h4 class="card-title">${$('#modal-name').val()}</h4>
+        <a href="/html/detail.html" class="card-title">${$('#modal-name').val()} <i class="bi bi-arrow-right"></i></a>
         <p class="card-ingredient">${$('#modal-ingredient').val()}</p>
         <p class="card-text">${$('#modal-text').val()}
         </p>
       </div>
     </div>
-  </div>`)
+  `)
   $('#modal-img').val("")
   $('#modal-name').val("")
   $('#modal-ingredient').val("")
@@ -136,6 +155,28 @@ $(document).on('click', '.add-card-btn', function() {
     }
   })
 })
+
+  
+  $(document).on('mouseenter', '.food-card', function() {
+    if (window.innerWidth <= 768) {
+        $(this).animate(
+            {scale: '105%'}, 200, 'swing')
+            return
+      }
+   
+    $(this).animate(
+      {scale: '110%'}, 200, 'swing')
+      
+  })
+  
+  $(document).on('mouseleave', '.food-card', function() {
+    $(this).animate(
+      {scale: '100%'}, 200, 'swing')
+  })
+  
+
+
+
 
 
 
