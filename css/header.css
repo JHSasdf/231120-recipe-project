@@ -184,7 +184,7 @@ header .searchBox .back {
 
         z-index: 100;
         visibility: hidden;
-        top: 10vh;
+        top: 60px;
     }
 
     header .navigation .menu.active {
