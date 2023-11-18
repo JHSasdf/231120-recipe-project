@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&d@400;700isplay=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet"> -->
+
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+        integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/header.css">
+
+    <script src="../js/loginLogic.js" defer></script>
+    <script src="../js/header.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <div class="logoImg"><a href="./index.html"><img src="../imgs/logo.png" alt="image-of-logo"
+                        class="logo"></a></div>
+            <ul class="menu">
+                <li><a href="list1.html">한식</a></li>
+                <li><a href="list1.html?cate=1">양식</a></li>
+                <li><a href="list1.html?cate=2">중식</a></li>
+                <li><a href="list1.html?cate=3">일식</a></li>
+                <li class="myPageshort"><a href="myPage.html" class="my-real-page">마이페이지</a></li>
+            </ul>
+            <div class="icon">
+                <div class="search"><i class="bi bi-search" style="font-size: 1.2rem;"></i>
+                </div>
+                <div class="login login-text" data-bs-toggle="modal" data-bs-target="#exampleModal">로그인
+                </div>
+                <div class="more"><i class="bi bi-justify" style="font-size: 1.2rem;"></i></div>
+            </div>
+        </nav>
+        <div class="searchBox">
+            <div class="back">back</div>
+            <div class="searchWrap">
+                <input type="text" class="search-input" placeholder="궁금했던 레시피를 검색해보세요!">
+                <button type="button" class="search-btn">검색버튼</button>
+            </div>
+        </div>
+
+    </header>
+
+    <aside>
+        <!-- bootstrap Modal simple ver.-->
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Sign in</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="id" class="col-form-label">아이디</label>
+                                <input type="text" class="form-control login-id" id="id">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="col-form-label">비밀번호</label>
+                                <input type="text" class="form-control login-pw" id="password">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <form>
+                            <button type="button" class="btn btn-primary login-button">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <div class="container">
+            <!-- top carousel -->
+            <section class="top">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src='../food-img/kebab_barbecue-wallpaper-2560x1080.jpg' class="d-block w-100"
+                                alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../food-img/sushi-thai-food-wallpaper-2560x1080_14.jpg" class="d-block w-100"
+                                alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://wallpapersmug.com/download/2560x1080/66383e/choco-cake-food.jpg"
+                                class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- 베스트 레시피 -->
+            <section class="best">
+                <div class="bestFour">
+                    <h3 class="font-weight-light">베스트 레시피</h3>
+                    <div class="row justify-content-center">
+                        <!-- <div class="col-md-4"> -->
+                        <div class="bCard-1 card col">
+                            <div class="card-img">
+                                <img src="https://static.wtable.co.kr/image/production/service/recipe/1785/e02ac07c-7fdb-4e06-aa41-ba8586d8ea6f.jpg?size=500x500"
+                                    class="img-fluid">
+                                <!-- <div class="card-img-overlay">
+                                    <i class="bi bi-bookmark "></i>
+                                    <i class="bi bi-bookmark-fill "></i>
+                                </div> -->
+                                <div class="card-body text-center">
+                                    <p>🥇 쇠고기 버섯 솥밥</p>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay">
+                                <i class="bi bi-bookmark "></i>
+                                <i class="bi bi-bookmark-fill "></i>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="col"> -->
+                        <div class="bCard-2 card col">
+                            <div class="card-img">
+                                <img src="https://static.wtable.co.kr/image/production/service/recipe/219/c0d1bfe5-e31e-4aaa-9add-95961dac82e5.jpg?size=500x500"
+                                    class="img-fluid">
+                                <div class="card-body text-center">
+                                    <p>🥈 바질페스토</p>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay">
+                                <i class="bi bi-bookmark "></i>
+                                <i class="bi bi-bookmark-fill "></i>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="col-md-4"> -->
+                        <div class="bCard-3 card col">
+                            <div class="card-img">
+                                <img src="https://static.wtable.co.kr/image/production/service/recipe/2301/8c5f0778-3f18-429a-81fb-d451325f4e57.jpg?size=500x500"
+                                    class="img-fluid">
+                                <div class="card-body text-center">
+                                    <p>🥉 시금치 통닭</p>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay">
+                                <i class="bi bi-bookmark "></i>
+                                <i class="bi bi-bookmark-fill "></i>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay"><i class="bi bi-bookmark"></i>Slide 1
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- 지금 많이 검색하는 메뉴 -->
+            <section class="watch">
+                <div class="wathchRank">
+                    <h3 class="font-weight-light">지금 많이 검색하는 메뉴</h3>
+                    <div class="row justify-content-center ">
+                        <div class="no1 col-6">
+                            <div class="glue no1">
+                                <div class="col-md-2 text-center">1</div>
+                                <div class="col-md-4">배추 된장국</div>
+                            </div>
+                            <div class="glue no2">
+                                <div class="col-md-2 text-center">2</div>
+                                <div class="col-md-4">갈치 조림</div>
+                            </div>
+                            <div class="glue no3">
+                                <div class="col-md-2 text-center">3</div>
+                                <div class="col-md-4">고사리 파스타</div>
+                            </div>
+                        </div>
+                        <div class="no2 col-6">
+                            <div class="glue no4">
+                                <div class="col-md-2 text-center">4</div>
+                                <div class="col-md-4">김치찜</div>
+                            </div>
+                            <div class="glue no5">
+                                <div class="col-md-2 text-center">5</div>
+                                <div class="col-md-4">가지탕수</div>
+                            </div>
+                            <div class="glue no6">
+                                <div class="col-md-2 text-center">6</div>
+                                <div class="col-md-4">시금치 통닭</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- 이달의 레시피 -->
+            <section class="recommend">
+                <h3>이달의 레시피</h3>
+                <div class=recTab>
+                    <div class="kFood">한식</div>
+                    <div class="wFood">양식</div>
+                    <div class="cFood">중식</div>
+                    <div class="jFood">일식</div>
+                </div>
+                <div class="korean row justify-content-center active">
+                    <!-- <div class="col-md-4"> -->
+                    <div class="kCard-1 card col-3">
+                        <div class="card-img">
+                            <img src="https://static.wtable.co.kr/image/production/service/recipe/1498/7b8f9554-13bd-45b9-9d3b-c9d01daa5aee.jpg?size=500x500"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>굴순두부찌개</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark"></i>
+                            <i class="bi bi-bookmark-fill"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-md-4"> -->
+                    <div class="kCard-2 card col-3">
+                        <div class="card-img">
+                            <img src="https://static.wtable.co.kr/image/production/service/recipe/1131/44083c3f-13d4-43a3-8caa-4e9bf7dcb34a.jpg?size=500x500"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>고구마밥</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark"></i>
+                            <i class="bi bi-bookmark-fill"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-md-4"> -->
+                    <div class="kCard-3 card col-3">
+                        <div class="card-img">
+                            <img src="https://static.wtable.co.kr/image/production/service/recipe/639/51cdb634-e04f-4914-bc4c-f17ac79ba234.jpg?size=500x500"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>오징어 순대</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark"></i>
+                            <i class="bi bi-bookmark-fill"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-md-3"> -->
+                    <div class="kCard-4 card col-3">
+                        <div class="card-img">
+                            <img src="https://static.wtable.co.kr/image/production/service/recipe/799/14efa545-df76-4f6f-8ce0-3572b93d005c.jpg?size=500x500"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>감자탕</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark"></i>
+                            <i class="bi bi-bookmark-fill"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+
+                <!-- 양식 -->
+                <div class="western row justify-content-center">
+                    <!-- <div class="col-md-4"> -->
+                    <div class="wCard-1 card col-3">
+                        <div class="card-img">
+                            <img src="https://static.wtable.co.kr/image/production/service/recipe/1999/425dddd3-6d30-4faf-bd31-4cc0de955e2a.jpg?size=500x500"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>토마토 스튜</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark"></i>
+                            <i class="bi bi-bookmark-fill"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-md-4"> -->
+                    <div class="wCard-2 card col-3">
+                        <div class="card-img">
+                            <img src="https://static.wtable.co.kr/image/production/service/recipe/1974/e3d221c1-c303-44b1-8540-36d1a7d64452.jpg?size=500x500"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>페타치즈 파스타</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark"></i>
+                            <i class="bi bi-bookmark-fill"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-md-4"> -->
+                    <div class="wCard-3 card col-3">
+                        <div class="card-img">
+                            <img src="https://static.wtable.co.kr/image/production/service/recipe/1822/412d4660-e89b-41d3-b05f-cf5c56d41b13.jpg?size=500x500"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>토마토 팍시</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark"></i>
+                            <i class="bi bi-bookmark-fill"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-md-3"> -->
+                    <div class="wCard-4 card col-3">
+                        <div class="card-img">
+                            <img src="https://static.wtable.co.kr/image/production/service/recipe/852/9dfb775f-b47a-4ee8-a9f7-7f6ea75d8706.jpg?size=500x500"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>양파 수프</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark"></i>
+                            <i class="bi bi-bookmark-fill"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+
+                <!-- 중식 -->
+                <div class="china row justify-content-center">
+                    <!-- <div class="col-md-4"> -->
+                    <div class="cCard-1 card col-3">
+                        <div class="card-img">
+                            <img src="https://static.wtable.co.kr/image/production/service/recipe/1205/eae59d78-533e-4015-9053-d235c3ddfa0f.jpg?size=500x500"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>사천식 고추 새우 덮밥</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark"></i>
+                            <i class="bi bi-bookmark-fill"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-md-4"> -->
+                    <div class="cCard-2 card col-3">
+                        <div class="card-img">
+                            <img src="https://static.wtable.co.kr/image/production/service/recipe/495/51efe3f4-8db7-4e80-9ad8-6158fce0a0b7.jpg?size=500x500"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>가지탕수</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark"></i>
+                            <i class="bi bi-bookmark-fill"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-md-4"> -->
+                    <div class="cCard-3 card col-3">
+                        <div class="card-img">
+                            <img src="https://static.wtable.co.kr/image/production/service/recipe/195/4e799085-60f5-46ba-b180-afc6a2ef4ad7.jpg?size=500x500"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>새우 완자 전골</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark"></i>
+                            <i class="bi bi-bookmark-fill"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-md-3"> -->
+                    <div class="cCard-4 card col-3">
+                        <div class="card-img">
+                            <img src="https://static.wtable.co.kr/image/production/service/recipe/2291/05de2ed5-2af7-494e-8a44-f54630398311.jpg?size=500x500"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>동파육</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark"></i>
+                            <i class="bi bi-bookmark-fill"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+
+                <!-- 일식 -->
+                <div class="japan row justify-content-center">
+                    <!-- <div class="col-md-4"> -->
+                    <div class="jCard-1 card col-3">
+                        <div class="card-img">
+                            <img src="https://static.wtable.co.kr/image/production/service/recipe/719/23757871-daf5-4a3d-b6e3-87b0a975f8d8.jpg?size=500x500"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>튀김 덮밥</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark"></i>
+                            <i class="bi bi-bookmark-fill"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-md-4"> -->
+                    <div class="jCard-2 card col-3">
+                        <div class="card-img">
+                            <img src="https://static.wtable.co.kr/image/production/service/recipe/2225/31de684e-49ca-43c4-8c16-844548610a69.jpg?size=500x500"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>우동</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark"></i>
+                            <i class="bi bi-bookmark-fill"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-md-4"> -->
+                    <div class="jCard-3 card col-3">
+                        <div class="card-img">
+                            <img src="https://static.wtable.co.kr/image/production/service/recipe/1344/eb3fea3b-559b-4add-9bbf-1f68ba973eaa.jpg?size=500x500"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>금태 술찜</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark"></i>
+                            <i class="bi bi-bookmark-fill"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-md-3"> -->
+                    <div class="jCard-4 card col-3">
+                        <div class="card-img">
+                            <img src="https://static.wtable.co.kr/image/production/service/recipe/948/5780ac56-3357-422f-b0ad-4240a3fff910.jpg?size=500x500"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>타코야키</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark"></i>
+                            <i class="bi bi-bookmark-fill"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+
+
+            </section>
+
+            <!-- 최근에 저장한 레시피 -->
+            <section class="bookmark">
+                <div class="recentBookmark">
+                    <h3>최근에 저장한 레시피</h3>
+                    <div class="bookmarkBox row row-cols-4">
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 동영상 -->
+            <!-- <section class="vid">
+                    <div class="four">
+                        <h3 class="font-weight-light">동영상으로 보는 레시피</h3>
+                        <div class="row justify-content-center">
+                            <div id="recipeCarousel" class="carousel slide" data-bs-ride="false">
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item active">
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-img">
+                                                    <iframe width="100%"
+                                                        src="https://www.youtube.com/embed/sQ4BVnVfw80?si=kmgR3kTxEIrGu6a4&amp;controls=0"
+                                                        title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                        allowfullscreen></iframe>
+                                                </div>
+                                                <div class="card-img-overlay"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-img">
+                                                    <iframe width="100%"
+                                                        src="https://www.youtube.com/embed/99YLmGofkQE?si=eKlkbPSQYNkNn0Oh&amp;controls=0"
+                                                        title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                        allowfullscreen></iframe>
+                                                </div>
+                                                <div class="card-img-overlay"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-img">
+                                                    <iframe width="100%"
+                                                        src="https://www.youtube.com/embed/J32Mfwl9xv8?si=NQ5CAARGtRsZVcOM&amp;controls=0"
+                                                        title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                        allowfullscreen></iframe>
+                                                </div>
+                                                <div class="card-img-overlay"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-img">
+                                                    <iframe width="100%"
+                                                        src="https://www.youtube.com/embed/NP5vh3RZlIM?si=pnjIhqhxeQqpZoCP&amp;controls=0"
+                                                        title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                        allowfullscreen></iframe>
+                                                </div>
+                                                <div class="card-img-overlay"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-img">
+                                                    <iframe width="100%"
+                                                        src="https://www.youtube.com/embed/fEJefgW6qzg?si=V-9U1izTSpzss5kO&amp;controls=0"
+                                                        title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                        allowfullscreen></iframe>
+                                                </div>
+                                                <div class="card-img-overlay"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-img">
+                                                    <iframe width="100%"
+                                                        src="https://www.youtube.com/embed/OJ90sjhm0xg?si=_UUlKJnJjMDGzVd0&amp;controls=0"
+                                                        title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                        allowfullscreen></iframe>
+                                                </div>
+                                                <div class="card-img-overlay"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel"
+                                    role="button" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                </a>
+                                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel"
+                                    role="button" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- <h5 class="mt-2 fw-light">advances one slide at a time</h5> -->
+        </div>
+        </section> -->
+
+    </main>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
