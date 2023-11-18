@@ -49,6 +49,8 @@ function changeSections2(){
 $('#submit').click(function(){
     let li = document.createElement('li');
     let day = new Date();
+    let time = `${day.getFullYear()} - ${day.getMonth()+1} - ${day.getDate()}`;
+    console.log(time);
     let headTitle = document.getElementById('headTitle').value;
     let newMessage = document.getElementById('newMessage').value;
     let ul;
@@ -58,7 +60,7 @@ $('#submit').click(function(){
     <p>주요 공지</p>
     <div class="serviceItemsStyle">
         <p> ${headTitle} </p>
-        <p>${day.getFullYear()}</p>
+        <p>${time}</p>
     </div>
 </button>
 <div class="hiddenWr">
@@ -72,7 +74,7 @@ ul.prepend(li);
     <p>FAQ</p>
     <div class="serviceItemsStyle">
         <p> ${headTitle} </p>
-        <p>${day.getFullYear()}</p>
+        <p>${time}</p>
     </div>
 </button>
 <div class="hiddenWr">
@@ -80,6 +82,8 @@ ul.prepend(li);
 </div>`;
 ul.prepend(li);
     }
+    document.getElementById('headTitle').value = '';
+    document.getElementById('newMessage').value = '';
 
     $('.popup').css('opacity', '0');
     $('.popup').css('visibility', 'hidden');
