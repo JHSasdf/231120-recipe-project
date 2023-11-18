@@ -65,7 +65,8 @@ $(document).on('click', '.like-btn', function() {
 })
 
 $('.container-of-like').click(function() {
-  $('.like-list').toggleClass('visible')
+  $('.like-list').toggleClass('visible');
+  $(this).toggleClass('blue');
 })
 
 $(document).on('click', '.find-card-btn', function() {
