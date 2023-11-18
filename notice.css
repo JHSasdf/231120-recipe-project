@@ -312,9 +312,6 @@ input:focus, textarea:focus{
         height: 400px;
     }
 
-    #newMessage{
-    
-
     }
     input{
         width: 320px;
@@ -332,4 +329,3 @@ input:focus, textarea:focus{
         width: 90px;
         height: 38px;
     }
-}
