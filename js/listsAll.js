@@ -33,7 +33,7 @@ $(document).on("click", ".food-card img" ,function() {
   $('body').addClass('overflow-hidden');
   $('.curtain').addClass('visible');
   $('body').append(`
-  <div class="card modal-card">
+  <div class="card modal-card" style="scale: 97%">
     <img src=${card.children[0].src} class="card-img-top" alt="image-of-food">  
     <div class="card-body" style="display: block;">
     <div class="likes"><div><button class="like-btn"><i class="bi bi-hand-thumbs-up"></i></button> <span>${card.dataset.numberoflikes}</span></div>
@@ -47,7 +47,8 @@ $(document).on("click", ".food-card img" ,function() {
     $($('.like-btn')[0].children[0]).addClass('blue');
   }
 
-
+  $('.modal-card').animate(
+    {scale: '100%'}, 100, 'linear')
 })
 
 $(document).on('click', '.like-btn', function() {
@@ -73,7 +74,7 @@ $(document).on('click', '.find-card-btn', function() {
         $('body').addClass('overflow-hidden');
         $('.curtain').addClass('visible');
         $('body').append(`
-        <div class="card modal-card">
+        <div class="card modal-card" style="scale:97%">
           <img src=${card.children[0].src} class="card-img-top" alt="image-of-food">  
           <div class="card-body" style="display: block;">
           <div class="likes"><div><button class="like-btn"><i class="bi bi-hand-thumbs-up"></i></button> <span>${card.dataset.numberoflikes}</span></div>
@@ -84,6 +85,9 @@ $(document).on('click', '.find-card-btn', function() {
           </div>
         </div>`)
         $($('.like-btn')[0].children[0]).addClass('blue');
+
+        $('.modal-card').animate(
+          {scale: '100%'}, 100, 'linear')
         break;
       }
     }
@@ -98,7 +102,7 @@ $(document).on('click', '.search-btn', function() {
       $('body').addClass('overflow-hidden');
       $('.curtain').addClass('visible');
       $('body').append(`
-      <div class="card modal-card">
+      <div class="card modal-card" style="scale: 97%">
         <img src=${card.children[0].src} class="card-img-top" alt="image-of-food">  
         <div class="card-body" style="display: block;">
         <div class="likes"><div><button class="like-btn"><i class="bi bi-hand-thumbs-up"></i></button> <span>${card.dataset.numberoflikes}</span></div>
@@ -111,6 +115,10 @@ $(document).on('click', '.search-btn', function() {
       if (card.dataset.mylike == 1) {
         $($('.like-btn')[0].children[0]).addClass('blue');
       }
+
+      $('.modal-card').animate(
+        {scale: '100%'}, 100, 'linear')
+
       $('.search-input').val("")
       $('.searchBox').removeClass('active')
       return
