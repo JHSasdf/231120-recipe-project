@@ -63,7 +63,6 @@ const observer = new IntersectionObserver(
     ([e]) =>btnGroup.classList.toggle("show", e.intersectionRatio < 1),
     { threshold: [1] }
 );
-
 observer.observe(el);
 
 let rootElement = document.documentElement;
@@ -98,6 +97,43 @@ $(function(){
         document.execCommand("copy");
         document.body.removeChild(textarea);
         alert("URL이 복사되었습니다.")
+    });
+
+    //임시 : 댓글 구분용
+    $('.replyDep1').each(function(i){
+        let id=$('.replyDep1 .comment').length-i;
+        $('.comment',this).prepend(id+' ');
+        $(this).attr('data-reply-id',id)
+        if($(this).nextAll('.replyDep2').length){
+            $(this).nextAll('.replyDep2').each(function(ii,dep2){
+                $('.comment',dep2).prepend(id+'-'+(ii+1)+' ');
+            })
+        }
+    });
+    //댓글 : 수정 버튼
+    $('.btnModify').click(function(e){
+        let id = $(this).closest('li').data('reply-id');
+        let $self= $(this).closest('li');
+        let text= $('.comment',$self).html().replace(/(\s\s)/gi, ' ').trim();
+        $('.comment',$self).after(`
+            <div class='replyTextareaWrap replyInput mt-3'><textarea id="replyTextarea">${text}</textarea><button onclick="function add(e){
+                let data=$('#replyTextarea').val();
+                $(e).closest('li').find('.comment').text(data)
+                $('.replyTextareaWrap').remove();
+            };add(this);">수정</button></div>
+        `);
+    });
+    //댓글 삭제
+    $('.btnDelete').click(function(e){
+        let id = $(this).closest('li').data('reply-id');
+        let $dep2All = $(`[data-reply-id=${id}]`).nextAll('.replyDep2');
+        let $self= $(this).closest('li');
+        if($dep2All.length){
+            $dep2All.each(function(){
+                $(this).remove();
+            });
+        }
+        $self.remove();
     });
 
     //팝업: 재료
