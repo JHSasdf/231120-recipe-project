@@ -64,12 +64,11 @@
                 <li class="myPageshort"> <a href="myPage.html">마이페이지</a></li>
             </ul>
             <div class="icon">
-                <div class="search">검색
+                <div class="search"><i class="bi bi-search" style="font-size: 1.2rem;"></i>
                 </div>
                 <div class="login login-text" data-bs-toggle="modal" data-bs-target="#exampleModal">로그인 
                 </div>
-                <div class="more">더보기</div>
-                <div class="myPagelong"><a href="myPage.html">마이페이지</a></div>
+                <div class="more"><i class="bi bi-justify" style="font-size: 1.2rem;"></i></div>
             </div>
         </nav>
         <div class="searchBox">
@@ -80,35 +79,6 @@
             </div>
         </div>
 
-    <!-- bootstrap Modal simple ver.-->
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Sign in</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="mb-3">
-                                <label for="id" class="col-form-label">아이디</label>
-                                <input type="text" class="form-control login-id" id="id">
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="col-form-label">비밀번호</label>
-                                <input type="text" class="form-control login-pw" id="password">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                    <form>
-                        <button type="button" class="btn btn-primary login-button">Sign in</button>
-                    </form>
-                    </div>
-                </div>
-            </div>
-        </div>
     </header>
 
     <main>
@@ -489,350 +459,382 @@
         </div>
     </footer>
 
-    <div id="ingredients" class="modal fade"><!-- 팝업 : 재료 -->
-        <div class="modal-dialog" role="document">
-            <div class="modal-content rounded-4 shadow">
-                <div class="modal-header pt-4 px-4 border-bottom-0">
-                    <h1 class="modal-title fs-2 fw-bold">된장</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body pt-0 px-4">
-                    <ul class="list">
-                        <li>제철 : 연중제철</li>
-                        <li>보관 온도 : 10 ~ 15℃</li>
-                        <li>100g 열량 : 131Kcal</li>
-                        <li>잘맞는 음식 : 부추</li>
-                    </ul>
-                    <h2 class="tit fs-5 mt-5">보관법</h2>
-                    <p>옹기에 담아 보관하거나 냉장보관한다.</p>
-                    <div class="feat mt-5">
-                        <h2 class="tit fs-5">
-                            <span>관련 레시피</span>
-                        </h2>
-
-                        <div class="featRecipeArrows">
-                            <button class="swiper-button-prev btnPrev" aria-label="previous"></button>
-                            <button class="swiper-button-next btnNext" aria-label="next"></button>
-                        </div><!-- //arrows -->
-                        <div class="swiper sliderWrap featRecipe">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="#none">
-                                        <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
-                                        <p>1 레시피</p>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#none">
-                                        <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
-                                        <p>2 레시피</p>
-                                    </a>
-
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#none">
-                                        <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
-                                        <p>3 레시피</p>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#none">
-                                        <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
-                                        <p>4 레시피</p>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#none">
-                                        <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
-                                        <p>5 레시피</p>
-                                    </a>
-                                </div>
-                            </div><!-- //slider -->
-                        </div>
+    <aside>
+        <!-- bootstrap Modal simple ver.-->
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Sign in</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="id" class="col-form-label">아이디</label>
+                                <input type="text" class="form-control login-id" id="id">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="col-form-label">비밀번호</label>
+                                <input type="text" class="form-control login-pw" id="password">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                    <form>
+                        <button type="button" class="btn btn-primary login-button">Sign in</button>
+                    </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div><!-- // 팝업 : 재료 -->
 
-    <!-- 팝업 : 계량 -->
-    <div id="weight" class="modal fade">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content rounded-4 shadow">
-                <div class="modal-header pt-4 px-4 border-bottom-0">
-                    <h1 class="modal-title fs-2 fw-bold">밥숟가락 계량법</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body pt-4 px-4">
-                    <div class="weight_wrap">
-                        <div class="weight_box">
-                            <div class="weightBtns">
-                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                                <label class="btn btn-outline-primary" for="btnradio1">숟가락</label>
-                                
-                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btnradio2">종이컵</label>
-                                
-                                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btnradio3">눈대중</label>
-                                
-                                <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btnradio4">손(그 외 팁)</label>
-                            </div>
-                            <div class="weight_list">
-                                <div class="weight_con" style="display: block;">
-                                    <div class="con">
-                                        <h2 class="fs-5">가루 분량 재기</h2>
-                                        <ul class="clr">
-                                            <li class="no_mar">
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_1.jpg" alt="설탕">
-                                                <div class="text_box">
-                                                    <p class="b_text">설탕(1)</p>
-                                                    <p class="g_text">수북이 떠서 위로 볼록하게<br>올라오도록 담아요.</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_2.jpg" alt="설탕">
-                                                <div class="text_box">
-                                                    <p class="b_text">설탕(0.5)</p>
-                                                    <p class="g_text">절반 정도만 볼록하게 담아요.</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_3.jpg" alt="설탕">
-                                                <div class="text_box">
-                                                    <p class="b_text">설탕(0.3)</p>
-                                                    <p class="g_text">1/3정도만 볼록하게 담아요.</p>
-                                                </div>
-                                            </li>
-                                        </ul>
+        <div id="ingredients" class="modal fade"><!-- 팝업 : 재료 -->
+            <div class="modal-dialog" role="document">
+                <div class="modal-content rounded-4 shadow">
+                    <div class="modal-header pt-4 px-4 border-bottom-0">
+                        <h1 class="modal-title fs-2 fw-bold">된장</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body pt-0 px-4">
+                        <ul class="list">
+                            <li>제철 : 연중제철</li>
+                            <li>보관 온도 : 10 ~ 15℃</li>
+                            <li>100g 열량 : 131Kcal</li>
+                            <li>잘맞는 음식 : 부추</li>
+                        </ul>
+                        <h2 class="tit fs-5 mt-5">보관법</h2>
+                        <p>옹기에 담아 보관하거나 냉장보관한다.</p>
+                        <div class="feat mt-5">
+                            <h2 class="tit fs-5">
+                                <span>관련 레시피</span>
+                            </h2>
+
+                            <div class="featRecipeArrows">
+                                <button class="swiper-button-prev btnPrev" aria-label="previous"></button>
+                                <button class="swiper-button-next btnNext" aria-label="next"></button>
+                            </div><!-- //arrows -->
+                            <div class="swiper sliderWrap featRecipe">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#none">
+                                            <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
+                                            <p>1 레시피</p>
+                                        </a>
                                     </div>
-                                    <div class="con">
-                                        <h2 class="fs-5">다진 재료 분량 재기</h2>
-                                        <ul class="clr">
-                                            <li class="no_mar">
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_4.jpg" alt="마늘">
-                                                <div class="text_box">
-                                                    <p class="b_text">마늘(1)</p>
-                                                    <p class="g_text">수북이 떠서 꼭 꼭 담아요.</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_5.jpg" alt="마늘">
-                                                <div class="text_box">
-                                                    <p class="b_text">마늘(0.5)</p>
-                                                    <p class="g_text">절반 정도만 꼭 꼭 담아요.</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_6.jpg" alt="마늘">
-                                                <div class="text_box">
-                                                    <p class="b_text">마늘(0.3)</p>
-                                                    <p class="g_text">1/3정도만 꼭 꼭 담아요.</p>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    <div class="swiper-slide">
+                                        <a href="#none">
+                                            <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
+                                            <p>2 레시피</p>
+                                        </a>
+
                                     </div>
-                                    <div class="con">
-                                        <h2 class="fs-5">장류 분량 재기</h2>
-                                        <ul class="clr">
-                                            <li class="no_mar">
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_7.jpg" alt="고추장">
-                                                <div class="text_box">
-                                                    <p class="b_text">고추장(1)</p>
-                                                    <p class="g_text">가득 떠서 위로 볼록하게 올라<br>오도록 담아요.</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_8.jpg" alt="고추장">
-                                                <div class="text_box">
-                                                    <p class="b_text">고추장(0.5)</p>
-                                                    <p class="g_text">절반 정도만 볼록하게 담아요.</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_9.jpg" alt="고추장">
-                                                <div class="text_box">
-                                                    <p class="b_text">고추장(0.3)</p>
-                                                    <p class="g_text">1/3정도만 볼록하게 담아요</p>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    <div class="swiper-slide">
+                                        <a href="#none">
+                                            <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
+                                            <p>3 레시피</p>
+                                        </a>
                                     </div>
-                                    <div class="con">
-                                        <h2 class="fs-5">액체 양념 분량 재기</h2>
-                                        <ul class="clr">
-                                            <li class="no_mar">
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_10.jpg" alt="간장">
-                                                <div class="text_box">
-                                                    <p class="b_text">간장(1)</p>
-                                                    <p class="g_text">한가득 찰랑거리게 담아요.</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_11.jpg" alt="간장">
-                                                <div class="text_box">
-                                                    <p class="b_text">간장(0.5)</p>
-                                                    <p class="g_text">가장자리가 보이도록 절반<br>정도만 담아요.</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_12.jpg" alt="간장">
-                                                <div class="text_box">
-                                                    <p class="b_text">간장(0.3)</p>
-                                                    <p class="g_text">1/3정도만 담아요</p>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    <div class="swiper-slide">
+                                        <a href="#none">
+                                            <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
+                                            <p>4 레시피</p>
+                                        </a>
                                     </div>
-                                </div>
-                                <div class="weight_con" style="display: none;">
-                                    <div class="con">
-                                        <h2 class="fs-5">종이컵으로 분량 재기</h2>
-                                        <ul class="clr">
-                                            <li class="no_mar">
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/cup01.jpg" alt="육수">
-                                                <div class="text_box">
-                                                    <p class="b_text">육수(1컵 = 180ml)</p>
-                                                    <p class="g_text">종이컵에 가득 담아요.</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/cup02.jpg" alt="육수">
-                                                <div class="text_box">
-                                                    <p class="b_text">육수(1/2컵 = 90ml)</p>
-                                                    <p class="g_text">종이컵의 절반만 담아요.</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/cup03.jpg" alt="밀가루">
-                                                <div class="text_box">
-                                                    <p class="b_text">밀가루(1컵 = 100g)</p>
-                                                    <p class="g_text">종이컵 가득 담아 윗면을 깍아요.</p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <ul class="clr">
-                                            <li class="no_mar">
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/cup04.jpg" alt="다진 양파">
-                                                <div class="text_box">
-                                                    <p class="b_text">다진 양파(1컵 = 110g)</p>
-                                                    <p class="g_text">종이컵 가득 담아 윗면을 깍아요.</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/cup05.jpg" alt="아몬드">
-                                                <div class="text_box">
-                                                    <p class="b_text">아몬드(1/2 컵)</p>
-                                                    <p class="g_text">종이컵의 절반만 담아요.</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/cup06.jpg" alt="멸치">
-                                                <div class="text_box">
-                                                    <p class="b_text">멸치(1컵)</p>
-                                                    <p class="g_text">종이컵에 가득 담아요.</p>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    <div class="swiper-slide">
+                                        <a href="#none">
+                                            <img src="https://2bob.co.kr/data/recipe/20170405155317-76K2G.jpg" alt="">
+                                            <p>5 레시피</p>
+                                        </a>
                                     </div>
-                                </div>
-                                <div class="weight_con" style="display: none;">
-                                    <div class="con">
-                                        <h2 class="fs-5">눈대중으로 분량 재기</h2>
-                                        <ul class="clr">
-                                            <li class="no_mar">
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/nun01.jpg" alt="애호박">
-                                                <div class="text_box">
-                                                    <p class="b_text">애호박(1/2개 = 100g)</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/nun02.jpg" alt="양파">
-                                                <div class="text_box">
-                                                    <p class="b_text">양파(1/2개 = 50g)</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/nun03.jpg" alt="무">
-                                                <div class="text_box">
-                                                    <p class="b_text">무(1토막 = 150g)</p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <ul class="clr">
-                                            <li class="no_mar">
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/nun04.jpg" alt="당근">
-                                                <div class="text_box">
-                                                    <p class="b_text">당근(1/2개 = 100g)</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/nun05.jpg" alt="대파 흰 부분">
-                                                <div class="text_box">
-                                                    <p class="b_text">대파 흰 부분(1대 = 10cm)</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/nun06.jpg" alt="마늘">
-                                                <div class="text_box">
-                                                    <p class="b_text">마늘(1쪽 = 5g)</p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <ul class="clr">
-                                            <li class="no_mar">
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/nun07.jpg" alt="생강">
-                                                <div class="text_box">
-                                                    <p class="b_text">생강(1톨 = 7g)</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/nun08.jpg" alt="돼지고기">
-                                                <div class="text_box">
-                                                    <p class="b_text">돼지고기(1토막 = 200g)</p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="weight_con" style="display: none;">
-                                    <div class="con">
-                                        <h2 class="fs-5">손으로 분량 재기</h2>
-                                        <ul class="clr">
-                                            <li class="no_mar">
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/hand01.jpg" alt="마늘">
-                                                <div class="text_box">
-                                                    <p class="b_text">콩나물(1줌)</p>
-                                                    <p class="g_text">손으로 자연스럽게 한가득 쥐어요.</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/hand02.jpg" alt="마늘">
-                                                <div class="text_box">
-                                                    <p class="b_text">시금치(1줌)</p>
-                                                    <p class="g_text">손으로 자연스럽게 한가득 쥐어요.</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="https://2bob.co.kr/skin/nodskin_argio/images/hand03.jpg" alt="마늘">
-                                                <div class="text_box">
-                                                    <p class="b_text">국수(1줌 = 1인분)</p>
-                                                    <p class="g_text">500원 동전 굵기로 가볍게 쥐어요.</p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/hand_tip.jpg" alt="+ 표시의 의미, 그외 알아두기" class="mt10">
-                                </div>
+                                </div><!-- //slider -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div><!-- //팝업 : 계량 -->
-    
+        </div><!-- // 팝업 : 재료 -->
+
+        <!-- 팝업 : 계량 -->
+        <div id="weight" class="modal fade">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content rounded-4 shadow">
+                    <div class="modal-header pt-4 px-4 border-bottom-0">
+                        <h1 class="modal-title fs-2 fw-bold">밥숟가락 계량법</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body pt-4 px-4">
+                        <div class="weight_wrap">
+                            <div class="weight_box">
+                                <div class="weightBtns">
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                                    <label class="btn btn-outline-primary" for="btnradio1">숟가락</label>
+                                    
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio2">종이컵</label>
+                                    
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio3">눈대중</label>
+                                    
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio4">손(그 외 팁)</label>
+                                </div>
+                                <div class="weight_list">
+                                    <div class="weight_con" style="display: block;">
+                                        <div class="con">
+                                            <h2 class="fs-5">가루 분량 재기</h2>
+                                            <ul class="clr">
+                                                <li class="no_mar">
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_1.jpg" alt="설탕">
+                                                    <div class="text_box">
+                                                        <p class="b_text">설탕(1)</p>
+                                                        <p class="g_text">수북이 떠서 위로 볼록하게<br>올라오도록 담아요.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_2.jpg" alt="설탕">
+                                                    <div class="text_box">
+                                                        <p class="b_text">설탕(0.5)</p>
+                                                        <p class="g_text">절반 정도만 볼록하게 담아요.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_3.jpg" alt="설탕">
+                                                    <div class="text_box">
+                                                        <p class="b_text">설탕(0.3)</p>
+                                                        <p class="g_text">1/3정도만 볼록하게 담아요.</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="con">
+                                            <h2 class="fs-5">다진 재료 분량 재기</h2>
+                                            <ul class="clr">
+                                                <li class="no_mar">
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_4.jpg" alt="마늘">
+                                                    <div class="text_box">
+                                                        <p class="b_text">마늘(1)</p>
+                                                        <p class="g_text">수북이 떠서 꼭 꼭 담아요.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_5.jpg" alt="마늘">
+                                                    <div class="text_box">
+                                                        <p class="b_text">마늘(0.5)</p>
+                                                        <p class="g_text">절반 정도만 꼭 꼭 담아요.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_6.jpg" alt="마늘">
+                                                    <div class="text_box">
+                                                        <p class="b_text">마늘(0.3)</p>
+                                                        <p class="g_text">1/3정도만 꼭 꼭 담아요.</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="con">
+                                            <h2 class="fs-5">장류 분량 재기</h2>
+                                            <ul class="clr">
+                                                <li class="no_mar">
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_7.jpg" alt="고추장">
+                                                    <div class="text_box">
+                                                        <p class="b_text">고추장(1)</p>
+                                                        <p class="g_text">가득 떠서 위로 볼록하게 올라<br>오도록 담아요.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_8.jpg" alt="고추장">
+                                                    <div class="text_box">
+                                                        <p class="b_text">고추장(0.5)</p>
+                                                        <p class="g_text">절반 정도만 볼록하게 담아요.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_9.jpg" alt="고추장">
+                                                    <div class="text_box">
+                                                        <p class="b_text">고추장(0.3)</p>
+                                                        <p class="g_text">1/3정도만 볼록하게 담아요</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="con">
+                                            <h2 class="fs-5">액체 양념 분량 재기</h2>
+                                            <ul class="clr">
+                                                <li class="no_mar">
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_10.jpg" alt="간장">
+                                                    <div class="text_box">
+                                                        <p class="b_text">간장(1)</p>
+                                                        <p class="g_text">한가득 찰랑거리게 담아요.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_11.jpg" alt="간장">
+                                                    <div class="text_box">
+                                                        <p class="b_text">간장(0.5)</p>
+                                                        <p class="g_text">가장자리가 보이도록 절반<br>정도만 담아요.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/wei_spoon_12.jpg" alt="간장">
+                                                    <div class="text_box">
+                                                        <p class="b_text">간장(0.3)</p>
+                                                        <p class="g_text">1/3정도만 담아요</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="weight_con" style="display: none;">
+                                        <div class="con">
+                                            <h2 class="fs-5">종이컵으로 분량 재기</h2>
+                                            <ul class="clr">
+                                                <li class="no_mar">
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/cup01.jpg" alt="육수">
+                                                    <div class="text_box">
+                                                        <p class="b_text">육수(1컵 = 180ml)</p>
+                                                        <p class="g_text">종이컵에 가득 담아요.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/cup02.jpg" alt="육수">
+                                                    <div class="text_box">
+                                                        <p class="b_text">육수(1/2컵 = 90ml)</p>
+                                                        <p class="g_text">종이컵의 절반만 담아요.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/cup03.jpg" alt="밀가루">
+                                                    <div class="text_box">
+                                                        <p class="b_text">밀가루(1컵 = 100g)</p>
+                                                        <p class="g_text">종이컵 가득 담아 윗면을 깍아요.</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <ul class="clr">
+                                                <li class="no_mar">
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/cup04.jpg" alt="다진 양파">
+                                                    <div class="text_box">
+                                                        <p class="b_text">다진 양파(1컵 = 110g)</p>
+                                                        <p class="g_text">종이컵 가득 담아 윗면을 깍아요.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/cup05.jpg" alt="아몬드">
+                                                    <div class="text_box">
+                                                        <p class="b_text">아몬드(1/2 컵)</p>
+                                                        <p class="g_text">종이컵의 절반만 담아요.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/cup06.jpg" alt="멸치">
+                                                    <div class="text_box">
+                                                        <p class="b_text">멸치(1컵)</p>
+                                                        <p class="g_text">종이컵에 가득 담아요.</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="weight_con" style="display: none;">
+                                        <div class="con">
+                                            <h2 class="fs-5">눈대중으로 분량 재기</h2>
+                                            <ul class="clr">
+                                                <li class="no_mar">
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/nun01.jpg" alt="애호박">
+                                                    <div class="text_box">
+                                                        <p class="b_text">애호박(1/2개 = 100g)</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/nun02.jpg" alt="양파">
+                                                    <div class="text_box">
+                                                        <p class="b_text">양파(1/2개 = 50g)</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/nun03.jpg" alt="무">
+                                                    <div class="text_box">
+                                                        <p class="b_text">무(1토막 = 150g)</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <ul class="clr">
+                                                <li class="no_mar">
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/nun04.jpg" alt="당근">
+                                                    <div class="text_box">
+                                                        <p class="b_text">당근(1/2개 = 100g)</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/nun05.jpg" alt="대파 흰 부분">
+                                                    <div class="text_box">
+                                                        <p class="b_text">대파 흰 부분(1대 = 10cm)</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/nun06.jpg" alt="마늘">
+                                                    <div class="text_box">
+                                                        <p class="b_text">마늘(1쪽 = 5g)</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <ul class="clr">
+                                                <li class="no_mar">
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/nun07.jpg" alt="생강">
+                                                    <div class="text_box">
+                                                        <p class="b_text">생강(1톨 = 7g)</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/nun08.jpg" alt="돼지고기">
+                                                    <div class="text_box">
+                                                        <p class="b_text">돼지고기(1토막 = 200g)</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="weight_con" style="display: none;">
+                                        <div class="con">
+                                            <h2 class="fs-5">손으로 분량 재기</h2>
+                                            <ul class="clr">
+                                                <li class="no_mar">
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/hand01.jpg" alt="마늘">
+                                                    <div class="text_box">
+                                                        <p class="b_text">콩나물(1줌)</p>
+                                                        <p class="g_text">손으로 자연스럽게 한가득 쥐어요.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/hand02.jpg" alt="마늘">
+                                                    <div class="text_box">
+                                                        <p class="b_text">시금치(1줌)</p>
+                                                        <p class="g_text">손으로 자연스럽게 한가득 쥐어요.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img src="https://2bob.co.kr/skin/nodskin_argio/images/hand03.jpg" alt="마늘">
+                                                    <div class="text_box">
+                                                        <p class="b_text">국수(1줌 = 1인분)</p>
+                                                        <p class="g_text">500원 동전 굵기로 가볍게 쥐어요.</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <img src="https://2bob.co.kr/skin/nodskin_argio/images/hand_tip.jpg" alt="+ 표시의 의미, 그외 알아두기" class="mt10">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- //팝업 : 계량 -->
+        
+    </aside>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../js/detail.js"></script>
 </body>
