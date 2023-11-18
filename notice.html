@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공지사항</title>
     <!-- css 연결 -->
-    <link rel="stylesheet" href="./footer.css">
+    <!-- <link rel="stylesheet" href="./footer.css"> -->
 
 
     <!-- 폰트어썸 및 jQurey -->
@@ -42,8 +42,7 @@
 
     <link rel="stylesheet" href="./mainHeader.css">
     <link rel="stylesheet" href="./notice.css">
-    <link rel="stylesheet" href="./footer.css">
-    <link rel="stylesheet" href="./mainHeader.css">
+    <link rel="stylesheet" href="./css/footer.css">
 
 </head>
 
@@ -270,9 +269,9 @@
                 <span></span>
                 <h1>공지 추가</h1>
                 <form>
-                    <input type="text" id="headTitle" placeholder="제목을 입력해주세요">
+                    <input type="text" class="input1" id="headTitle" placeholder="제목을 입력해주세요">
                     <label></label>
-                    <textarea name="message" id="newMessage" cols="30" rows="10" placeholder="내용을 입력해주세요"></textarea><br>
+                    <textarea name="message" class="input2" id="newMessage" cols="30" rows="10" placeholder="내용을 입력해주세요"></textarea><br>
                     <input type="button" id="cancel" value="취소">
                     <input type="button" id="submit" value="등록">
                 </form>
@@ -284,21 +283,20 @@
 <!-- 위 아래 간격 넣기 -->
         <div class="nothing"></div>
 <!-- footer -->
-        <footer>
-            <div class="container p-3">
+        
+            <!-- <div class="container p-3">
                 <p>고객센터</p>
                 <div>
                     <a href="./notice.html">
                         <p>공지사항</p>
                     </a>
-                    <a href="">
+                    <a href="./notice.html">
                         <p>FAQ</p>
                     </a>
                     <p>고객 센터 번호 : 000 - 0000 - 0000</p>
                 </div>
             </div>
-        </footer>
-        <!-- <footer>
+        <footer>
             <div class="container p-3">
                 <div class="d-flex justify-content-between align-item-center">
                     <div class="col-6">

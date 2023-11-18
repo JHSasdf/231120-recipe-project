@@ -198,6 +198,13 @@ input, textarea{
     color: #3a3a3a;
 }
 
+.input2{
+    width: 420px;
+    height: 270px;
+}
+.input1{
+    width: 420px;
+}
 input:focus, textarea:focus{
     border: 1px solid #97d6eb;
 }
@@ -270,62 +277,62 @@ input:focus, textarea:focus{
 }
 
 
-@media  screen and (768 <= width <= 992px) {
-    
+@media  screen and (min-width: 577px) {
+    .input2{
+        width: 420px;
+        height: 270px;
+    }
+    .input1{
+        width: 420px;
+    }
 }
 
 @media screen and (max-width : 576px){
     .serviceItemsStyle > p:last-child{
         display: none;
     }
-    /* .container{
-        margin: auto 10px;
-    } */
+        .container{
+            max-width: 520px;
+        }
+        .topics{
+            font-size: 18px;
+        }
+        .sectionHead > h2{
+            font-size: 20px;
+        }
+        .addNotice{
+            font-size: 15px;
+        }
+    
+        .hiddenF > p {
+            font-size: 15px;
+        }
+        .serviceItems > p{
+            font-size: 16px;
+        }
+        .serviceItemsStyle > p:first-child{
+            font-size: 16px;
+        }
+    
+        .popup-content {
+            width: 400px;
+            height: 400px;
+        }
+    
+        .input1{
+            width: 320px;
+        }
+        .input2{
+            width: 320px;
+            height: 200px;
+        }
+    
+        h1{
+            font-size: 20px;
+        }
+    
+        #submit, #cancel{
+            width: 90px;
+            height: 38px;
+        }
 }
-
-@media (max-width: 575px){
-    .container{
-        max-width: 520px;
-    }
-    .topics{
-        font-size: 18px;
-    }
-    .sectionHead > h2{
-        font-size: 20px;
-    }
-    .addNotice{
-        font-size: 15px;
-    }
-
-    .hiddenF > p {
-        font-size: 15px;
-    }
-    .serviceItems > p{
-        font-size: 16px;
-    }
-    .serviceItemsStyle > p:first-child{
-        font-size: 16px;
-    }
-
-    .popup-content {
-        width: 400px;
-        height: 400px;
-    }
-
-    }
-    input{
-        width: 320px;
-    }
-    textarea{
-        width: 320px;
-        height: 200px;
-    }
-
-    h1{
-        font-size: 20px;
-    }
-
-    #submit, #cancel{
-        width: 90px;
-        height: 38px;
-    }

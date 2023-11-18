@@ -145,6 +145,12 @@ img:hover{
     margin-top: 100px;
 }
 
+.loginname{
+    font-size: 30px;
+}
+.loginname:hover{
+    cursor: pointer;
+}
 
 .request > p{
     font-size:140%;
@@ -167,4 +173,24 @@ img:hover{
     font-family: 'Nanum Brush Script', cursive;
     font-family: 'Noto Sans KR', sans-serif;
     color: #64220B;
+}
+
+@media screen and (max-width: 768px) {
+    .profileImg{
+        margin-right: 0px;
+    }
+    .PostWr{
+        text-align: center;
+    }
+    #previewImg{
+        width: 150px;
+        height: 150px;
+        margin-top: 25px;
+    }
+    .profile>.profileImg{
+        margin-right: 0px;
+    }
+    .loginname {
+        font-size: 20px;
+    }
 }
