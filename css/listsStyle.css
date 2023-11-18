@@ -55,6 +55,11 @@ main {
   padding: 1rem;
 }
 
+footer a {
+  color: rgb(200, 115, 15);
+  text-decoration: none;
+}
+
 .food-slide-title h5 {
   margin: 0;
   line-height: 2rem;
