@@ -24,11 +24,13 @@ function removeModals () {
   $('.modal-card').remove();
   $('.curtain').removeClass('visible');
   $('.add-modal-card').removeClass('visible')
+  $('body').removeClass('overflow-hidden');
 }
 
 
 $(document).on("click", ".food-card img" ,function() {
   card = this.parentNode;
+  $('body').addClass('overflow-hidden');
   $('.curtain').addClass('visible');
   $('body').append(`
   <div class="card modal-card">
@@ -68,6 +70,7 @@ $('.container-of-like').click(function() {
 $(document).on('click', '.find-card-btn', function() {
     for (const card of $('.food-card')) {
       if (this.children[0].textContent === card.dataset.index ) {
+        $('body').addClass('overflow-hidden');
         $('.curtain').addClass('visible');
         $('body').append(`
         <div class="card modal-card">
@@ -92,6 +95,7 @@ $(document).on('click', '.search-btn', function() {
   for (const card of $('.food-card')) {
     
     if ($('.search-input')[0].value === card.children[1].children[0].textContent) {
+      $('body').addClass('overflow-hidden');
       $('.curtain').addClass('visible');
       $('body').append(`
       <div class="card modal-card">
@@ -104,9 +108,11 @@ $(document).on('click', '.search-btn', function() {
           <p class="card-text" style="white-space: pre-wrap;">${card.children[1].children[2].textContent} </p>
         </div>
       </div>`)
-      $($('.like-btn')[0].children[0]).addClass('blue');
+      if (card.dataset.mylike == 1) {
+        $($('.like-btn')[0].children[0]).addClass('blue');
+      }
       $('.search-input').val("")
-
+      $('.searchBox').removeClass('active')
       return
     }
     
@@ -140,6 +146,7 @@ function previewFile() {
 $(document).on('click', '.add-card-btn', function() {
   $('.add-modal-card').addClass('visible')
   $('.curtain').addClass('visible');
+  $('body').addClass('overflow-hidden');
   slideIndex = this.dataset.countryindex;
 
   $(document).on('click', '.confirm-add-card-btn', function() {
@@ -153,7 +160,7 @@ $(document).on('click', '.add-card-btn', function() {
       />
 
       <div class="card-body">
-        <a href="./detail.html" class="card-title">${$('#modal-name').val()} <i class="bi bi-arrow-right"></i></a>
+        <a href="./detail.html" class="card-title">${$('#modal-name').val()}<i class="bi bi-arrow-right"></i></a>
         <p class="card-ingredient">준비재료: ${$('#modal-ingredient').val()}</p>
         <p class="card-text">${$('#modal-text').val()}
         </p>
