@@ -115,6 +115,8 @@ $(function(){
         let id = $(this).closest('li').data('reply-id');
         let $self= $(this).closest('li');
         let text= $('.comment',$self).html().replace(/(\n\s+)/gi, ' ').trim();
+        console.log()
+        if($('.comment',$self).next('.replyTextareaWrap').length) return;
         $('.comment',$self).after(`
             <div class='replyTextareaWrap replyInput mt-3'><textarea id="replyTextarea">${text}</textarea><button onclick="function add(e){
                 let data=$('#replyTextarea').val();
