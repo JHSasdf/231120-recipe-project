@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공지사항</title>
     <!-- css 연결 -->
-    <link rel="stylesheet" href="./notice.css">
     <link rel="stylesheet" href="./footer.css">
-    <link rel="stylesheet" href="./mainHeader.css">
 
 
     <!-- 폰트어썸 및 jQurey -->
@@ -42,6 +40,7 @@
     <script defer src="./mainHeader.js"></script>
     <script defer src="./notice.js"></script>
 
+    <link rel="stylesheet" href="./mainHeader.css">
     <link rel="stylesheet" href="./notice.css">
     <link rel="stylesheet" href="./footer.css">
     <link rel="stylesheet" href="./mainHeader.css">
@@ -109,7 +108,7 @@
         </div>
     </header>
 
-    <div id="all">
+    <div id="all container-md">
         <div class="noBanner">
             <div>고객센터</div>
         </div>
@@ -126,7 +125,7 @@
         </div>
 
         <section class="sectionBox container-md" style="display: block;">
-            <div class="sectionHead">
+            <div class="sectionHead container-md">
                 <h2>공지사항</h2>
                 <button type="button" class="addNotice" onclick="showPopup()"><i class="fa-solid fa-plus"></i></button>
             </div>
@@ -136,7 +135,7 @@
                         <p>주요 공지</p>
                         <div class="serviceItemsStyle">
                             <p>레시피 공유 지침서</p>
-                            <p>2023-11-17</p>
+                            <p>2023 - 11 - 17</p>
                         </div>
                     </button>
                     <div class="hiddenWr hiddenF">
@@ -150,7 +149,7 @@
                         <p>주요 공지</p>
                         <div class="serviceItemsStyle">
                             <p>레시피 무단배포 주의</p>
-                            <p>2023-11-16</p>
+                            <p>2023 - 11 - 16</p>
                         </div>
                     </button>
                     <div class="hiddenWr hiddenF">
@@ -163,7 +162,7 @@
                         <p>주요 공지</p>
                         <div class="serviceItemsStyle">
                             <p>제 1회 베스트 레시피 콘테스트 당첨자</p>
-                            <p>2023-11-15</p>
+                            <p>2023 - 11 - 15</p>
                         </div>
                     </button>
                     <div class="hiddenWr hiddenF">
@@ -183,7 +182,7 @@
                         <p>주요 공지</p>
                         <div class="serviceItemsStyle">
                             <p>제휴 문의</p>
-                            <p>2023-11-14</p>
+                            <p>2023 - 11 - 14</p>
                         </div>
                     </button>
                     <div class="hiddenWr hiddenF">
@@ -203,7 +202,7 @@
         <!-- FAQ -->
 
         <section class="sectionBox2 container-md" style="display: none;">
-            <div class="sectionHead">
+            <div class="sectionHead container-md">
                 <h2>FAQ</h2>
                 <button type="button" class="addNotice" onclick="showPopup()"><i class="fa-solid fa-plus"></i></button>
             </div>
@@ -213,7 +212,7 @@
                         <p>FAQ</p>
                         <div class="serviceItemsStyle">
                             <p>Q : 우아한 레시피 파트너스가 뭔가요? </p>
-                            <p>2023-11-17</p>
+                            <p>2023 - 11 - 17</p>
                         </div>
                     </button>
                     <div class="hiddenWr hiddenF">
@@ -226,7 +225,7 @@
                         <p>FAQ</p>
                         <div class="serviceItemsStyle">
                             <p>Q : 멤버쉽 기능은 없나요?</p>
-                            <p>2023-11-16</p>
+                            <p>2023 - 11 - 16</p>
                         </div>
                     </button>
                     <div class="hiddenWr hiddenF">
@@ -238,7 +237,7 @@
                         <p>FAQ </p>
                         <div class="serviceItemsStyle">
                             <p>Q : 이모티콘 기능은 없나요?</p>
-                            <p>2023-11-15</p>
+                            <p>2023 - 11 - 15</p>
                         </div>
                     </button>
                     <div class="hiddenWr hiddenF">
@@ -251,7 +250,7 @@
                         <p>FAQ</p>
                         <div class="serviceItemsStyle">
                             <p>Q : 베스트 메뉴는 어떻게 선정되나요?</p>
-                            <p>2023-11-14</p>
+                            <p>2023 - 11 - 14</p>
                         </div>
                     </button>
                     <div class="hiddenWr hiddenF">
@@ -273,7 +272,7 @@
                 <form>
                     <input type="text" id="headTitle" placeholder="제목을 입력해주세요">
                     <label></label>
-                    <textarea name="message" id="newMessage" cols="30" rows="10" placeholder="내용을 입력해주세요"></textarea>
+                    <textarea name="message" id="newMessage" cols="30" rows="10" placeholder="내용을 입력해주세요"></textarea><br>
                     <input type="button" id="cancel" value="취소">
                     <input type="button" id="submit" value="등록">
                 </form>
@@ -286,7 +285,7 @@
         <div class="nothing"></div>
 <!-- footer -->
         <footer>
-            <div class="request container-md">
+            <div class="container p-3">
                 <p>고객센터</p>
                 <div>
                     <a href="./notice.html">
@@ -299,5 +298,15 @@
                 </div>
             </div>
         </footer>
-    </div>
+        <!-- <footer>
+            <div class="container p-3">
+                <div class="d-flex justify-content-between align-item-center">
+                    <div class="col-6">
+                        <p>© 2023 빼빼로</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        우아한 레시피
+                    </div>
+                </div>
+        </footer> -->
 </html>

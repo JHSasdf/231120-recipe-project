@@ -121,6 +121,7 @@ a:hover {
     padding: 10px;
     width: 210px;
     height: 210px;
+    position: relative;
 }
 
 .prev,
@@ -158,6 +159,7 @@ a:hover {
     padding: 10px;
     width: 210px;
     height: 210px;
+    position: relative;
 }
 
 /* recent Slides */
@@ -190,6 +192,7 @@ a:hover {
     padding: 10px;
     width: 210px;
     height: 210px;
+    position: relative;
 }
 
 #all{
@@ -212,4 +215,9 @@ a:hover {
     font-family: 'Nanum Brush Script', cursive;
     font-family: 'Noto Sans KR', sans-serif;
     color: #64220B;
+}
+
+img:hover{
+    cursor: pointer;
+    bottom: 2vh;
 }

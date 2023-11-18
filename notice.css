@@ -37,6 +37,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 125px;
+    margin-top: 10px;
     /* background-color: rgb(243, 243, 247); */
 
 }
@@ -94,13 +95,13 @@ section button{
     letter-spacing: -0.6px;
 }
 .sectionHead button {
-    display: block;
+    /* display: block;
     width: 100px;
-    height: 100px;
-    justify-content: center;
-    align-items: center;
+    height: 100px; */
+    justify-content: end;
+    /* align-items: center;
     margin-left: 1100px;
-    margin-top: -30px;
+    margin-top: -30px; */
 }
 
 .serviceItems{
@@ -206,7 +207,7 @@ input:focus, textarea:focus{
     height: 48px;
     text-align: center;
     border: none;
-    margin-top: 20px;
+    margin-top: 10px;
     cursor: pointer;
 }
 
@@ -266,4 +267,69 @@ input:focus, textarea:focus{
 
 .sectionBox2{
     display: none;
+}
+
+
+@media  screen and (768 <= width <= 992px) {
+    
+}
+
+@media screen and (max-width : 576px){
+    .serviceItemsStyle > p:last-child{
+        display: none;
+    }
+    /* .container{
+        margin: auto 10px;
+    } */
+}
+
+@media (max-width: 575px){
+    .container{
+        max-width: 520px;
+    }
+    .topics{
+        font-size: 18px;
+    }
+    .sectionHead > h2{
+        font-size: 20px;
+    }
+    .addNotice{
+        font-size: 15px;
+    }
+
+    .hiddenF > p {
+        font-size: 15px;
+    }
+    .serviceItems > p{
+        font-size: 16px;
+    }
+    .serviceItemsStyle > p:first-child{
+        font-size: 16px;
+    }
+
+    .popup-content {
+        width: 400px;
+        height: 400px;
+    }
+
+    #newMessage{
+    
+
+    }
+    input{
+        width: 320px;
+    }
+    textarea{
+        width: 320px;
+        height: 200px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    #submit, #cancel{
+        width: 90px;
+        height: 38px;
+    }
 }
