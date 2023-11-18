@@ -50,7 +50,8 @@ h3 {
 }
 
 /* 북마크 아이콘 */
-.bi {
+.best .bi, .recommend .bi,
+.bookmark .bi {
     position: absolute;
     right: 10%;
     /* margin-right: 10%; */
