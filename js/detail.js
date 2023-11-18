@@ -114,7 +114,7 @@ $(function(){
     $('.btnModify').click(function(e){
         let id = $(this).closest('li').data('reply-id');
         let $self= $(this).closest('li');
-        let text= $('.comment',$self).html().replace(/(\s\s)/gi, ' ').trim();
+        let text= $('.comment',$self).html().replace(/(\n\s+)/gi, ' ').trim();
         $('.comment',$self).after(`
             <div class='replyTextareaWrap replyInput mt-3'><textarea id="replyTextarea">${text}</textarea><button onclick="function add(e){
                 let data=$('#replyTextarea').val();

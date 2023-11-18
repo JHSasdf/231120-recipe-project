@@ -33,16 +33,12 @@ button:before{color: inherit;}
 .container .head em{color: var(--d-note);font-style: normal;}
 .container .body textarea{padding:1rem;border: 1px solid var(--d-line);}
 .container .body button{color: var(--d-btn-color);background-color: var(--d-btn-bg);border: 1px solid var(--d-line);}
-footer .container{border-top-width: 0;}
 .divider{
     height: 1rem;
     background-color: rgba(0, 0, 0, .1);
 }
 
 .detailHead{border-top: 0;}
-@media screen and (max-width:768px) {
-    /* .detailHead{margin-top: 80px;}    */
-}
 .dh_imgs{position: relative;}
 
 .dh_imgs .bi-star-fill{color:#ddd}
