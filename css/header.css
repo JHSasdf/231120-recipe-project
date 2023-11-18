@@ -66,6 +66,11 @@ header .navigation .icon .more {
     display: none;
 }
 
+.login-text {
+    display: flex;
+    align-items: center;
+}
+
 header .searchBox {
     position: absolute;
     width: 100%;
