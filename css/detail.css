@@ -39,6 +39,7 @@ button:before{color: inherit;}
 }
 
 .detailHead{border-top: 0;}
+.detailBody{z-index: 1;}
 .dh_imgs{position: relative;}
 
 .dh_imgs .bi-star-fill{color:#ddd}
