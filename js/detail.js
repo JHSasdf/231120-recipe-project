@@ -57,27 +57,22 @@ $btnBack.addEventListener('click',function(e){
 });
 
 //처음(상단)으로 가기 버튼
-let target = document.querySelector(".detailHead");
 let btnGroup = document.querySelector(".airBtns");
-let scrollToTopBtn = document.querySelector(".btnTop");
-let rootElement = document.documentElement;
-function callback(entries, observer) {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            btnGroup.classList.remove("show");
-        } else {
-            btnGroup.classList.add("show");
-        }
-    });
-}
+const el = document.querySelector(".detailHead");
+const observer = new IntersectionObserver( 
+    ([e]) =>btnGroup.classList.toggle("show", e.intersectionRatio < 1),
+    { threshold: [1] }
+);
 
+observer.observe(el);
+
+let rootElement = document.documentElement;
+let scrollToTopBtn = document.querySelector(".btnTop");
 function scrollToTop() {
     rootElement.scrollTo({ top: 0, behavior: "smooth" });
 }
 scrollToTopBtn.addEventListener("click", scrollToTop);
 
-let observer = new IntersectionObserver(callback);
-observer.observe(target);
 
 $(function(){
     $('.btnTWX').click(function(e){
