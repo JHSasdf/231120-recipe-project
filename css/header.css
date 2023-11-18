@@ -154,9 +154,9 @@ header .searchBox .back {
         height: 60px;
     }
 
-    header .navigation .menu .myPageshort {
+    /* header .navigation .menu .myPageshort {
         display: block;
-    }
+    } */
 
     header .navigation .menu,
     header .navigation {

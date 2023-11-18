@@ -53,4 +53,5 @@ $(".login-button").click(function () {
   $('body').removeClass('modal-open');
   $('body').css('overflow', 'visible');
   $('.login-text')[0].innerHTML = '<a href="./../html/myPage.html"><i class="bi bi-person-circle" style="font-size: 1.2rem;"></i></a>';
+  $('header .navigation .menu .myPageshort').css('display', 'block');
 });
