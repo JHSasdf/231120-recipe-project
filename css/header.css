@@ -71,6 +71,10 @@ header .navigation .icon .more {
     align-items: center;
 }
 
+.my-real-page {
+    display: none;
+}
+
 header .searchBox {
     position: absolute;
     width: 100%;
@@ -159,9 +163,9 @@ header .searchBox .back {
         height: 60px;
     }
 
-    /* header .navigation .menu .myPageshort {
+    header .navigation .menu .myPageshort {
         display: block;
-    } */
+    }
 
     header .navigation .menu,
     header .navigation {
