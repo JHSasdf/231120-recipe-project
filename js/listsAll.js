@@ -74,7 +74,7 @@ $(document).on('click', '.find-card-btn', function() {
         $('body').addClass('overflow-hidden');
         $('.curtain').addClass('visible');
         $('body').append(`
-        <div class="card modal-card" style="">
+        <div class="card modal-card" style="scale: 97%">
           <img src=${card.children[0].src} class="card-img-top" alt="image-of-food">  
           <div class="card-body" style="display: block;">
           <div class="likes"><div><button class="like-btn"><i class="bi bi-hand-thumbs-up"></i></button> <span>${card.dataset.numberoflikes}</span></div>
