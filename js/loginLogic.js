@@ -52,6 +52,6 @@ $(".login-button").click(function () {
   $('.modal-backdrop').remove();
   $('body').removeClass('modal-open');
   $('body').css('overflow', 'visible');
-  $('.login-text')[0].innerHTML = '<a href="./../html/myPage.html"><i class="bi bi-person-circle" style="font-size: 1.2rem;"></i></a>';
+  $('.login-text')[0].innerHTML = '<a href="/myPage.html"><i class="bi bi-person-circle" style="font-size: 1.2rem;"></i></a>';
   $('.my-real-page').css('display', 'block');
 });
