@@ -82,7 +82,7 @@
                     <div class="swiper sliderWrap mainSlider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <iframe width="100%" height="500" src="https://www.youtube.com/embed/vNqTnXQaTvY?si=-4E2BfA7_p4bUNHt&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe width="100%" height="500" src="https://www.youtube.com/embed/vNqTnXQaTvY?si=-4E2BfA7_p4bUNHt&controls=0&enablejsapi=1&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                             <div class="swiper-slide"><img src="../imgs/d_recipe_1.jpg" alt=""></div>
                         </div>
@@ -497,7 +497,7 @@
 
         <!-- 댓글 : 삭제 팝업 -->
         <div class="modal" id="replyDeleteConfirm">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header border-bottom-0">
                     <h1 class="modal-title fs-3 fw-bold">댓글</h1>
@@ -516,8 +516,8 @@
         <!-- //댓글 : 삭제 팝업 -->
 
         <!-- 팝업 : 재료 -->
-        <div id="ingredients" class="modal fade">
-            <div class="modal-dialog" role="document">
+        <div class="modal fade" id="ingredients">
+            <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content rounded-4 shadow">
                     <div class="modal-header pt-4 px-4 border-bottom-0">
                         <h1 class="modal-title fs-2 fw-bold">된장</h1>
@@ -584,7 +584,7 @@
 
         <!-- 팝업 : 계량 -->
         <div id="weight" class="modal fade">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content rounded-4 shadow">
                     <div class="modal-header pt-4 px-4 border-bottom-0">
                         <h1 class="modal-title fs-2 fw-bold">밥숟가락 계량법</h1>

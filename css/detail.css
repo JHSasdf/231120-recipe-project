@@ -102,14 +102,12 @@ button:before{color: inherit;}
 .detailHead .title{display: flex;justify-content: space-between;align-items: flex-end;}
 .detailHead .title .tit{margin-bottom: 0;}
 .tit{color: var(--d-head);vertical-align: top;}
-
 @media (min-width: 992px) {
     .ingredients{border-right: 1px solid var(--d-line);} 
 }
 .ingredients .sticky-top{z-index: 1;}
 .ingredients .banner{display: inline-block;border: 1px solid var(--d-line);}
-/* .tit [class*="fa-"]{color: #000;} */
-.tit em{display: block;font-size: 1rem;font-weight: normal;font-style: normal;color: var(--d-color);}
+.tit em{display: block;font-size: 1rem;font-weight: normal;font-style: normal;color: var(--d-color);white-space: nowrap;}
 .shares{display: flex;gap: 10px;}
 .shares a{font-size: 1.3rem;}
 .shares img{height: 1.6rem;vertical-align: middle;filter: grayscale();}
