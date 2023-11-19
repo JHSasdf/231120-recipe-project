@@ -11,16 +11,28 @@ p {
 h3 {
     font-weight: 700;
 }
+a {
+    text-decoration: none;
+}
 
 .card {
     border: none;
 
     /* cursor: pointer; */
 }
+.card-img-overlay {
+    padding: 0;
+    margin-left: 100px;
+}
 
+.card-body {
+    padding-left: 0;
+    padding-right: 0;
+}
 .best img,
 .watch img,
-.recommend img {
+.recommend img,
+.bookmark img {
     border-radius: 2%;
 }
 
@@ -51,7 +63,8 @@ h3 {
 .recommend .bi,
 .bookmark .bi {
     position: absolute;
-    right: 10%;
+    right: 20%;
+    top: 2%;
     /* margin-right: 10%; */
     color: #907761;
     font-size: 200%;
@@ -60,7 +73,6 @@ h3 {
 .bi-bookmark-fill {
     display: none;
 }
-
 .bi-bookmark-fill.active {
     display: block;
 }
@@ -90,35 +102,32 @@ section {
     margin-bottom: 2vh;
     font-size: 110%;
 }
-
-.glue .col-md-2 {
-    color: #907761;
-    font-size: 110%;
+.glue .rank {
     margin-right: 3vw;
-    font-weight: 700;
 }
+.glue .rank p {
+    font-size: 110%;
+    font-weight: 800; 
+    color: #907761;
+}
+
 
 /* 회전 */
 .glue.no1 {
     animation: no1 1s linear 1s;
 }
-
 .glue.no2 {
     animation: no2 1s linear 1.4s;
 }
-
 .glue.no3 {
     animation: no3 1s linear 1.8s;
 }
-
 .glue.no4 {
     animation: no4 1s linear 2.2s;
 }
-
 .glue.no5 {
     animation: no5 1s linear 2.6s;
 }
-
 .glue.no6 {
     animation: no6 1s linear 3s;
 }
@@ -127,7 +136,6 @@ section {
     0% {
         transform: rotateX(0deg);
     }
-
     100% {
         transform: rotateX(360deg);
     }
@@ -137,7 +145,6 @@ section {
     0% {
         transform: rotateX(0deg);
     }
-
     100% {
         transform: rotateX(360deg);
     }
@@ -147,7 +154,6 @@ section {
     0% {
         transform: rotateX(0deg);
     }
-
     100% {
         transform: rotateX(360deg);
     }
@@ -157,7 +163,6 @@ section {
     0% {
         transform: rotateX(0deg);
     }
-
     100% {
         transform: rotateX(360deg);
     }
@@ -167,7 +172,6 @@ section {
     0% {
         transform: rotateX(0deg);
     }
-
     100% {
         transform: rotateX(360deg);
     }
@@ -177,7 +181,6 @@ section {
     0% {
         transform: rotateX(0deg);
     }
-
     100% {
         transform: rotateX(360deg);
     }
@@ -187,7 +190,6 @@ section {
     0% {
         transform: rotateX(0deg);
     }
-
     100% {
         transform: rotateX(360deg);
     }
@@ -198,9 +200,7 @@ section {
 .bookmarkBox {
     overflow: hidden;
     /* flex-direction: row-reverse; */
-
 }
-
 .bookmarkBox .inactive {
     display: none;
 }
@@ -212,12 +212,17 @@ section {
     display: flex;
     margin-bottom: 2vh;
 }
-
 .recommend .recTab div {
-    margin-right: 1vw;
+    margin-right: 3vw;
     cursor: pointer;
+    font-weight: 500;
 }
-
+.recommend .recTab .kFood.active,
+.recommend .recTab .wFood.active,
+.recommend .recTab .cFood.active,
+.recommend .recTab .jFood.active{
+    color: #907761;
+}
 
 .recommend .korean,
 .recommend .western,
@@ -225,7 +230,6 @@ section {
 .recommend .japan {
     display: none;
 }
-
 .recommend .korean.active,
 .recommend .western.active,
 .recommend .china.active,
@@ -303,19 +307,18 @@ section {
 
 /* 동영상 제외 미디어쿼리 */
 @media screen and (max-width: 576px) {
-
-    .best .bi,
     .recommend .bi,
     .bookmark .bi {
-        font-size: 100%;
+        font-size: 120%;
         right: 15%;
         top: 1%;
     }
 
-    p,
-    .watch,
+    .watch p, .recommend p{
+        font-size: 80%;
+    }
     .recTab {
-        font-size: 70%;
+        font-size: 90%;
     }
 
     h3 {
