@@ -11,6 +11,7 @@ function nextSlidesBe() {
     let bsetObj = document.createElement(bestContainer.lenght)
     // document.createElement('li')
     container.style.right = bestMove + 'px';
+    console.log(bestMove);
 
 
 
@@ -29,7 +30,7 @@ function nextSlidesBe() {
     // console.log(bestMove);
 
     // 어느 1200 이동하면 다시 처음 화면으로 이동 시킴
-    if(bestMove > 1200)
+    if(bestMove >= 840)
     {
         bestMove = -210;
     }
@@ -51,7 +52,7 @@ function nextSlidesRe() {
     container.style.right = recentMove + 'px';
     console.log(recentMove);
     console.log(container.style.right = recentMove + 'px');
-    if(recentMove > 1200)
+    if(recentMove >= 840)
     {
         recentMove = -210;
     }

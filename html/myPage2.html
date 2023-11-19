@@ -7,9 +7,9 @@
     <title>myPage2</title>
 
     <!-- CSS 링크 -->
-    <link rel="stylesheet" href="./myPage2.css">
-    <link rel="stylesheet" href="./css/mainHeader.css">
-    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="/css/myPage2.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -28,6 +28,9 @@
         integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
+        
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
 
     <!-- 구글 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,8 +38,8 @@
         href="https://fonts.googleapis.com/css2?family=Gugi&family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@300&display=swap"
         rel="stylesheet">
 
-    <script defer src="./myPage2.js"></script>
-    <script defer src="./mainHeader.js"></script>
+    <script defer src="/js/myPage2.js"></script>
+    <script defer src="/js/header.js"></script>
     
 
 </head>
@@ -44,19 +47,18 @@
 <body>
     <header>
         <nav class="navigation">
-            <div class="logoImg"><a href="mainpage.html"><img src="./logo.png" alt="image-of-logo" class="logo"></a></div>
+            <div class="logoImg"><a href="./index.html"><img src="/imgs/logo.png" alt="image-of-logo" class="logo"></a></div>
             <ul class="menu">
-                <li><a href="list1.html">한식</a></li>
-                <li><a href="list1.html?cate=1">양식</a></li>
-                <li><a href="list1.html?cate=2">중식</a></li>
-                <li><a href="list1.html?cate=3">일식</a></li>
-                <li class="myPageshort"> <a href="myPage.html">마이페이지</a></li>
+                <li><a href="/list1.html">한식</a></li>
+                <li><a href="/list1.html?cate=1">양식</a></li>
+                <li><a href="/list1.html?cate=2">중식</a></li>
+                <li><a href="/list1.html?cate=3">일식</a></li>
+                <li class="myPageshort"> <a href="./myPage.html" class="my-real-page">마이페이지</a></li>
             </ul>
             <div class="icon">
-                <div class="search">검색
+                <div class="search"><i class="bi bi-search" style="font-size: 1.2rem;"></i>
                 </div>
-                <div class="more">더보기</div>
-                <div class="myPagelong"><a href="myPage.html">마이페이지</a></div>
+                <div class="more"><i class="bi bi-justify" style="font-size: 1.2rem;"></i></div>
             </div>
         </nav>
         <div class="searchBox">
@@ -67,7 +69,10 @@
             </div>
         </div>
 
-    <!-- bootstrap Modal simple ver.-->
+    </header>
+
+    <aside>
+        <!-- bootstrap Modal simple ver.-->
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -96,8 +101,8 @@
                 </div>
             </div>
         </div>
-    </header>
-
+    </aside>
+<main>
     <div id="all">
         <!-- section 22 -->
         <div class="profile container-md">
@@ -106,7 +111,7 @@
             <div class="profileImg">
                 <!-- 프로필 이미지를 아이디 별로 변경 -->
                 <!-- 프로필 이미지. 클릭 시 input[type=file]을 클릭하는 JavaScript 함수가 실행됩니다. -->
-                <img src="./Profile_icon.png" alt="프로필이미지" width="300px" height="300px" id="previewImg"
+                <img src="/Profile_icon.png" alt="프로필이미지" width="300px" height="300px" id="previewImg"
                     onclick="changeImg()">
 
                 <!-- 이미지를 변경하기 위한 파일 업로드 input. 실제로는 display: none;으로 숨겨져 있습니다. -->
@@ -146,7 +151,7 @@
 
             <div class="PostWr">
                 <!-- 작성한 글 페이지로 이동 -->
-                <a href=""><span>작성한 레시피 <i class="fa-regular fa-pen-to-square"></i></span></a>
+                <h5>작성한 레시피 <i class="fa-regular fa-pen-to-square"></i></h5>
             </div>
 
             <div class="newSlidesBox">
@@ -156,16 +161,19 @@
                 <div class="newSlidesContainer">
                     <ul class="newSlides">
                         <li>
-                            <img src="./food_img/bibimbap.jpeg" alt="비빔밥">
+                            <a href="./detail.html"><img src="/food_img/bibimbap.jpeg" alt="비빔밥"></a>
                         </li>
                         <li>
-                            <img src="./food_img/images-3.jpeg" alt="">
+                            <a href="./detail.html"><img src="/food_img/images-3.jpeg" alt=""></a>
                         </li>
                         <li>
-                            <img src="./food_img/images-2.jpeg" alt="">
+                            <a href="./detail.html"><img src="/food_img/images-2.jpeg" alt=""></a>
                         </li>
                         <li>
-                            <img src="./food_img/images-4.jpeg" alt="">
+                            <a href="./detail.html"><img src="/food_img/images.jpeg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="./detail.html"><img src="/food-img/kebab_barbecue-wallpaper-2560x1080.jpg" alt=""></a>
                         </li>
                         <!-- 여기에 추가하는 함수를 추가로 만들면 될거 같습니다. -->
                     </ul>
@@ -180,7 +188,7 @@
 
             <div class="PostWr">
                 <!-- 베스트 글 페이지로 이동 -->
-                <a href=""><span>베스트 레시피 <i class="fa-solid fa-award"></i></span></a>
+                <h5>베스트 레시피 <i class="fa-solid fa-award"></i></h5>
             </div>
 
             <div class="bestSlidesBox">
@@ -192,16 +200,19 @@
                     <!-- 베스트 글을 최대 몇개 까지 표시할 지 지정 ex) max 10 -->
                     <ul class="bestSlides">
                         <li>
-                            <img src="./food_img/bibimbap.jpeg" alt="비빔밥">
+                            <a href="./detail.html"><img src="/food_img/bibimbap.jpeg" alt="비빔밥"></a>
                         </li>
                         <li>
-                            <img src="./food_img/images-3.jpeg" alt="">
+                            <a href="./detail.html"><img src="/food_img/images-3.jpeg" alt=""></a>
                         </li>
                         <li>
-                            <img src="./food_img/images-2.jpeg" alt="">
+                            <a href="./detail.html"><img src="/food_img/images-2.jpeg" alt=""></a>
                         </li>
                         <li>
-                            <img src="./food_img/images-4.jpeg" alt="">
+                            <a href="./detail.html"><img src="/food_img/images.jpeg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="./detail.html"><img src="/food-img/kebab_barbecue-wallpaper-2560x1080.jpg" alt=""></a>
                         </li>
                         <!-- 여기에 추가하는 함수를 추가로 만들면 될거 같습니다. -->
                     </ul>
@@ -217,7 +228,7 @@
         <div class="post container-md">
 
             <div class="PostWr">
-                <a href=""><span>최근 조회한 레시피 <i class="fa-regular fa-eye"></i></span></a>
+                <h5>최근 조회한 레시피 <i class="fa-regular fa-eye"></i></h5>
             </div>
 
             <div class="recentSlidesBox">
@@ -228,16 +239,19 @@
                 <div class="recentSlidesContainer">
                     <ul class="recentSlides">
                         <li>
-                            <img src="./food_img/bibimbap.jpeg" alt="비빔밥">
+                            <a href="./detail.html"><img src="/food_img/bibimbap.jpeg" alt="비빔밥"></a>
                         </li>
                         <li>
-                            <img src="./food_img/images-3.jpeg" alt="">
+                            <a href="./detail.html"><img src="/food_img/images-3.jpeg" alt=""></a>
                         </li>
                         <li>
-                            <img src="./food_img/images-2.jpeg" alt="">
+                            <a href="./detail.html"><img src="/food_img/images-2.jpeg" alt=""></a>
                         </li>
                         <li>
-                            <img src="./food_img/images-4.jpeg" alt="">
+                            <a href="./detail.html"><img src="/food_img/images.jpeg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="./detail.html"><img src="/food-img/kebab_barbecue-wallpaper-2560x1080.jpg" alt=""></a>
                         </li>
                         <!-- 여기에 추가하는 함수를 추가로 만들면 될거 같습니다. -->
                     </ul>
@@ -246,27 +260,31 @@
                 <a class="next" onclick="nextSlidesRe()">&gt;</a>
             </div>
         </div>
-
-
-
-        <!-- <hr class="container-md" style="border: 1px solid rgb(212, 219, 226);"> -->
-
-
+</main>
         <!-- 고객 센터 -->
-        <!-- <footer>
-            <div class="container p-3">
-                <p>고객센터</p>
-                <div>
-                    <a href="./notice.html">
-                        <p>공지사항</p>
-                    </a>
-                    <a href="./notice.html">
-                        <p>FAQ</p>
-                    </a>
-                    <p>고객 센터 번호 : 000 - 0000 - 0000</p>
+        <footer>
+            <div class="container p-3 info">
+                <div class="d-flex justify-content-end align-item-center column-gap-2"> 
+                    <p>
+                        <a href="../html/notice.html"> 공지사항 </a>
+                        <a href="../html/notice.html"> FAQ </a>
+                    </p>
+                    <p>
+                        <a href="tel:00-0000-0000"><i class="bi bi-telephone-fill"></i> 1833 - 0000</a>
+                    </p>
                 </div>
             </div>
-        </footer> -->
+            <div class="container p-3">
+                <div class="d-flex justify-content-between align-item-center"> 
+                    <div>
+                        <p>© 2023 빼빼로</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        우아한 레시피
+                    </div>
+                </div>
+            </div>
+        </footer>
 
     </div>
 
