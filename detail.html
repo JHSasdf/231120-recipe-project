@@ -15,19 +15,12 @@
     <meta property="og:description"        content="How much does culture influence creative thinking?" />
     <meta property="og:image"              content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
 
-    <!-- 카카오톡 api -->
-    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.4.0/kakao.min.js"   integrity="sha384-mXVrIX2T/Kszp6Z0aEWaA8Nm7J6/ZeWXbL8UpGRjKwWe56Srd/iyNmWMBhcItAjH" crossorigin="anonymous"></script>
-    <script>
-    Kakao.init('c089c8172def97eb00c07217cae17495'); // 사용하려는 앱의 JavaScript 키 입력
-    </script>
-
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/fontawesome.min.js" integrity="sha512-64O4TSvYybbO2u06YzKDmZfLj/Tcr9+oorWhxzE3yDnmBRf7wvDgQweCzUf5pm2xYTgHMMyk5tW8kWU92JENng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/v4-shims.min.js" integrity="sha512-6n3X18GAJomziz6HVPbmyBOEZeoB8+unwEBTRXFs3IZTRYYCkbXNAWNV68uHujamEvDBqaGe2FTW19o81h1/RA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- <script src="https://kit.fontawesome.com/837ff3adc1.js" crossorigin="anonymous" ></script> -->
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> 
     <!-- 부트스트랩 css -->
@@ -45,23 +38,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- style -->
-    <link rel="stylesheet" type="text/css" meida="print" href="../css/print.css" />
-    <link rel="stylesheet" type="text/css" href="../css/header.css" />
-    <link rel="stylesheet" type="text/css" href="../css/footer.css" />
-    <link rel="stylesheet" type="text/css" href="../css/detail.css" />
-    <script src="../js/header.js" defer></script>
-    
+    <link rel="stylesheet" type="text/css" meida="print" href="/css/print.css" />
+    <link rel="stylesheet" type="text/css" href="/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="/css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="/css/detail.css" />
+    <script src="/js/header.js" defer></script>
 </head>
 <body>
     <header>
         <nav class="navigation">
-            <div class="logoImg"><a href="mainpage.html"><img src="../imgs/logo.png" alt="image-of-logo" class="logo"></a></div>
+            <div class="logoImg"><a href="./index.html"><img src="/imgs/logo.png" alt="image-of-logo" class="logo"></a></div>
             <ul class="menu">
-                <li><a href="list1.html">한식</a></li>
-                <li><a href="list1.html?cate=1">양식</a></li>
-                <li><a href="list1.html?cate=2">중식</a></li>
-                <li><a href="list1.html?cate=3">일식</a></li>
-                <li class="myPageshort"> <a href="myPage.html">마이페이지</a></li>
+                <li><a href="/list1.html">한식</a></li>
+                <li><a href="/list1.html?cate=1">양식</a></li>
+                <li><a href="/list1.html?cate=2">중식</a></li>
+                <li><a href="/list1.html?cate=3">일식</a></li>
+                <li class="myPageshort"> <a href="./myPage.html" class="my-real-page">마이페이지</a></li>
             </ul>
             <div class="icon">
                 <div class="search"><i class="bi bi-search" style="font-size: 1.2rem;"></i>
@@ -102,7 +94,7 @@
                     <div class="summary">
                         <div class="title">
                             <h2 class="tit">
-                                <em class="mb-2"><i class="fa-solid fa-award"></i> 주간 레시피 1위</em>
+                                <em class="mb-2"><i class="fa-solid fa-award"></i> 베스트 레시피 1위</em>
                                 배추 된장국
                             </h2>
 
@@ -110,7 +102,7 @@
                                 <li><a href="#" class="btnFB"><i class="fa-brands fa-facebook"></i></a></li>
                                 <li><a href="#" class="btnTWX"><i class="fa-brands fa-x-twitter"></i></a></li>
                                 <li><a href="#" class="btnCopy"><i class="fa-solid fa-link"></i></a></li>
-                                <li><a href="#" onclick="onPrint();"><i class="fa-solid fa-print" aria-label="프린트"></i></a></li>
+                                <li><a href="#" class="btnPrint"><i class="fa-solid fa-print" aria-label="프린트"></i></a></li>
                             </ul>
                         </div>
                         <ul class="recipe_info my-3 pt-3">
@@ -125,7 +117,7 @@
                             <li>
                                 <span><i class="fa-solid fa-eye" aria-label="조회수"></i> 23677</span>
                                 <span><i class="fa-solid fa-heart"></i aria-label="좋아요"> <span>27</span></span>
-                                <span><botton class="bookmark" aria-label="bookmark"></botton></span>
+                                <span><botton class="btnBookmark" aria-label="bookmark"></botton></span>
                             </li>
                         </ul>
                         <p class="smr my-5 my-lg-3">
@@ -147,11 +139,11 @@
                         <div>
                             <h2 class="tit">
                                 <span>재료 </span>
-                                <button class="btn btn-outline-info btn-sm btnWeight" data-bs-toggle="modal" data-bs-target="#weight">계량 방법</button>
+                                <button class="btn  btn-wa-primary btn-sm btnWeight" data-bs-toggle="modal" data-bs-target="#weight">계량 방법</button>
                             </h2>
                             <p>
                                 <span>배추잎(4장)</span> <a href="#" data-bs-toggle="modal" data-bs-target="#ingredients"><i class="bi bi-info-circle"></i></a><br>
-                                <span>대파(5cm)</span><a href="#" data-bs-toggle="modal" data-bs-target="#ingredients"><i class="bi bi-info-circle"></i></a><br>
+                                <span>대파(5cm)</span> <a href="#" data-bs-toggle="modal" data-bs-target="#ingredients"><i class="bi bi-info-circle"></i></a><br>
                                 <span>국물용 멸치(10마리)</span> <a href="#" data-bs-toggle="modal" data-bs-target="#ingredients"><i class="bi bi-info-circle"></i></a><br>
                                 <span>다시마(1장=5×5cm)</span> <a href="#" data-bs-toggle="modal" data-bs-target="#ingredients"><i class="bi bi-info-circle"></i></a><br>
                                 <span>된장(1)</span> <a href="#" data-bs-toggle="modal" data-bs-target="#ingredients"><i class="bi bi-info-circle"></i></a><br>
@@ -240,12 +232,12 @@
         
         <div class="container detailFoot my-5"><!-- 댓글 -->
             <div class="head">
-                <h2 class="tit">레시피 댓글</h2> <em>3</em>
+                <h2 class="tit">레시피 댓글</h2> <em>12</em>
             </div>
             <div class="body ">
                 <div class="replyInput">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="함께 이야기 해주세요"></textarea>
-                    <button>등록</button>
+                    <textarea name="" id="replyText" cols="30" rows="10" placeholder="함께 이야기 해주세요"></textarea>
+                    <button class="btn btn-wa-primary btnReplyWrite">등록</button>
                 </div>
                 <ul class="replyList mt-5">
                     <li class="replyDep1">
@@ -260,7 +252,7 @@
                         <div class="moreBtns">
                             <span><i class="bi bi-three-dots"></i></span>
                             <button class="btnModify" aria-label="수정"><i class="bi bi-pencil"></i></button>
-                            <button class="btnDelete" aria-label="삭제"><i class="bi bi-trash"></i></button>
+                            <button class="btnDelete" aria-label="삭제" data-bs-target="#replyDeleteConfirm" data-bs-toggle="modal"><i class="bi bi-trash"></i></button>
                         </div>
                     </li>
                     <li class="replyDep2">
@@ -275,7 +267,7 @@
                         <div class="moreBtns">
                             <span><i class="bi bi-three-dots"></i></span>
                             <button class="btnModify" aria-label="수정"><i class="bi bi-pencil"></i></button>
-                            <button class="btnDelete" aria-label="삭제"><i class="bi bi-trash"></i></button>
+                            <button class="btnDelete" aria-label="삭제" data-bs-target="#replyDeleteConfirm" data-bs-toggle="modal"><i class="bi bi-trash"></i></button>
                         </div>
                     </li>
                     <li class="replyDep2">
@@ -290,7 +282,7 @@
                         <div class="moreBtns">
                             <span><i class="bi bi-three-dots"></i></span>
                             <button class="btnModify" aria-label="수정"><i class="bi bi-pencil"></i></button>
-                            <button class="btnDelete" aria-label="삭제"><i class="bi bi-trash"></i></button>
+                            <button class="btnDelete" aria-label="삭제" data-bs-target="#replyDeleteConfirm" data-bs-toggle="modal"><i class="bi bi-trash"></i></button>
                         </div>
                     </li>
                     <li class="replyDep1">
@@ -306,7 +298,7 @@
                         <div class="moreBtns">
                             <span><i class="bi bi-three-dots"></i></span>
                             <button class="btnModify" aria-label="수정"><i class="bi bi-pencil"></i></button>
-                            <button class="btnDelete" aria-label="삭제"><i class="bi bi-trash"></i></button>
+                            <button class="btnDelete" aria-label="삭제" data-bs-target="#replyDeleteConfirm" data-bs-toggle="modal"><i class="bi bi-trash"></i></button>
                         </div>
                     </li>
                     <li class="replyDep1">
@@ -322,7 +314,7 @@
                         <div class="moreBtns">
                             <span><i class="bi bi-three-dots"></i></span>
                             <button class="btnModify" aria-label="수정"><i class="bi bi-pencil"></i></button>
-                            <button class="btnDelete" aria-label="삭제"><i class="bi bi-trash"></i></button>
+                            <button class="btnDelete" aria-label="삭제" data-bs-target="#replyDeleteConfirm" data-bs-toggle="modal"><i class="bi bi-trash"></i></button>
                         </div>
                     </li>
                     <li class="replyDep1">
@@ -338,7 +330,7 @@
                         <div class="moreBtns">
                             <span><i class="bi bi-three-dots"></i></span>
                             <button class="btnModify" aria-label="수정"><i class="bi bi-pencil"></i></button>
-                            <button class="btnDelete" aria-label="삭제"><i class="bi bi-trash"></i></button>
+                            <button class="btnDelete" aria-label="삭제" data-bs-target="#replyDeleteConfirm" data-bs-toggle="modal"><i class="bi bi-trash"></i></button>
                         </div>
                     </li>
                     <li class="replyDep1">
@@ -354,7 +346,7 @@
                         <div class="moreBtns">
                             <span><i class="bi bi-three-dots"></i></span>
                             <button class="btnModify" aria-label="수정"><i class="bi bi-pencil"></i></button>
-                            <button class="btnDelete" aria-label="삭제"><i class="bi bi-trash"></i></button>
+                            <button class="btnDelete" aria-label="삭제" data-bs-target="#replyDeleteConfirm" data-bs-toggle="modal"><i class="bi bi-trash"></i></button>
                         </div>
                     </li>
                     <li class="replyDep1">
@@ -370,7 +362,7 @@
                         <div class="moreBtns">
                             <span><i class="bi bi-three-dots"></i></span>
                             <button class="btnModify" aria-label="수정"><i class="bi bi-pencil"></i></button>
-                            <button class="btnDelete" aria-label="삭제"><i class="bi bi-trash"></i></button>
+                            <button class="btnDelete" aria-label="삭제" data-bs-target="#replyDeleteConfirm" data-bs-toggle="modal"><i class="bi bi-trash"></i></button>
                         </div>
                     </li>
                     <li class="replyDep1">
@@ -386,7 +378,7 @@
                         <div class="moreBtns">
                             <span aria-label="수정/삭제 버튼 더보기"><i class="bi bi-three-dots"></i></span>
                             <button class="btnModify" aria-label="수정"><i class="bi bi-pencil"></i></button>
-                            <button class="btnDelete" aria-label="삭제"><i class="bi bi-trash"></i></button>
+                            <button class="btnDelete" aria-label="삭제" data-bs-target="#replyDeleteConfirm" data-bs-toggle="modal"><i class="bi bi-trash"></i></button>
                         </div>
                     </li>
                     <li class="replyDep1">
@@ -402,7 +394,7 @@
                         <div class="moreBtns">
                             <span><i class="bi bi-three-dots"></i></span>
                             <button class="btnModify" aria-label="수정"><i class="bi bi-pencil"></i></button>
-                            <button class="btnDelete" aria-label="삭제"><i class="bi bi-trash"></i></button>
+                            <button class="btnDelete" aria-label="삭제" data-bs-target="#replyDeleteConfirm" data-bs-toggle="modal"><i class="bi bi-trash"></i></button>
                         </div>
                     </li>
                     <li class="replyDep1">
@@ -418,7 +410,7 @@
                         <div class="moreBtns">
                             <span><i class="bi bi-three-dots"></i></span>
                             <button class="btnModify" aria-label="수정"><i class="bi bi-pencil"></i></button>
-                            <button class="btnDelete" aria-label="삭제"><i class="bi bi-trash"></i></button>
+                            <button class="btnDelete" aria-label="삭제" data-bs-target="#replyDeleteConfirm" data-bs-toggle="modal"><i class="bi bi-trash"></i></button>
                         </div>
                     </li>
                     <li class="replyDep1">
@@ -434,11 +426,11 @@
                         <div class="moreBtns">
                             <span><i class="bi bi-three-dots"></i></span>
                             <button class="btnModify" aria-label="수정"><i class="bi bi-pencil"></i></button>
-                            <button class="btnDelete" aria-label="삭제"><i class="bi bi-trash"></i></button>
+                            <button class="btnDelete" aria-label="삭제" data-bs-target="#replyDeleteConfirm" data-bs-toggle="modal"><i class="bi bi-trash"></i></button>
                         </div>
                     </li>
                 </ul>
-                <button class="replyMoreBtn my-3">댓글 더보기 <i class="bi bi-plus-lg"></i></button>
+                <button class="btn replyMoreBtn my-3 btn-wa-primary">댓글 더보기 <i class="bi bi-plus-lg"></i></button>
             </div>
         </div><!-- //댓글 -->
     </main>
@@ -454,7 +446,7 @@
                     <a href="../html/notice.html"> FAQ </a>
                 </p>
                 <p>
-                    <a href="tel:00-0000-0000"><i class="bi bi-telephone-fill"></i> 1833 - 0000</a>
+                    <a href="tel:1833-0000"><i class="bi bi-telephone-fill"></i> 1833 - 0000</a>
                 </p>
             </div>
         </div>
@@ -501,7 +493,28 @@
             </div>
         </div>
 
-        <div id="ingredients" class="modal fade"><!-- 팝업 : 재료 -->
+        <!-- 댓글 : 삭제 팝업 -->
+        <div class="modal" id="replyDeleteConfirm">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header border-bottom-0">
+                    <h1 class="modal-title fs-3 fw-bold">댓글</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                    <p>정말로 삭제할까요?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-wa-primary" data-bs-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //댓글 : 삭제 팝업 -->
+
+        <!-- 팝업 : 재료 -->
+        <div id="ingredients" class="modal fade">
             <div class="modal-dialog" role="document">
                 <div class="modal-content rounded-4 shadow">
                     <div class="modal-header pt-4 px-4 border-bottom-0">
@@ -847,6 +860,6 @@
         
     </aside>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="../js/detail.js"></script>
+    <script src="/js/detail.js"></script>
 </body>
 </html>
