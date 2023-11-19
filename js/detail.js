@@ -57,6 +57,16 @@ const swiper1 = new Swiper('.mainSlider', {
         nextEl: '.mainSlider .swiper-button-next',
         prevEl: '.mainSlider .swiper-button-prev',
     },
+    on: {
+        slideChange: function () {
+            $('.swiper-slide').each(function () {
+                let youtubePlayer = $(this).find('iframe').get(0);
+                if (youtubePlayer) {
+                    youtubePlayer.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                }
+            });
+        },
+    }
 });
 
 const swiper2 = new Swiper('.ingredients .featRecipe', {
@@ -209,13 +219,13 @@ $(function(){
         let text= $('.comment',$self).html().replace(/(\n\s+)/gi, ' ').trim();
         !$('.comment',$self).next('.replyTextareaWrap').length && 
         $('.comment',$self).after(`
-            <div class='replyTextareaWrap replyInput mt-3'><textarea id="replyTextarea">${text}</textarea><button class="btn btn-secondary" onclick="function close(e){
+            <div class='replyTextareaWrap replyInput mt-3'><textarea id="replyTextarea">${text}</textarea><button class="btn btn-secondary" onclick="(function(e){
                 $('.replyTextareaWrap').remove();
-            };close(this);">취소</button><button class="btn btn-wa-primary" onclick="function add(e){
+            })(this);">취소</button><button class="btn btn-wa-primary" onclick="(function(e){
                 let data=$('#replyTextarea').val();
                 $(e).closest('li').find('.comment').text(data);
                 $('.replyTextareaWrap').remove();
-            };add(this);">수정</button></div>
+            })(this);">수정</button></div>
         `);
     });
     //댓글 삭제 버튼
