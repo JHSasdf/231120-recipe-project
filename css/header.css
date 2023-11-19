@@ -5,6 +5,7 @@
     --d-btn-color:#fff;/* 버튼 폰트 컬러 */
     --d-btn-line:#64220B;/* 버튼 라인 컬러 */
     --d-btn-bg:#907761;/* 버튼 배경 컬러 */
+    --d-btn-bg-hover:#755f4a;/* 버튼 배경 오버 컬러 */
     --d-btn-hover:#C8730F;/* 버튼 오버 컬러 */
 }
 header{position: relative;z-index: 3;height: 80px;}
@@ -114,6 +115,11 @@ header .searchBox .back {
     padding: 10px;
     display: none;
 }
+header .searchBox .search-btn{
+    color: #000;
+    background-color: transparent;
+    border: none;
+}
 
 .overflow-hidden {
     overflow: hidden;
@@ -121,6 +127,7 @@ header .searchBox .back {
 
 .modal.fade .modal-dialog {
     width: 380px;
+    margin: 0 auto;
     transition: bottom .75s ease-in-out;
 }
 
