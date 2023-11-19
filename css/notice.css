@@ -5,7 +5,7 @@ body{
 .noBanner{
     width: 100vw;
     height: 24vh;
-    background-image: url(./noticeBanner3.jpg);
+    background-image: url(/noticeBanner3.jpg);
     /* background-size: cover; */
     background-size: 100vw 700px;
     background-repeat: no-repeat;

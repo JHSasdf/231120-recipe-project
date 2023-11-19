@@ -1,7 +1,7 @@
 .profile {
     margin: 0 100px 0 100px;
     height: 220px;
-    background-color: rgb(245, 212, 189,.7);
+    background-color: rgb(245, 212, 189);
     position: relative;
     display: flex;
     justify-content: center;
@@ -40,7 +40,7 @@ img:hover{
     width: 10px;
     height: 10px;
     margin: 20px 0px;
-    background-color: rgb(108,36,22,.5);
+    background-color: rgb(108,36,22,.7);
     border-radius: 10px;
 }
 
@@ -82,7 +82,7 @@ img:hover{
     list-style: none;
     margin-top: 15px;
     margin-left: 0px;
-    width: 1200000px; /* width를 크기 주어서 버튼을 넘기면 width 상자가 이동하게 만들고 싶다.*/
+    width: 120000px; /* width를 크기 주어서 버튼을 넘기면 width 상자가 이동하게 만들고 싶다.*/
     /* justify-content: center; */
     /* align-items: center; */
     /* padding: 10px 0px; */
@@ -193,4 +193,7 @@ img:hover{
     .loginname {
         font-size: 20px;
     }
+}
+img{
+    border-radius: 20px;
 }

@@ -6,18 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Page</title>
     <!-- css연결 -->
-    <link rel="stylesheet" href="./myPage.css">
-    <link rel="stylesheet" href="./footer.css">
-    <link rel="stylesheet" href="./mainHeader.css">
+    <link rel="stylesheet" href="/css/myPage.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/header.css">
+
+    <!-- js 연결 -->
+    <script defer src="/js/header.js"></script>
+    <script defer src="/js/myPage.js"></script>
+    <script defer src="/js/loginLogicForMypage.js"></script>
 
     <!-- 구글 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
 
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <!-- 폰트어썸 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -37,31 +40,28 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-        <script defer src="./mainHeader.js"></script>
-        <script defer src="./myPage.js"></script>
-        <script defer src="./loginLogicForMypage.js"></script>
 </head>
 
 <body>
 
     <header>
         <nav class="navigation">
-            <div class="logoImg"><a href="mainpage.html"><img src="./logo.png" alt="image-of-logo" class="logo"></a></div>
+            <div class="logoImg"><a href="./index.html"><img src="/imgs/logo.png" alt="image-of-logo" class="logo"></a></div>
             <ul class="menu">
-                <li><a href="list1.html">한식</a></li>
-                <li><a href="list1.html?cate=1">양식</a></li>
-                <li><a href="list1.html?cate=2">중식</a></li>
-                <li><a href="list1.html?cate=3">일식</a></li>
-                <li class="myPageshort"> <a href="myPage.html">마이페이지</a></li>
+                <li><a href="/list1.html">한식</a></li>
+                <li><a href="/list1.html?cate=1">양식</a></li>
+                <li><a href="/list1.html?cate=2">중식</a></li>
+                <li><a href="/list1.html?cate=3">일식</a></li>
+                <li class="myPageshort"> <a href="./myPage.html" class="my-real-page">마이페이지</a></li>
             </ul>
             <div class="icon">
-                <div class="search">검색
+                <div class="search"><i class="bi bi-search" style="font-size: 1.2rem;"></i>
                 </div>
                 <div class="login login-text" data-bs-toggle="modal" data-bs-target="#exampleModal">로그인 
                 </div>
-                <div class="more">더보기</div>
-                <div class="myPagelong"><a href="myPage.html">마이페이지</a></div>
+                <div class="more"><i class="bi bi-justify" style="font-size: 1.2rem;"></i></div>
             </div>
         </nav>
         <div class="searchBox">
@@ -72,7 +72,10 @@
             </div>
         </div>
 
-    <!-- bootstrap Modal simple ver.-->
+    </header>
+
+    <aside>
+        <!-- bootstrap Modal simple ver.-->
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -101,14 +104,14 @@
                 </div>
             </div>
         </div>
-    </header>
+    </aside>
 
-
+<main>
 <div id="all">
     <!-- 로그인 화면 -->
     <div class="profile container-md">
         <div class="profileImg ">
-            <img src="./Profile_icon.png" alt="프로필이미지" width="300px" height="300px" id="previewImg">
+            <img src="/Profile_icon.png" alt="프로필이미지" width="300px" height="300px" id="previewImg">
         </div>
         <div>
             <div class="login login-text loginMypage" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="loginname">로그인하세요 ></span>
@@ -124,7 +127,7 @@
 
         <div class="PostWr">
             <!-- 베스트 글 페이지로 이동 -->
-            <a href=""><span>베스트 레시피 <i class="fa-solid fa-award"></i></span></a>
+            <h5>베스트 레시피 <i class="fa-solid fa-award"></i></h5>
         </div>
 
         <div class="bestSlidesBox">
@@ -136,16 +139,19 @@
                 <!-- 베스트 글을 최대 몇개 까지 표시할 지 지정 ex) max 10 -->
                 <ul class="bestSlides">
                     <li>
-                        <img src="./food_img/bibimbap.jpeg" alt="비빔밥">
+                        <a href="./detail.html"><img src="/food_img/bibimbap.jpeg" alt="비빔밥" style="border-radius: 20px;"></a>
                     </li>
                     <li>
-                        <img src="./food_img/images-3.jpeg" alt="">
+                        <a href="./detail.html"><img src="/food_img/images-3.jpeg" alt=""></a>
                     </li>
                     <li>
-                        <img src="./food_img/images-2.jpeg" alt="">
+                        <a href="./detail.html"><img src="/food_img/images-2.jpeg" alt=""></a>
                     </li>
                     <li>
-                        <img src="./food_img/images-4.jpeg" alt="">
+                        <a href="./detail.html"><img src="/food_img/images.jpeg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="./detail.html"><img src="/food-img/kebab_barbecue-wallpaper-2560x1080.jpg" alt=""></a>
                     </li>
                 </ul>
             </div>
@@ -160,7 +166,7 @@
     <div class="post container-md">
 
         <div class="PostWr">
-            <a href=""><span>최근 조회한 레시피 <i class="fa-regular fa-eye"></i></span></a>
+            <h5>최근 조회한 레시피 <i class="fa-regular fa-eye"></i></h5>
         </div>
 
         <div class="recentSlidesBox">
@@ -171,16 +177,19 @@
             <div class="recentSlidesContainer">
                 <ul class="recentSlides">
                     <li>
-                        <img src="./food_img/bibimbap.jpeg" alt="비빔밥">
+                        <a href="./detail.html"><img src="/food_img/bibimbap.jpeg" alt="비빔밥"></a>
                     </li>
                     <li>
-                        <img src="./food_img/images-3.jpeg" alt="">
+                        <a href="./detail.html"><img src="/food_img/images-3.jpeg" alt=""></a>
                     </li>
                     <li>
-                        <img src="./food_img/images-2.jpeg" alt="">
+                        <a href="./detail.html"><img src="/food_img/images-2.jpeg" alt=""></a>
                     </li>
                     <li>
-                        <img src="./food_img/images-4.jpeg" alt="">
+                        <a href="./detail.html"><img src="/food_img/images.jpeg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="./detail.html"><img src="/food-img/kebab_barbecue-wallpaper-2560x1080.jpg" alt=""></a>
                     </li>
                     <!-- 여기에 추가하는 함수를 추가로 만들면 될거 같습니다. -->
                 </ul>
@@ -189,24 +198,33 @@
             <a class="next" onclick="nextSlidesRe()">&gt;</a>
         </div>
     </div>
-
+</main>
 
     <!-- <hr class="container-md"> -->
 
-    <!-- <footer>
-        <div class="container p-3">
-            <p>고객센터</p>
-            <div>
-                <a href="./notice.html">
-                    <p>공지사항</p>
-                </a>
-                <a href="./notice.html">
-                    <p>FAQ</p>
-                </a>
-                <p>고객 센터 번호 : 000 - 0000 - 0000</p>
+    <footer>
+        <div class="container p-3 info">
+            <div class="d-flex justify-content-end align-item-center column-gap-2"> 
+                <p>
+                    <a href="../html/notice.html"> 공지사항 </a>
+                    <a href="../html/notice.html"> FAQ </a>
+                </p>
+                <p>
+                    <a href="tel:00-0000-0000"><i class="bi bi-telephone-fill"></i> 1833 - 0000</a>
+                </p>
             </div>
         </div>
-    </footer> -->
+        <div class="container p-3">
+            <div class="d-flex justify-content-between align-item-center"> 
+                <div>
+                    <p>© 2023 빼빼로</p>
+                </div>
+                <div class="d-flex justify-content-end">
+                    우아한 레시피
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 </body>

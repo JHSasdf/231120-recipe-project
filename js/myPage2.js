@@ -15,7 +15,7 @@ function previewFile() {
     if (file) {
         reader.readAsDataURL(file);
     } else {
-        preview.src = './Profile_icon.png';
+        preview.src = '/Profile_icon.png';
     }
 }
 
@@ -39,7 +39,7 @@ function nextSlidesNew() {
     container.style.right = newMove + 'px';
     console.log(newMove);
     console.log(container.style.right = newMove + 'px');
-    if(newMove > 1200)
+    if(newMove >= 840)
     {
         newMove = -210;
     }
@@ -62,7 +62,7 @@ function nextSlidesBe() {
     let container = document.getElementsByClassName('bestSlides')[0];
     container.style.right = bestMove + 'px';
 
-    if(bestMove > 1200)
+    if(bestMove >= 840)
     {
         bestMove = -210;
     }
@@ -84,7 +84,7 @@ function nextSlidesRe() {
     container.style.right = recentMove + 'px';
     console.log(recentMove);
     console.log(container.style.right = recentMove + 'px');
-    if(recentMove > 1200)
+    if(recentMove >= 840)
     {
         recentMove = -210;
     }
