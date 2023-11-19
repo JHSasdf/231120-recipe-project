@@ -310,8 +310,7 @@ section {
     .recommend .bi,
     .bookmark .bi {
         font-size: 120%;
-        right: 15%;
-        top: 1%;
+        right: 30%;
     }
 
     .watch p, .recommend p{
@@ -323,5 +322,13 @@ section {
 
     h3 {
         font-size: medium;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .recommend .bi,
+    .bookmark .bi {
+        font-size: 120%;
+        right: 50%;
     }
 }
