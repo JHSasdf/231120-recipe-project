@@ -53,17 +53,6 @@ $(".login-button").click(function () {
   $('body').removeClass('modal-open');
   $('body').css('overflow', 'visible');
   $('.login-text')[0].innerHTML = '<i class="bi bi-person-circle" style="font-size: 1.2rem;"></i>';
-  location.replace('./myPage2.html');
+  location.replace('/myPage2.html');
 
 });
-
-
-window.localStorage.setItem("id", "aaaa");
-window.localStorage.setItem("pw", "1111");
-// 로그인 상태 로컬스토리지에 저장
-window.localStorage.setItem("isLoggedin", false);
-
-function cleanLoginInput () {
-    $(".login-id").val("")
-    $(".login-pw").val("")
-}
