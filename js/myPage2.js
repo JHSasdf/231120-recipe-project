@@ -3,6 +3,13 @@ function changeImg() {
     document.getElementById('inputImg').click();
 }
 
+$('.logout-btn').click(function() {
+    window.localStorage.setItem('isLoggedin', false);
+})
+if (JSON.parse(window.localStorage.getItem('isLoggedin'))){
+    $('.login-text')[0].innerHTML = '<a href="/myPage2.html"><i class="bi bi-person-circle" style="font-size: 1.2rem;"></i></a>';
+  }
+
 function previewFile() {
     let preview = document.getElementById('previewImg');
     let file = document.getElementById('inputImg').files[0];
