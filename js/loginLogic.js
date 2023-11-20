@@ -10,6 +10,7 @@ window.localStorage.setItem("pw", "1111");
 // window.localStorage.setItem("isLoggedin", false);
 if (JSON.parse(window.localStorage.getItem('isLoggedin'))){
   $('.login-text')[0].innerHTML = '<a href="/myPage2.html"><i class="bi bi-person-circle" style="font-size: 1.2rem;"></i></a>';
+  $('.login-text').removeAttr('data-bs-target');
 }
 
 function cleanLoginInput () {
